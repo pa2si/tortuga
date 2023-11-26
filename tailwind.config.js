@@ -18,6 +18,9 @@ module.exports = {
         linkedin: '#0077B5',
         'erdkugel-text': '#404040',
       },
+      fontFamily: {
+        tortuga: ['var(--font-poorStory)', 'sans-serif'],
+      },
     },
   },
   plugins: [],

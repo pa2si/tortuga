@@ -1,18 +1,29 @@
-import { Inter } from 'next/font/google';
 import './globals.css';
 import Header from './_components/Header/Header';
-
-const inter = Inter({ subsets: ['latin'] });
+import { poorStory } from './fonts';
 
 export const metadata = {
   title: 'Tortuga',
   description: 'Tortuga Storytolling',
+  robots: {
+    index: false,
+    follow: false,
+    nocache: true,
+    googleBot: {
+      index: false,
+      follow: false,
+      noimageindex: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={poorStory.variable}>
         <Header />
         {children}
       </body>

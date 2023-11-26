@@ -20,16 +20,11 @@ export const pageLinks = [
   },
   {
     id: 4,
-    url: '#pastEvents',
-    text: 'Past Events',
+    url: '#performances',
+    text: 'Performances',
   },
   {
     id: 5,
-    url: '#program',
-    text: 'Program',
-  },
-  {
-    id: 6,
     url: '#contact',
     text: 'Contact',
   },

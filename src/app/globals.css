@@ -10,6 +10,11 @@
   box-sizing: border-box;
 }
 
+img {
+  width: auto;
+  height: auto;
+}
+
 html {
   font-size: 100%;
 } /*16px*/
@@ -53,4 +58,30 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+}
+
+.slick-prev,
+.slick-next {
+  background-color: #000; /* Arrow background color */
+  color: #fff; /* Arrow color */
+  border-radius: 50%; /* Make the arrows circular */
+  padding: 10px; /* Arrow size */
+  z-index: 1; /* Ensure arrows are above other content */
+}
+
+/* Additional styles for hover state */
+.slick-prev:hover,
+.slick-next:hover {
+  background-color: #555;
+}
+
+/* Position adjustments if needed */
+.slick-prev::before {
+  color: black !important;
+  font-size: 30px !important;
+}
+
+.slick-next::before {
+  color: black !important;
+  font-size: 30px !important;
 }

@@ -1,13 +1,13 @@
 'use client';
 
-import { useState, useRef } from 'react';
-import { FaBars } from 'react-icons/fa';
 import { socialLinks, email, pageLinks } from './data';
-import Image from 'next/image';
-import { motion } from 'framer-motion';
+import { FaBars } from 'react-icons/fa';
 import styles from './Navbar.module.css';
+import Image from 'next/image';
+import { useState, useRef } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { motion } from 'framer-motion';
 
 const Navbar = () => {
   const [showLinks, setShowLinks] = useState(false);
@@ -39,7 +39,7 @@ const Navbar = () => {
 
   return (
     <motion.nav
-      className={`p-1 ${styles.navbar}`}
+      className={`p-1 font-tortuga ${styles.navbar}`}
       variants={{
         visible: { y: 0 },
         hidden: { y: '-100%' },
@@ -47,7 +47,7 @@ const Navbar = () => {
       animate={hidden ? 'hidden' : 'visible'}
       transition={{ duration: 0.35, ease: 'easeInOut' }}
     >
-      <div className={`container mx-auto ${styles.nav_center}`}>
+      <div className={` mx-auto max-w-6xl ${styles.nav_center}`}>
         {/* header */}
 
         <section className={styles.nav__header}>

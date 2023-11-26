@@ -46,16 +46,13 @@
 
 .links a {
   color: var(--white);
-  font-size: 1rem;
+  font-size: 1.2rem;
   letter-spacing: 3px;
   display: block;
   padding: 0.5rem 1rem;
   transition: var(--transition);
 }
 
-.menu__links a {
-  font-size: 1.2rem;
-}
 .links a:hover {
   padding-left: 1.5rem;
 }
