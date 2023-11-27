@@ -54,6 +54,7 @@ const Event = ({
               postal,
               description,
               eventLink,
+              title,
             })
           }
         >

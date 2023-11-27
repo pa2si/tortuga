@@ -3,9 +3,7 @@ import styles from './Hero.module.css';
 
 const Hero = () => {
   return (
-    <section
-      className={`relative h-[42rem] w-full bg-green-300 ${styles.heroContainer}`}
-    >
+    <section className={`relative h-[42rem] w-full ${styles.heroContainer}`}>
       <Image
         src="/images/tortuga-hero.jpg"
         fill={true}

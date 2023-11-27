@@ -3,6 +3,7 @@
 import { useGlobalContext } from '@/utils/context';
 import Image from 'next/image';
 import styles from './Modal.module.css';
+import { FaTimes } from 'react-icons/fa';
 
 const Modal = () => {
   const { isModalOpen, closeModal, selectedEvent } = useGlobalContext();
@@ -22,17 +23,32 @@ const Modal = () => {
     >
       {isModalOpen && selectedEvent ? (
         <div className="relative bg-white max-w-4xl text-center grid place-items-center p-8 rounded-md ">
+          <h5 className="text-3xl mb-3">{selectedEvent.title}</h5>
           <Image
             src={selectedEvent.image}
             alt={selectedEvent.alt}
             priority={true}
             width="300"
             height="300"
-            className="mb-4"
+            className="rounded-md"
           />
-
-          <h5 className="">{selectedEvent.title}</h5>
-          <p className="">{selectedEvent.title}</p>
+          <div className="my-4">
+            <p className="text-gray-700 text-base">
+              Date: {selectedEvent.date}
+            </p>
+            <p className="text-gray-700 text-base">
+              Location: {selectedEvent.location}
+            </p>
+            <p className="text-gray-700 text-base">
+              City: {selectedEvent.city}
+            </p>
+            <p className="text-gray-700 text-base">
+              Address: {selectedEvent.address}
+            </p>
+            <p className="text-gray-700 text-base">
+              Postal Code: {selectedEvent.postal}
+            </p>
+          </div>
           <p className="">{selectedEvent.description}</p>
           <a
             href={selectedEvent.eventLink}
@@ -48,9 +64,11 @@ const Modal = () => {
           </a>
 
           <button
-            className={styles.close_modal_btn}
+            className={`text-red-600 ${styles.close_modal_btn}`}
             onClick={closeModal}
-          ></button>
+          >
+            <FaTimes />
+          </button>
         </div>
       ) : null}
     </div>
