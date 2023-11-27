@@ -1,12 +1,12 @@
 'use client';
 
-import Program from './Program';
-import { programList } from './data';
+import Event from './_components/Event';
+import { eventList } from './data';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
-const Programs = () => {
+const Events = () => {
   const settings = {
     dots: true,
     infinite: true,
@@ -19,32 +19,33 @@ const Programs = () => {
     // pauseOnHover: true,
     responsive: [
       {
-        breakpoint: 1024, // Width up to 1024px
+        breakpoint: 1024,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 2,
         },
       },
       {
-        breakpoint: 600, // Width up to 600px
+        breakpoint: 600,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
         },
       },
-      // You can add more breakpoints as needed
     ],
   };
 
   return (
-    <section className="max-h-content w-max-7xl justify-center items-center m-20">
-      <h2 className="text-5xl font-tortuga">Programs</h2>
+    <section className="max-w-7xl mx-auto">
+      <h2 className="text-4xl text-tortuga-dark font-bold underline underline-offset-4 my-8 flex justify-center">
+        Events
+      </h2>
       <Slider {...settings}>
-        {programList.map((program) => {
-          return <Program key={program.id} {...program} />;
+        {eventList.map((event) => {
+          return <Event key={event.id} {...event} />;
         })}
       </Slider>
     </section>
   );
 };
-export default Programs;
+export default Events;

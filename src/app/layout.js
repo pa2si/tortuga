@@ -1,6 +1,7 @@
 import './globals.css';
 import Header from './_components/Header/Header';
 import { poorStory } from './fonts';
+import { AppProvider } from '@/utils/context';
 
 export const metadata = {
   title: 'Tortuga',
@@ -24,8 +25,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={poorStory.variable}>
-        <Header />
-        {children}
+        <AppProvider>
+          <Header />
+          {children}
+        </AppProvider>
       </body>
     </html>
   );

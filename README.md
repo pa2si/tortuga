@@ -1,8 +1,12 @@
 What's new:
 
-v 0.2.0 checkout branch v 0.2.0
+Program Component is now called Event Component and has Modal feature for more info.
+Title is implemented manually for now.
+
+v 0.3.0
 
 Done:
 
 - Header with Navbar
-- Programs Carousel
+- Heo image
+- Event Carousel
