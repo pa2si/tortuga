@@ -1,12 +1,11 @@
 What's new:
 
-Program Component is now called Event Component and has Modal feature for more info.
-Title is implemented manually for now.
+new image for carousel
 
-v 0.3.0
+v 0.3.1
 
 Done:
 
 - Header with Navbar
-- Heo image
-- Event Carousel
+- Hero image
+- Event Carousel with modal button for more info

@@ -45,8 +45,8 @@ export const eventList = [
   },
   {
     id: 4,
-    image: '/images/program1.jpeg',
-    alt: 'program1',
+    image: '/images/program4.jpeg',
+    alt: 'program4',
     copyright: '© Andres Beltran',
     date: '12.12.12',
     location: 'K19',
