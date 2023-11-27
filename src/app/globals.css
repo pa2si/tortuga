@@ -60,28 +60,65 @@ body {
     rgb(var(--background-start-rgb));
 }
 
-.slick-prev,
-.slick-next {
-  background-color: #000; /* Arrow background color */
-  color: #fff; /* Arrow color */
-  border-radius: 50%; /* Make the arrows circular */
-  padding: 10px; /* Arrow size */
-  z-index: 1; /* Ensure arrows are above other content */
-}
+/* Event Arrows */
 
-/* Additional styles for hover state */
-.slick-prev:hover,
-.slick-next:hover {
-  background-color: #555;
-}
-
-/* Position adjustments if needed */
-.slick-prev::before {
+.slider-dark .slick-prev::before,
+.slider-dark .slick-next::before {
   color: black !important;
-  font-size: 30px !important;
+  font-size: 35px;
 }
 
-.slick-next::before {
-  color: black !important;
-  font-size: 30px !important;
+.slider-dark .slick-prev {
+  left: -38px !important;
+}
+
+.slick-slide {
+  transform: scale(0.8); /* Scale down all slides */
+  transition: transform 0.3s ease; /* Smooth transition */
+}
+
+.slick-center {
+  transform: scale(1); /* Scale up the active slide */
+}
+
+/* Program Arrows */
+
+.slider-light .slick-prev::before {
+  font-size: 40px !important;
+}
+
+.slider-light .slick-next::before {
+  font-size: 40px !important;
+}
+
+.slider-light .slick-prev {
+  left: 40px !important;
+}
+.slider-light .slick-next {
+  right: 110px !important;
+}
+
+@media screen and (max-width: 940px) {
+  .slider-light .slick-prev {
+    left: 20px !important;
+  }
+  .slider-light .slick-next {
+    right: 90px !important;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .slider-light .slick-prev {
+    left: 1px !important;
+  }
+  .slider-light .slick-next {
+    right: 11px !important;
+  }
+  .slider-light .slick-prev::before {
+    font-size: 30px !important;
+  }
+
+  .slider-light .slick-next::before {
+    font-size: 30px !important;
+  }
 }
