@@ -5,7 +5,7 @@ import Programs from './_components/Programs/Programs';
 
 export default function Home() {
   return (
-    <main>
+    <main className="font-abhayaLibre">
       <Hero />
       <Events />
       <Modal />

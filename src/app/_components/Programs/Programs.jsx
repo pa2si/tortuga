@@ -19,7 +19,7 @@ const Programs = () => {
     <div className="bg-slate-950  text-white overflow-auto">
       <div className="lg:max-w-5xl xl:max-w-screen-2xl mx-auto py-16 slider-light">
         <div className="max-w-7xl mx-auto">
-          <h2 className=" px-4 xl:px-0 font-bold text-3xl" id="programs">
+          <h2 className=" px-4 xl:px-0 font-title text-4xl" id="programs">
             Programs
           </h2>
         </div>

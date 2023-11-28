@@ -41,9 +41,9 @@ const Events = () => {
   };
 
   return (
-    <section className="max-w-7xl mx-auto my-10 sm:my-20 px-9 xl:px-0 slider-dark">
+    <section className="max-w-7xl max-h-screen mx-auto my-10 px-9 xl:px-0 slider-dark ">
       <h2
-        className="text-4xl text-tortuga-dark font-bold underline underline-offset-4 my-2 sm:my-8 flex justify-center"
+        className="text-5xl text-tortuga-dark font-title underline underline-offset-4 my-2 sm:my-8 flex justify-center"
         id="events"
       >
         Events

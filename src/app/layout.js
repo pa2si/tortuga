@@ -1,6 +1,9 @@
 import './globals.css';
 import Header from './_components/Header/Header';
 import { poorStory } from './fonts';
+import { indieFlower } from './fonts';
+import { kalam } from './fonts';
+import { abhayaLibre } from './fonts';
 import { AppProvider } from '@/utils/context';
 
 export const metadata = {
@@ -24,7 +27,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html className="scroll-smooth" lang="en">
-      <body className={poorStory.variable}>
+      <body
+        className={`${poorStory.variable} ${indieFlower.variable} ${kalam.variable} ${abhayaLibre.variable}`}
+      >
         <AppProvider>
           <Header />
           {children}

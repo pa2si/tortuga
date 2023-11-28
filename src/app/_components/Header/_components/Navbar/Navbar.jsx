@@ -39,7 +39,7 @@ const Navbar = () => {
 
   return (
     <motion.nav
-      className={`p-1 font-tortuga ${styles.navbar}`}
+      className={`p-1 font-title ${styles.navbar}`}
       variants={{
         visible: { y: 0 },
         hidden: { y: '-100%' },

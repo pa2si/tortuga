@@ -16,28 +16,29 @@ const Event = ({
 }) => {
   const { openModal } = useGlobalContext();
   return (
-    <div className="flex flex-col max-w-sm h-[35rem] sm:h-[40rem] bg-white shadow-lg rounded overflow-hidden mx-auto">
-      <div className="relative w-full h-[18rem] shadow-lg">
+    <div className="flex flex-col max-w-sm max-h-screen bg-white shadow-lg rounded overflow-hidden mx-auto">
+      <div className="relative w-full h-[15rem] shadow-lg">
         <Image
           src={image}
           alt={alt}
           priority={true}
           fill={true}
           sizes="30vw"
-          className="object-cover xl:object-contain absolute"
+          className="object-cover  absolute"
         />
       </div>
       <span className="inline-block rounded-full px-1 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
         {copyright}
       </span>
       <div className="flex-grow px-6 py-4">
-        <div className=" text-4xl mb-2">{title}</div>
-
-        <p className="text-gray-700 text-base">Date: {date}</p>
-        <p className="text-gray-700 text-base">Location: {location}</p>
-        <p className="text-gray-700 text-base">City: {city}</p>
-        <p className="text-gray-700 text-base">Address: {address}</p>
-        <p className="text-gray-700 text-base">Postal Code: {postal}</p>
+        <p className=" text-3xl mb-2">{title}</p>
+        <div className="">
+          <p className="text-gray-700 leading-5">Date: {date}</p>
+          <p className="text-gray-700 leading-5">Location: {location}</p>
+          <p className="text-gray-700 leading-5">City: {city}</p>
+          <p className="text-gray-700 leading-5">Address: {address}</p>
+          <p className="text-gray-700 leading-5">Postal Code: {postal}</p>
+        </div>
       </div>
       <div className="px-6 pt-4 pb-2 flex justify-center">
         <button
