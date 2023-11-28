@@ -22,7 +22,7 @@ const Modal = () => {
       onClick={handleOverlayClick}
     >
       {isModalOpen && selectedEvent ? (
-        <div className="relative bg-white max-w-4xl text-center grid place-items-center p-8 rounded-md ">
+        <div className="relative bg-white lg:max-w-3xl xl:max-w-4xl text-center grid place-items-center p-8 rounded-md ">
           <h5 className="text-3xl mb-3">{selectedEvent.title}</h5>
           <Image
             src={selectedEvent.image}
@@ -30,22 +30,14 @@ const Modal = () => {
             priority={true}
             width="300"
             height="300"
-            className="rounded-md"
+            className="rounded-md h-[10rem]"
           />
-          <div className="my-4">
-            <p className="text-gray-700 text-base">
-              Date: {selectedEvent.date}
-            </p>
-            <p className="text-gray-700 text-base">
-              Location: {selectedEvent.location}
-            </p>
-            <p className="text-gray-700 text-base">
-              City: {selectedEvent.city}
-            </p>
-            <p className="text-gray-700 text-base">
-              Address: {selectedEvent.address}
-            </p>
-            <p className="text-gray-700 text-base">
+          <div className="my-4 leading-5">
+            <p className="text-gray-700 ">Date: {selectedEvent.date}</p>
+            <p className="text-gray-700 ">Location: {selectedEvent.location}</p>
+            <p className="text-gray-700 ">City: {selectedEvent.city}</p>
+            <p className="text-gray-700 ">Address: {selectedEvent.address}</p>
+            <p className="text-gray-700 ">
               Postal Code: {selectedEvent.postal}
             </p>
           </div>

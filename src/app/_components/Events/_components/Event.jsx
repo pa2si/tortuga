@@ -16,8 +16,8 @@ const Event = ({
 }) => {
   const { openModal } = useGlobalContext();
   return (
-    <div className="flex flex-col max-w-sm max-h-screen bg-white shadow-lg rounded overflow-hidden mx-auto">
-      <div className="relative w-full h-[15rem] shadow-lg">
+    <div className="flex flex-col max-w-sm max-h-screen xl:h-[37rem] 2xl:h-[40rem]  bg-white shadow-lg rounded overflow-hidden mx-auto">
+      <div className="relative w-full h-[18rem] shadow-lg">
         <Image
           src={image}
           alt={alt}
@@ -42,7 +42,7 @@ const Event = ({
       </div>
       <div className="px-6 pt-4 pb-2 flex justify-center">
         <button
-          className="bg-tortuga-dark hover:bg-tortuga-light text-white font-bold py-2 px-4 rounded transition-all duration-200 ease-in-out"
+          className="bg-tortuga-dark hover:bg-tortuga-light text-white font-kalam py-2 px-4 rounded transition-all duration-200 ease-in-out"
           onClick={() =>
             openModal({
               image,

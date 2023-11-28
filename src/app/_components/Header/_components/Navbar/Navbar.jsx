@@ -47,7 +47,9 @@ const Navbar = () => {
       animate={hidden ? 'hidden' : 'visible'}
       transition={{ duration: 0.35, ease: 'easeInOut' }}
     >
-      <div className={` mx-auto max-w-6xl ${styles.nav_center}`}>
+      <div
+        className={` mx-auto max-w-6xl px-0 md:px-3 xl:px-0 ${styles.nav_center}`}
+      >
         {/* header */}
 
         <section className={styles.nav__header}>
