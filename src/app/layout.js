@@ -1,5 +1,5 @@
 import './globals.css';
-import Header from './_components/Header/Header';
+import Header from './_sections/Header/Header';
 import { poorStory } from './fonts';
 import { indieFlower } from './fonts';
 import { kalam } from './fonts';

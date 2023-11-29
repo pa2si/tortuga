@@ -5,7 +5,7 @@ import { MdArrowForwardIos } from 'react-icons/md';
 const Programs = () => {
   return (
     <section className="relative bg-slate-950 max-h-max text-slate-50 overflow-auto">
-      <div className=" max-w-md sm:max-w-2xl lg:max-w-4xl xl:max-w-screen-xl mx-auto py-10 slider-light">
+      <div className=" max-w-md sm:max-w-2xl md:max-w-3xl lg:max-w-4xl xl:max-w-screen-xl mx-auto py-10 slider-light">
         <div className="max-w-7xl mx-auto">
           <h2
             className=" font-title underline underline-offset-4 my-2 sm:my-8 flex justify-center"

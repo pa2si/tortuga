@@ -41,7 +41,7 @@ const Modal = () => {
               Postal Code: {selectedEvent.postal}
             </p>
           </div>
-          <p className="">{selectedEvent.description}</p>
+          <p className="max-w-xl">{selectedEvent.description}</p>
           <a
             href={selectedEvent.eventLink}
             target="_blank"
