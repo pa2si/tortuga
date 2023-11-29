@@ -1,9 +1,10 @@
-v 0.6.0
+v 0.6.1
 
 What's new:
 
 - About section
-- \_component Folder renamed into \_sections
+- app component Folder renamed into sections
+  -(renamed the readme file just to trigger a deploy)
 
 Done:
 
