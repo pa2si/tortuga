@@ -5,7 +5,7 @@ import { FaFacebook } from 'react-icons/fa';
 export const pageLinks = [
   {
     id: 1,
-    url: '/',
+    url: '#home',
     text: 'Home',
   },
   {

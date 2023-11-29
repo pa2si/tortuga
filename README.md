@@ -1,9 +1,9 @@
-v 0.5.0
+v 0.5.1
 
 What's new:
 
-- some more responsve styling for event and program carousel indluding responsive arrows beeing displayed or not depending on the vw
-- Title and Navigation Fonts changed
+- MotionDiv component created to replace import {motion}
+- some more responsive styling for h2 (now in global.css)
 
 Done:
 

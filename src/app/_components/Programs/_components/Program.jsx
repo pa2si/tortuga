@@ -5,8 +5,8 @@ const Program = ({ title, image, alt, description1, description2 }) => {
     <section className="grid lg:grid-cols-2 grid-cols-1">
       <div className=" flex flex-col justify-center ">
         <h3 className="text-2xl md:text-3xl xl:text-4xl mb-8">{title}</h3>
-        <div className="text-lg sm:text-2xl text-justify lg:text-left">
-          <p className="lg:leading-10">
+        <div className="text-xl sm:text-2xl text-center sm:text-justify lg:text-left">
+          <p className="leading-8 lg:leading-10">
             {description1}
             <br />
             {description2}
