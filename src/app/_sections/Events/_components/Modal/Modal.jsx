@@ -23,16 +23,16 @@ const Modal = () => {
     >
       {isModalOpen && selectedEvent ? (
         <div className="relative bg-white lg:max-w-3xl xl:max-w-4xl text-center grid place-items-center p-8 rounded-md ">
-          <h5 className="text-3xl mb-3">{selectedEvent.title}</h5>
+          <h5 className="text-3xl lg:text-4xl mb-3">{selectedEvent.title}</h5>
           <Image
             src={selectedEvent.image}
             alt={selectedEvent.alt}
             priority={true}
             width="300"
             height="300"
-            className="rounded-md h-[10rem]"
+            className="rounded-md h-[10rem] md:h-[15rem]"
           />
-          <div className="my-4 leading-5">
+          <div className="my-4 lg:text-lg">
             <p className="text-gray-700 ">Date: {selectedEvent.date}</p>
             <p className="text-gray-700 ">Location: {selectedEvent.location}</p>
             <p className="text-gray-700 ">City: {selectedEvent.city}</p>
@@ -41,7 +41,7 @@ const Modal = () => {
               Postal Code: {selectedEvent.postal}
             </p>
           </div>
-          <p className="max-w-xl">{selectedEvent.description}</p>
+          <p className="max-w-xl lg:text-xl">{selectedEvent.description}</p>
           <a
             href={selectedEvent.eventLink}
             target="_blank"

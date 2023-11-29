@@ -2,9 +2,9 @@ v 0.6.1
 
 What's new:
 
-- About section
-- app component Folder renamed into sections
-  -(renamed the readme file just to trigger a deploy)
+- border around event cards
+- flex order adapted for programs (image in mobile version first)
+- new logo implemented with lots of responsive settings for links and image and nav-center padding
 
 Done:
 

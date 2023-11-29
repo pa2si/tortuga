@@ -5,15 +5,15 @@ import { MdArrowForwardIos } from 'react-icons/md';
 const Events = () => {
   return (
     <section
-      className="relative max-h-max overflow-auto"
-      /*       style={{
-        backgroundImage: `linear-gradient(to bottom, transparent, rgb(var(--background-end-rgb))),  url('/images/marek-piwnicki-0HljtjUzpnc-unsplash.jpg')`,
+      className="relative max-h-max overflow-auto "
+      /*         style={{
+        backgroundImage: `linear-gradient(to bottom, rgba(62, 81, 81,0.8), rgba(222, 203, 164, 0.9)), url('/images/hintergrund2-bearbeitet.jpg')`,
         backgroundAttachment: 'fixed',
-        backgroundPosition: 'bottom',
+        backgroundPosition: 'center',
         backgroundSize: 'cover',
-      }} */
+      }}  */
     >
-      <div className="max-w-7xl max-h-screen mx-auto my-10 px-9 xl:px-0 slider-dark ">
+      <div className="max-w-7xl max-h-screen mx-auto my-10 px-9 xl:px-0 slider-dark">
         <h2
           className="text-tortuga-dark font-title underline underline-offset-4 md:my-8 flex justify-center"
           id="events"

@@ -16,7 +16,7 @@ const Event = ({
 }) => {
   const { openModal } = useGlobalContext();
   return (
-    <div className="flex flex-col max-w-sm max-h-screen xl:h-[37rem] 2xl:h-[40rem] md:mb-4 bg-white shadow-lg rounded overflow-hidden mx-auto">
+    <div className="flex flex-col max-w-sm max-h-screen xl:h-[37rem] 2xl:h-[40rem] md:mb-4 bg-white shadow-lg rounded overflow-hidden mx-auto border-2 border-tortuga-light">
       <div className="relative w-full h-[18rem] shadow-lg">
         <Image
           src={image}

@@ -48,7 +48,7 @@ const Navbar = () => {
       transition={{ duration: 0.35, ease: 'easeInOut' }}
     >
       <div
-        className={` mx-auto max-w-6xl px-0 md:px-3 xl:px-0 ${styles.nav_center}`}
+        className={` mx-auto mmax-w-screen-2xl px-0 md:px-3 xl:px-20  ${styles.nav_center}`}
       >
         {/* header */}
 
@@ -56,11 +56,12 @@ const Navbar = () => {
           <Link href="/">
             <Image
               href={'/'}
-              src="/logos/tortuga-logo.webp"
+              src="/logos/tortuga-logo-w-text.webp"
               alt="tortuga logo"
               priority={true}
-              width="90"
-              height="90"
+              width="260"
+              height="260"
+              className="w-3/4 sm:w-full md:w-3/4 lg:w-full"
             />
           </Link>
           <button
@@ -81,7 +82,7 @@ const Navbar = () => {
           animate={{ y: 0, opacity: 1 }}
         >
           <ul
-            className={`${styles.links} ${styles.menu__links}`}
+            className={` text-[1.2rem] md:gap-[1.1rem] md:text-[1rem] md:mr-[3.1rem] lg:text-[1.2rem] lg:mr-0 lg:gap-[1.5rem] xl:gap-8 ${styles.links} ${styles.menu__links}`}
             ref={linksRef}
           >
             {pageLinks.map((link) => {

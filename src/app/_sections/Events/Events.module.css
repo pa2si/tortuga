@@ -1,0 +1,18 @@
+.eventBg {
+  .eventBg {
+    position: relative;
+  }
+
+  .eventBg::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('/images/hintergrund2-bearbeitet.jpg');
+    background-size: cover;
+    opacity: 1; /* Set your desired opacity here */
+    z-index: -1;
+  }
+}

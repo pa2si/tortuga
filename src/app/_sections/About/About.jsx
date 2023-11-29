@@ -5,7 +5,7 @@ const About = () => {
   const { title, image, alt, copyright, description } = aboutData;
 
   return (
-    <section className="relative bg-tortuga-light bg-opacity-30 max-h-max text-slate-50 overflow-auto">
+    <section className="relative bg-white  bg-opacity-90 max-h-max text-slate-50 overflow-auto">
       <div className="mx-8 max-w-6xl xl:mx-auto">
         <h2
           className=" font-title text-tortuga-dark underline underline-offset-4 mt-4 mb-8  sm:my-12 flex justify-center"
