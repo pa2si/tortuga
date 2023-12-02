@@ -20,7 +20,7 @@ html {
 } /*16px*/
 
 body {
-  font-family: josefinSans-light, system-ui, -apple-system, BlinkMacSystemFont,
+  font-family: josefinSans-program, system-ui, -apple-system, BlinkMacSystemFont,
     'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue',
     sans-serif;
 }
@@ -53,7 +53,7 @@ h2 {
   --transition: 0.3s ease-in-out all;
 }
 
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: events) {
   :root {
     --foreground-rgb: 255, 255, 255;
     --background-start-rgb: 0, 0, 0;
@@ -63,28 +63,28 @@ h2 {
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
+  /*   background: linear-gradient(
       to bottom,
       transparent,
       rgb(var(--background-end-rgb))
     )
-    rgb(var(--background-start-rgb));
+    rgb(var(--background-start-rgb)); */
 }
 
 /* Event Arrows */
 
-.slider-dark .slick-prev::before,
-.slider-dark .slick-next::before {
+.slider-events .slick-prev::before,
+.slider-events .slick-next::before {
   color: black !important;
   font-size: 35px;
 }
-
-.slider-dark .slick-dots li button:before {
+/* 
+.slider-events .slick-dots li button:before {
   color: #638409 !important;
-}
+} */
 
-.slider-dark .slick-next {
-  right: 0px !important;
+.slider-events .slick-next {
+  right: -15px !important;
 }
 
 .slick-slide {
@@ -97,54 +97,56 @@ body {
 }
 
 @media screen and (max-width: 768px) {
-  .slider-dark .slick-prev::before {
+  .slider-events .slick-prev::before {
     font-size: 30px !important;
   }
 
-  .slider-dark .slick-next::before {
+  .slider-events .slick-next::before {
     font-size: 30px !important;
   }
-  .slider-dark .slick-next {
+  .slider-events .slick-next {
     right: -15px !important;
   }
 }
 
 /* Program Arrows */
 
-.slider-light .slick-prev::before {
+.slider-programs .slick-prev::before {
   font-size: 35px !important;
+  color: black !important;
 }
 
-.slider-light .slick-next::before {
+.slider-programs .slick-next::before {
   font-size: 35px !important;
+  color: black !important;
 }
 
-.slider-light .slick-next {
-  right: -6px !important;
+.slider-programs .slick-next {
+  right: -10px !important;
 }
 
-.slider-light .slick-dots li button:before {
+/* .slider-programs .slick-dots li button:before {
   color: #638409 !important;
-}
+} */
 
 @media screen and (max-width: 768px) {
-  .slider-light .slick-prev::before {
+  .slider-programs .slick-prev::before {
     font-size: 30px !important;
   }
 
-  .slider-light .slick-next::before {
+  .slider-programs .slick-next::before {
     font-size: 30px !important;
   }
-  .slider-light .slick-next {
+  .slider-programs .slick-next {
     right: -15px !important;
   }
 }
 
-.event-bg {
+.events-bg {
   position: relative;
 }
 
-.event-bg::before {
+.events-bg::before {
   content: '';
   position: absolute;
 
@@ -152,14 +154,91 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: linear-gradient(
+  background-image: /* linear-gradient(
+      to bottom,
+      rgb(255, 255, 255),
+      transparent,
+      rgb(255, 255, 255)
+    ), */ url('/images/hintergrund2-bearbeitet.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  opacity: 0.5;
+  z-index: -1;
+}
+
+.programs-bg {
+  position: relative;
+}
+
+.programs-bg::before {
+  content: '';
+  position: absolute;
+
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: /* linear-gradient(
       to bottom,
       rgb(172, 89, 89),
       rgba(0, 0, 0, 0),
       rgb(136, 76, 76)
-    ),
-    url('/images/hintergrund2-bearbeitet.jpg');
+    ), */ url('/images/hintergrund1-bearbeitet.jpg');
   background-size: cover;
-  opacity: 0.3; /* Set your desired opacity here */
+  background-attachment: fixed;
+  opacity: 0.7;
   z-index: -1;
+}
+.about-bg {
+  position: relative;
+}
+
+.about-bg::before {
+  content: '';
+  position: absolute;
+
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: /* linear-gradient(
+      to bottom,
+      rgb(172, 89, 89),
+      rgba(0, 0, 0, 0),
+      rgb(136, 76, 76)
+    ), */ url('/images/alexander-grey-62vi3TG5EDg-unsplash.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  opacity: 0.7;
+  z-index: -1;
+}
+
+.large-white-gradient {
+  background: linear-gradient(
+    to bottom,
+    rgb(0, 0, 0),
+    transparent 40%,
+    transparent 65%,
+    rgb(0, 0, 0)
+  );
+}
+
+.title-gradient {
+  background-color: black !important;
+}
+
+.program-margin {
+  margin-top: -2rem;
+}
+
+@media (min-width: 1024px) {
+  .program-margin {
+    margin-top: -4rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .program-margin {
+    margin-top: -2rem;
+  }
 }

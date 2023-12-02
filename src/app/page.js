@@ -3,17 +3,17 @@ import Events from './_sections/Events/Events';
 import Modal from './_sections/Events/_components/Modal/Modal';
 import Programs from './_sections/Programs/Programs';
 import About from './_sections/About/About';
-import Intersection1 from './_sections/Intersections/Intersection1';
+import Contacts from './_sections/Contacts/Contacts';
 
 export default function Home() {
   return (
-    <main className="font-abhayaLibre">
+    <main className="font-abhayaLibre ">
       <Hero />
-      {/*       <Intersection1 /> */}
       <About />
       <Events />
       <Modal />
       <Programs />
+      <Contacts />
     </main>
   );
 }

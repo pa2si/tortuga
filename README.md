@@ -1,10 +1,9 @@
-v 0.6.1
+v 0.7.0
 
 What's new:
 
-- border around event cards
-- flex order adapted for programs (image in mobile version first)
-- new logo implemented with lots of responsive settings for links and image and nav-center padding
+- contact section with buttons for privacy and imprint
+- overall redesigned common sections with background
 
 Done:
 

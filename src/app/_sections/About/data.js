@@ -1,6 +1,5 @@
 export const aboutData = {
-  id: 1,
-  title: 'Johanna Wollin',
+  menuId: 'about',
   image: '/images/johanna.jpeg',
   alt: 'Profilbild Johanna Wollin',
   copyright: '© César Wayqui Villegas',

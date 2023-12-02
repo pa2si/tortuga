@@ -1,6 +1,7 @@
 export const eventList = [
   {
     id: 1,
+    sectionTitle: 'Events',
     title: 'Geschichten für eine (R)Evolution',
     image: '/images/program1.jpeg',
     alt: 'program1',

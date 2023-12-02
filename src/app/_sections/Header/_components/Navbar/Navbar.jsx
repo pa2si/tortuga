@@ -48,7 +48,7 @@ const Navbar = () => {
       transition={{ duration: 0.35, ease: 'easeInOut' }}
     >
       <div
-        className={` mx-auto mmax-w-screen-2xl px-0 md:px-3 xl:px-20  ${styles.nav_center}`}
+        className={` mx-auto max-w-screen-2xl px-0 md:px-3 xl:px-20  ${styles.nav_center}`}
       >
         {/* header */}
 
@@ -126,7 +126,7 @@ const Navbar = () => {
             return (
               <li
                 key={id}
-                className="text-xl text-tortuga-dark hover:tortuga-light hover:scale-105 transition-all duration-200"
+                className="text-xl text-tortuga-dark hover:text-tortuga-light hover:scale-105 transition-all duration-200"
               >
                 <a
                   key={id}
