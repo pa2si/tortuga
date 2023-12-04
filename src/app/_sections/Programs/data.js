@@ -2,8 +2,8 @@ export const programList = [
   {
     id: 1,
     title: 'Zwischen den Stühlen',
-    image: '/images/justin-lim-XO-dMoofxoY-unsplash.jpg',
-    alt: 'program1',
+    image: '/images/zwischen-den-stuehlen.jpg',
+    alt: 'Several chairs next to each other',
     description1:
       'Wenn man zwischen zwei Kontinenten, zwei Kulturen, zwei Sprachen, eigentlich zwei Welten aufwächst, wo ist man dann zuhause? Und steckt dahinter wirklich ein konkreter Ort?',
     description2:

@@ -1,6 +1,6 @@
 'use client';
 
-import { socialLinks, email, pageLinks } from './data';
+import { socialLinks, email, pageLinks, languages } from './data';
 import { FaBars } from 'react-icons/fa';
 import styles from './Navbar.module.css';
 import Image from 'next/image';
@@ -8,6 +8,7 @@ import { useState, useRef } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { motion } from 'framer-motion';
+import { useGlobalContext } from '@/utils/context';
 
 const Navbar = () => {
   const [showLinks, setShowLinks] = useState(false);
@@ -16,6 +17,7 @@ const Navbar = () => {
   const linksRef = useRef(null);
   const { useScroll, useMotionValueEvent } = require('framer-motion');
   const { scrollY } = useScroll();
+
   const pathname = usePathname();
 
   const toggleLinks = () => {
@@ -36,6 +38,9 @@ const Navbar = () => {
       setHidden(false);
     }
   });
+
+  const { isEventsInView, isProgramsInView, isAboutInView, isContactInView } =
+    useGlobalContext();
 
   return (
     <motion.nav
@@ -61,7 +66,7 @@ const Navbar = () => {
               priority={true}
               width="260"
               height="260"
-              className="w-3/4 sm:w-full md:w-3/4 lg:w-full"
+              className="w-3/4 sm:w-full md:w-3/4 xl:w-full"
             />
           </Link>
           <button
@@ -80,17 +85,29 @@ const Navbar = () => {
           style={linkStyles}
           initial={{ y: -100, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 1.3, ease: 'easeInOut' }}
         >
           <ul
-            className={` text-[1.2rem] md:gap-[1.1rem] md:text-[1rem] md:mr-[3.1rem] lg:text-[1.2rem] lg:mr-0 lg:gap-[1.5rem] xl:gap-8 ${styles.links} ${styles.menu__links}`}
+            className={` text-[1.2rem] md:gap-[1.1rem] mb-[-0.3rem] md:text-[1rem] md:mr-[3.1rem] lg:text-[1.2rem] lg:mr-0 lg:gap-[1.5rem] xl:gap-8 ${styles.links} ${styles.menu__links}`}
             ref={linksRef}
           >
             {pageLinks.map((link) => {
+              let className = '';
+              if (link.url === '#events' && isEventsInView) {
+                className = '!text-tortuga-dark';
+              } else if (link.url === '#programs' && isProgramsInView) {
+                className = '!text-tortuga-dark';
+              } else if (link.url === '#about' && isAboutInView) {
+                className = '!text-tortuga-dark';
+              } else if (link.url === '#contact' && isContactInView) {
+                className = '!text-tortuga-dark';
+              }
+
               const { id, url, text } = link;
               return (
                 <li key={id} className="hover:text-tortuga-light">
                   <Link
-                    className={pathname === url ? '!text-tortuga-dark ' : ''}
+                    className={className}
                     href={`/${url}`}
                     onClick={toggleLinks}
                   >
@@ -99,6 +116,26 @@ const Navbar = () => {
                 </li>
               );
             })}
+            <div className="flex gap-2 ml-6 ">
+              {languages.map((language) => {
+                const { id, icon } = language;
+                return (
+                  <li
+                    key={id}
+                    className="w-5 h-5 md:w-5 md:h-5 lg:w-6 lg:h-6 md:pt-1"
+                  >
+                    <Image
+                      href={'url'}
+                      src={icon}
+                      alt="languages"
+                      priority={true}
+                      width="30"
+                      height="30"
+                    />
+                  </li>
+                );
+              })}
+            </div>
           </ul>
         </motion.section>
 
@@ -110,7 +147,7 @@ const Navbar = () => {
             return (
               <li
                 key={id}
-                className={`${styles.mailIcon} text-2xl text-tortuga-dark hover:tortuga-light hover:scale-105 transition-all duration-200`}
+                className={`${styles.mailIcon} text-2xl text-tortuga-dark hover:text-tortuga-light hover:scale-105 transition-all duration-200`}
               >
                 <a href={`mailto:${email}`}>{icon}</a>
               </li>

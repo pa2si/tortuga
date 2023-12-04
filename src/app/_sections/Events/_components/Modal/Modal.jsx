@@ -16,21 +16,23 @@ const Modal = () => {
 
   return (
     <div
-      className={`${styles.modal_overlay} ${
+      className={`  ${styles.modal_overlay} ${
         isModalOpen ? styles.modal_show : ''
       }`}
       onClick={handleOverlayClick}
     >
       {isModalOpen && selectedEvent ? (
-        <div className="relative bg-white lg:max-w-3xl xl:max-w-4xl text-center grid place-items-center p-8 rounded-md ">
-          <h5 className="text-3xl lg:text-4xl mb-3">{selectedEvent.title}</h5>
+        <div className="relative bg-white max-h-screen lg:max-w-3xl xl:max-w-4xl text-center grid place-items-center p-8 rounded-md overflow-scroll">
+          <h5 className="text-3xl lg:text-4xl mb-4 mt-4 font-kalam">
+            {selectedEvent.title}
+          </h5>
           <Image
             src={selectedEvent.image}
             alt={selectedEvent.alt}
             priority={true}
             width="300"
             height="300"
-            className="rounded-md h-[10rem] md:h-[15rem]"
+            className="rounded-md h-[10rem] md:h-[15rem] shadow-lg"
           />
           <div className="my-4 lg:text-lg">
             <p className="text-gray-700 ">Date: {selectedEvent.date}</p>

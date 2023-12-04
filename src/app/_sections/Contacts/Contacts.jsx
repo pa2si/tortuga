@@ -6,27 +6,21 @@ import Imprint from './_components/Imprint';
 import { titleList } from '@/utils/Titles/TitleList';
 import Title from '@/utils/Titles/Title';
 import { AnimatePresence } from 'framer-motion';
-
 import { useState } from 'react';
 
 const Contacts = () => {
   const [activeComponent, setActiveComponent] = useState('contact');
 
-  const variants = {
-    hidden: { x: '100%', opacity: 0 },
-    visible: { x: 0, opacity: 1 },
-  };
-
   return (
-    <div
+    <section
       style={{
-        backgroundImage: 'url(/images/hintergrund3.webp)',
-        backgroundAttachment: 'fixed',
+        backgroundImage: 'url(/images/bg-tortuga-contact.webp)',
+        /*         backgroundAttachment: 'fixed', */
         backgroundPosition: 'center',
         backgroundSize: 'cover',
       }}
     >
-      <section
+      <div
         className="relative max-h-max text-slate-50 overflow-auto  bg-slate-200 bg-opacity-50 "
         id="contact"
       >
@@ -77,8 +71,8 @@ const Contacts = () => {
           </AnimatePresence>
         </div>
         {/* <div className="absolute inset-0 bg-gradient-to-b from-white via-transparent to-white  z-10"></div> */}
-      </section>
-    </div>
+      </div>
+    </section>
   );
 };
 export default Contacts;

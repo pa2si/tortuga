@@ -20,6 +20,12 @@ export const AppProvider = ({ children }) => {
     setSelectedEvent(null);
     setIsModalOpen(false);
   };
+
+  const [isEventsInView, setIsEventsInView] = useState(false);
+  const [isProgramsInView, setIsProgramsInView] = useState(false);
+  const [isAboutInView, setIsAboutInView] = useState(false);
+  const [isContactInView, setIsContactInView] = useState(false);
+
   return (
     <AppContext.Provider
       value={{
@@ -28,6 +34,14 @@ export const AppProvider = ({ children }) => {
         event,
         openModal,
         closeModal,
+        isEventsInView,
+        setIsEventsInView,
+        isProgramsInView,
+        setIsProgramsInView,
+        isAboutInView,
+        setIsAboutInView,
+        isContactInView,
+        setIsContactInView,
       }}
     >
       {children}

@@ -7,7 +7,7 @@ import { abhayaLibre } from './fonts';
 import { AppProvider } from '@/utils/context';
 
 export const metadata = {
-  title: 'Tortuga',
+  title: 'Tortuga Storytelling',
   description: 'Tortuga Storytolling',
   robots: {
     index: false,

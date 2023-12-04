@@ -1,20 +1,44 @@
+'use client';
+
 import Image from 'next/image';
 import styles from './Hero.module.css';
+import { motion, useScroll, useTransform } from 'framer-motion';
 
 const Hero = () => {
+  const { scrollYProgress } = useScroll();
+  const blurProgress = useTransform(
+    scrollYProgress,
+    [0, 0.5],
+    ['blur(0px)', 'blur(20px)']
+  );
+  const opacityProgress = useTransform(scrollYProgress, [0, 1], [1, 0]);
+
   return (
     <section
-      className={`relative h-[30rem] sm:h-[42rem] w-full  ${styles.heroContainer}`}
+      style={{
+        backgroundImage: 'url(/images/bg-tortuga-about.webp)',
+        backgroundAttachment: 'fixed',
+        backgroundPosition: 'center',
+        backgroundSize: 'cover',
+      }}
     >
-      <Image
-        src="/images/tortuga-hero.jpg"
-        layout="fill"
-        alt="stage where Johanna performed"
-        sizes="100vw"
-        className="object-cover overflow-hidden "
-        priority={true}
-      />
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black z-10"></div>
+      <motion.section
+        className={`relative h-[30rem] sm:h-[42rem] w-full  ${styles.heroContainer}`}
+        style={{
+          filter: blurProgress,
+          opacity: opacityProgress,
+        }}
+      >
+        <Image
+          src="/images/tortuga-hero.jpg"
+          fill={true}
+          alt="Johanna Wollin Tortuga Storytelling performing on stage"
+          sizes="100vw"
+          className="object-cover overflow-hidden absolute w-auto"
+          priority={true}
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black z-10"></div>
+      </motion.section>
     </section>
   );
 };

@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import { useGlobalContext } from '@/utils/context';
+import { MotionArticle } from '@/utils/MotionDiv';
 
 const Event = ({
   image,
@@ -14,9 +15,29 @@ const Event = ({
   city,
   eventLink,
 }) => {
+  const slideIn = {
+    initial: {
+      opacity: 0,
+      x: -200,
+    },
+    animate: () => ({
+      opacity: 1,
+      x: 0,
+      transition: {
+        duration: 1,
+      },
+    }),
+  };
+
   const { openModal } = useGlobalContext();
   return (
-    <article className="flex flex-col max-w-sm max-h-screen lg:my-10 xl:h-[37rem] 2xl:h-[40rem] md:mb-4 bg-white shadow-xl rounded overflow-hidden mx-auto ">
+    <MotionArticle
+      className="flex flex-col max-w-sm max-h-screen lg:my-10 xl:h-[37rem] 2xl:h-[40rem] md:mb-4 bg-white shadow-xl rounded overflow-hidden mx-auto "
+      variants={slideIn}
+      initial="initial"
+      whileInView="animate"
+      viewport={{ once: true }}
+    >
       <div className="relative w-full h-[18rem] shadow-lg">
         <Image
           src={image}
@@ -31,7 +52,7 @@ const Event = ({
         {copyright}
       </span>
       <div className="flex-grow px-6 py-4">
-        <p className=" text-3xl mb-2">{title}</p>
+        <p className=" text-3xl mb-2 font-kalam">{title}</p>
         <div className="">
           <p className="text-gray-700 leading-5">Date: {date}</p>
           <p className="text-gray-700 leading-5">Location: {location}</p>
@@ -62,7 +83,7 @@ const Event = ({
           More Info
         </button>
       </div>
-    </article>
+    </MotionArticle>
   );
 };
 export default Event;
