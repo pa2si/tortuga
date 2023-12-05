@@ -34,7 +34,7 @@ const Modal = () => {
             height="300"
             className="rounded-md h-[10rem] md:h-[15rem] shadow-lg"
           />
-          <div className="my-4 lg:text-lg">
+          <div className="my-4 pt-1 leading-[1.4rem] text-[1.1rem] md:text-[1.2rem] md:leading-[1.5rem] lg:text-[1.3rem] lg:leading-[1.6rem]">
             <p className="text-gray-700 ">Date: {selectedEvent.date}</p>
             <p className="text-gray-700 ">Location: {selectedEvent.location}</p>
             <p className="text-gray-700 ">City: {selectedEvent.city}</p>
@@ -43,7 +43,9 @@ const Modal = () => {
               Postal Code: {selectedEvent.postal}
             </p>
           </div>
-          <p className="max-w-xl lg:text-xl">{selectedEvent.description}</p>
+          <p className="max-w-xl md:text-[1.2rem] lg:text-[1.3rem]">
+            {selectedEvent.description}
+          </p>
           <a
             href={selectedEvent.eventLink}
             target="_blank"

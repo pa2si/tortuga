@@ -2,14 +2,25 @@
 
 import Image from 'next/image';
 import styles from './Hero.module.css';
+import { useEffect, useState } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 
 const Hero = () => {
   const { scrollYProgress } = useScroll();
+  const [windowWidth, setWindowWidth] = useState(0);
+
+  useEffect(() => {
+    const handleResize = () => setWindowWidth(window.innerWidth);
+    handleResize(); // Set initial size
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
   const blurProgress = useTransform(
     scrollYProgress,
     [0, 0.5],
-    ['blur(0px)', 'blur(20px)']
+    windowWidth > 786 ? ['blur(0px)', 'blur(20px)'] : ['blur(0px)', 'blur(0px)']
   );
   const opacityProgress = useTransform(scrollYProgress, [0, 1], [1, 0]);
 

@@ -1,5 +1,3 @@
-import Title from '@/utils/Titles/Title';
-import { titleList } from '@/utils/Titles/TitleList';
 import Image from 'next/image';
 import { aboutData } from './data';
 import InView from './_components/InView';
@@ -17,7 +15,7 @@ const About = () => {
       }}
     >
       <div
-        className="relative max-h-max text-slate-50 overflow-auto  bg-gray-300 bg-opacity-50"
+        className="relative max-h-max bg-gray-300 mx-4 bg-opacity-0  text-slate-50 overflow-auto sm:bg-opacity-50 xl:mx-0 rounded-lg"
         id="about"
       >
         <div className="my-10 sm:mx-8 max-w-6xl xl:mx-auto pt-8 pb-1 lg:py-12 lg:px-16 bg-white bg-opacity-95 rounded-xl">
@@ -40,9 +38,9 @@ const About = () => {
             />
           </div>
           {/* About Description */}
-          <div className="grid grid-cols-1 lg:grid-cols-5 lg:items-center text-slate-900 mt-8 mb-12 lg:mb-8  ">
-            <div className="col-span-3 px-4 sm:px-8  text-xl sm:text-2xl text-justify lg:px-0 lg:text-left order-last lg:order-first ">
-              <p className="text-gray-800 font-poorStory leading-8 sm:leading-9 lg:leading-9 tracking-wide">
+          <div className="grid grid-cols-1 text-slate-900 mt-8 mb-12 lg:grid-cols-5 lg:items-center lg:mb-8">
+            <div className="col-span-3 px-4 sm:px-8 text-xl sm:text-xl md:text-[1.4rem] lg:text-[1.6rem]] text-justify lg:px-0 lg:text-left order-last lg:order-first ">
+              <p className="text-gray-800 font-poorStory leading-7 sm:leading-8 lg:leading-9 tracking-wide">
                 {description}
               </p>
               <InView />

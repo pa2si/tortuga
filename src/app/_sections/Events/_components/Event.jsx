@@ -52,13 +52,13 @@ const Event = ({
         {copyright}
       </span>
       <div className="flex-grow px-6 py-4">
-        <p className=" text-3xl mb-2 font-kalam">{title}</p>
-        <div className="">
-          <p className="text-gray-700 leading-5">Date: {date}</p>
-          <p className="text-gray-700 leading-5">Location: {location}</p>
-          <p className="text-gray-700 leading-5">City: {city}</p>
-          <p className="text-gray-700 leading-5">Address: {address}</p>
-          <p className="text-gray-700 leading-5">Postal Code: {postal}</p>
+        <p className=" text-4xl  mb-2 font-kalam">{title}</p>
+        <div className="text-[1.4rem] md:text-[1.4rem] leading-7 lg:text-[1.2rem] ">
+          <p className="text-gray-700 ">Date: {date}</p>
+          <p className="text-gray-700 ">Location: {location}</p>
+          <p className="text-gray-700 ">City: {city}</p>
+          <p className="text-gray-700 ">Address: {address}</p>
+          <p className="text-gray-700 ">Postal Code: {postal}</p>
         </div>
       </div>
       <div className="px-6 pt-4 pb-2 flex justify-center lg:text-xl">

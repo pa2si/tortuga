@@ -1,5 +1,3 @@
-import Title from '@/utils/Titles/Title';
-import { titleList } from '@/utils/Titles/TitleList';
 import SlickComp from './_components/SlickComp';
 import { MdArrowBackIos } from 'react-icons/md';
 import { MdArrowForwardIos } from 'react-icons/md';
@@ -17,7 +15,7 @@ const Events = () => {
       }}
     >
       <section
-        className="relative max-h-max overflow-auto bg-gray-100 bg-opacity-5"
+        className="relative mx-4 max-h-max overflow-auto bg-gray-100 bg-opacity-0 xl:mx-0 sm:bg-opacity-5 rounded-lg"
         id="events"
       >
         <div className="my-10 pt-8 pb-12 sm:mx-8 max-w-6xl xl:mx-auto lg:py-12 lg:px-16 bg-white bg-opacity-95 rounded-xl slider-events">

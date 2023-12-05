@@ -1,10 +1,10 @@
-v 0.8.1
+v 0.8.2
 
 What's new:
 
-- Titles now directly in Section Components
-  - Underline included
-- Image of Contact responsive resized
+- margin for section container in mobile version
+- some sesizing of description text in sections for responsive
+- rendering blureffect of hero only from md size on
 
 Done:
 
@@ -12,6 +12,8 @@ Done:
 - Header with Navbar
   - Language Buttons in Menu (wo function so far)
   - InView for Sections: Colored Menubuttons regarding the section that is in View
+  - Titles directly in Section Components
+    - Underline included
 - Hero image
   - Blur Effect for Hero when scrolling
 - About Section

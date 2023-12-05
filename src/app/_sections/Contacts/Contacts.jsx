@@ -3,8 +3,6 @@
 import Contact from './_components/Contact';
 import Privacy from './_components/Privacy';
 import Imprint from './_components/Imprint';
-import { titleList } from '@/utils/Titles/TitleList';
-import Title from '@/utils/Titles/Title';
 import { AnimatePresence } from 'framer-motion';
 import { useState } from 'react';
 
