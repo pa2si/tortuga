@@ -74,7 +74,7 @@ const Contact = () => {
           priority={true}
           width={130}
           height={400}
-          className=" mx-auto h-4/5 sm:h-5/6  md:h-full lg:h-4/5 xl:h-full drop-shadow-lg rounded-xl "
+          className=" mx-auto h-4/5 sm:h-5/6  md:h-full lg:h-5/6 xl:h-full drop-shadow-lg rounded-xl "
         />
       </div>
     </motion.article>

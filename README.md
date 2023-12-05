@@ -1,21 +1,20 @@
-v 0.8.2
+v 0.8.3
 
 What's new:
 
-- margin for section container in mobile version
-- some sesizing of description text in sections for responsive
-- rendering blureffect of hero only from md size on
+- responsive resizing for Contact image
 
 Done:
 
 - Custom Google Fonts
+- margin for section container in mobile version
 - Header with Navbar
   - Language Buttons in Menu (wo function so far)
   - InView for Sections: Colored Menubuttons regarding the section that is in View
   - Titles directly in Section Components
     - Underline included
 - Hero image
-  - Blur Effect for Hero when scrolling
+  - Blur and Opacity Effect for Hero when scrolling in Desktop version
 - About Section
 - Event Carousel with modal button for more info
   - Motion Effect in View for Events and Programs
