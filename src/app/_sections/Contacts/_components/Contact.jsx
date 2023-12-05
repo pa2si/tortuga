@@ -24,7 +24,7 @@ const Contact = () => {
       transition={{ type: 'spring', stiffness: 50 }}
     >
       <div className="flex flex-col col-span-3 px-4 text-xl text-justify sm:text-2xl sm:px-8 lg:px-0 lg:mb-8 lg:text-left order-last lg:order-first ">
-        <p className="text-gray-700 font-poorStory leading-8 sm:leading-9 tracking-wide">
+        <p className="text-gray-700 font-poorStory leading-8 sm:leading-9 tracking-wide text-center lg:text-left">
           {description}
         </p>
         <div className=" h-full flex flex-col items-center justify-center gap-4">
@@ -67,14 +67,14 @@ const Contact = () => {
         </div>
       </div>
       {/* Contact Image */}
-      <div className="col-span-2 flex flex-col justify-center items-center lg:ml-36 my-[-2rem] sm:my-[0rem] order-first lg:order-last">
+      <div className="col-span-2 flex flex-col justify-center items-center md:my-4 lg:my-0 lg:ml-36 order-first lg:order-last">
         <Image
           src={image}
           alt={alt}
           priority={true}
           width={130}
           height={400}
-          className=" mx-auto h-3/5 sm:h-4/6 lg:h-full drop-shadow-lg rounded-xl "
+          className=" mx-auto h-4/5 sm:h-5/6  md:h-full lg:h-4/5 xl:h-full drop-shadow-lg rounded-xl "
         />
       </div>
     </motion.article>

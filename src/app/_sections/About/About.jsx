@@ -23,14 +23,19 @@ const About = () => {
         <div className="my-10 sm:mx-8 max-w-6xl xl:mx-auto pt-8 pb-1 lg:py-12 lg:px-16 bg-white bg-opacity-95 rounded-xl">
           <div className=" flex justify-center items-center gap-4">
             {/* Title */}
-            <Title text={titleList.about} />
+            <div className="flex flex-col items-center">
+              <h2 className="font-title text-black text-center">About</h2>
+              <div className="relative w-full h-1 mt-8 sm:mt-4 md:mt-1">
+                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-tortuga-light to-transparent"></div>
+              </div>
+            </div>
             <Image
               src="/logos/tortuga-logo.webp"
               alt="tortuga logo"
               priority={true}
               width={100}
               height={80}
-              className=" w-[100px] lg:w-[110px] md:mb-5"
+              className=" w-[100px] lg:w-[110px] mb-6 lg:mb-5"
               style={{ height: 'auto' }}
             />
           </div>
@@ -50,9 +55,9 @@ const About = () => {
                 priority={true}
                 width={150}
                 height={250}
-                className=" mx-auto h-3/5 lg:h-full drop-shadow-lg rounded-xl "
+                className=" mx-auto h-4/5 lg:h-full drop-shadow-lg rounded-xl "
               />
-              <p className="mt-2 ">{copyright}</p>
+              <p className="mt-2 mb-4  ">{copyright}</p>
             </div>
           </div>
         </div>

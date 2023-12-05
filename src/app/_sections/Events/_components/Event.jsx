@@ -32,7 +32,7 @@ const Event = ({
   const { openModal } = useGlobalContext();
   return (
     <MotionArticle
-      className="flex flex-col max-w-sm max-h-screen lg:my-10 xl:h-[37rem] 2xl:h-[40rem] md:mb-4 bg-white shadow-xl rounded overflow-hidden mx-auto "
+      className="flex flex-col max-w-sm max-h-screen xl:my-10 xl:h-[37rem] 2xl:h-[40rem] md:mb-4 bg-white shadow-xl rounded overflow-hidden mx-auto "
       variants={slideIn}
       initial="initial"
       whileInView="animate"

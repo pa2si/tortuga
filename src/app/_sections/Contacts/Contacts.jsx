@@ -26,7 +26,12 @@ const Contacts = () => {
       >
         <div className="my-10 sm:mx-8 max-w-6xl xl:mx-auto pt-8 pb-1 lg:py-12 lg:px-16 bg-white bg-opacity-90 rounded-xl">
           <div className=" w-full flex justify-center items-center ">
-            <Title text={titleList.contact} />
+            <div className="flex flex-col items-center">
+              <h2 className="font-title text-black text-center">Contact me</h2>
+              <div className="relative w-full h-1 mt-6 md:mt-1 mb-4">
+                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-tortuga-light to-transparent"></div>
+              </div>
+            </div>
           </div>
 
           {/* Button Group */}

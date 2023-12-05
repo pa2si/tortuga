@@ -20,8 +20,14 @@ const Programs = () => {
         id="programs"
       >
         <div className=" my-10 pt-8 pb-12 sm:mx-8 max-w-6xl xl:mx-auto lg:py-12 lg:px-16 xl:px-0 bg-white bg-opacity-95 rounded-xl slider-programs">
+          {/* Title */}
           <div className=" w-full flex justify-center items-center ">
-            <Title text={titleList.programs} />
+            <div className="flex flex-col items-center">
+              <h2 className="font-title text-black text-center">Program</h2>
+              <div className="relative w-full h-1 mt-8 sm:mt-4 md:mt-1">
+                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-tortuga-light to-transparent"></div>
+              </div>
+            </div>
           </div>
           <SlickComp />
         </div>
