@@ -35,19 +35,16 @@ export const languages = [
     id: 1,
     url: '#de',
     text: 'DE',
-    icon: '/images/de.svg',
   },
   {
     id: 2,
     url: '#en',
     text: 'EN',
-    icon: '/images/es.svg',
   },
   {
     id: 3,
     url: '#es',
     text: 'ES',
-    icon: '/images/gb.svg',
   },
 ];
 

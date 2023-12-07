@@ -116,22 +116,12 @@ const Navbar = () => {
                 </li>
               );
             })}
-            <div className="flex gap-2 ml-6 ">
+            <div className="flex gap-3 ml-4 md:ml-6 2xl:ml-[20%]">
               {languages.map((language) => {
-                const { id, icon } = language;
+                const { id, text } = language;
                 return (
-                  <li
-                    key={id}
-                    className="w-5 h-5 md:w-5 md:h-5 lg:w-6 lg:h-6 md:pt-1"
-                  >
-                    <Image
-                      href={'url'}
-                      src={icon}
-                      alt="languages"
-                      priority={true}
-                      width="30"
-                      height="30"
-                    />
+                  <li key={id} className="font-kalam">
+                    <button>{text}</button>
                   </li>
                 );
               })}

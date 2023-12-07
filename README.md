@@ -1,8 +1,8 @@
-v 0.8.3
+v 0.8.4
 
 What's new:
 
-- responsive resizing for Contact image
+- language buttons for navbar now with letters instead of flags
 
 Done:
 
