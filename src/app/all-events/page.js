@@ -1,0 +1,80 @@
+import { eventList } from '../_sections/Events/data';
+import Image from 'next/image';
+import Link from 'next/link';
+
+const AllEvents = () => {
+  const buttonText = 'More Info';
+  const hoverText = 'click here for more info';
+  const sectionTitle = 'All events';
+
+  return (
+    <section
+      className="min-w-screen min-h-screen flex items-center "
+      style={{
+        backgroundImage:
+          'linear-gradient(to right, rgba(180, 180, 180, 0.37),  rgba(180, 180, 180, 0.37)), url(/images/bg-tortuga-contact.webp)',
+        /*      backgroundAttachment: 'fixed', */
+        backgroundPosition: 'center',
+        backgroundSize: 'cover',
+      }}
+    >
+      <article className=" flex flex-col max-w-6xl max-h-content m-auto mt-20 mb-2 sm:mt-22  mx-4 p-3 pb-8 sm:mx-8 xl:mx-auto md:p-8 bg-white bg-opacity-95 rounded-xl ">
+        {/* title */}
+        <div className=" flex flex-col justify-center items-center mb-8">
+          <div className="flex flex-col items-center">
+            <h2 className="font-title text-black text-center">
+              {sectionTitle}
+            </h2>
+            <div className="relative w-full h-1 mt-7 sm:mt-4 md:mt-1">
+              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-tortuga-light to-transparent"></div>
+            </div>
+          </div>
+        </div>
+        {/* events container */}
+        <ul className="flex flex-wrap gap-5 sm:gap-10 justify-center">
+          {eventList.map((event) => {
+            const { id, image, alt, title } = event;
+            return (
+              <li
+                key={id}
+                className="flex flex-col border-2 border-tortuga-light bg-opacity-80 w-[10rem] md:w-[15rem] group rounded-lg hover:scale-105 transition-all duration-400 ease-in-out"
+              >
+                <Link
+                  href={`/all-events/${id}`}
+                  className="block relative w-full h-[9rem] sm:h-[12rem] shadow-lg "
+                >
+                  <Image
+                    src={image}
+                    alt={alt}
+                    priority={true}
+                    fill={true}
+                    sizes="30vw"
+                    className="object-cover absolute rounded-md"
+                  />
+                  <div className="flex justify-center items-center opacity-0 group-hover:opacity-100 absolute inset-0 bg-gray-600 bg-opacity-60 transition-opacity duration-400 ease-in-out visibility-hidden group-hover:visibility-visible">
+                    <span className="text-white text-lg">{hoverText}</span>
+                  </div>
+                </Link>
+                <div className="px-6 py-4 flex-grow">
+                  <p className="text-xl sm:text-2xl mb-2 font-kalam">{title}</p>
+                </div>
+                <div className="text-sm px-6 ot-1 sm:pt-4 pb-2 flex justify-center lg:hidden ">
+                  <Link
+                    href={`/all-events/${id}`}
+                    className="bg-tortuga-dark hover:bg-tortuga-light text-white font-kalam py-2 px-4 rounded transition-all duration-200 ease-in-out"
+                  >
+                    {buttonText}
+                  </Link>
+                </div>
+              </li>
+            );
+          })}
+        </ul>
+        <button className=" w-fit mx-auto mt-16 text-md sm:text-xl hover:text-tortuga-light text-tortuga-dark border-2 border-tortuga-dark hover:border-tortuga-light font-kalam py-1 px-12 rounded transition-all duration-200 ease-in-out">
+          <Link href={'/'}>back to home</Link>
+        </button>
+      </article>
+    </section>
+  );
+};
+export default AllEvents;

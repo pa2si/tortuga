@@ -9,11 +9,22 @@ export const AppProvider = ({ children }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedEvent, setSelectedEvent] = useState(null);
 
+  // Event Modal
   const [event, setEvent] = useState(eventList);
 
   const openModal = (event) => {
     setIsModalOpen(true);
     setSelectedEvent(event);
+    console.log('modal has been opened');
+  };
+
+  // Single Event image Modal
+  const [modalImageUrl, setModalImageUrl] = useState('');
+
+  // Method to open the image modal
+  const openImageModal = (imageUrl) => {
+    setModalImageUrl(imageUrl);
+    setIsModalOpen(true); // Assuming this controls the visibility of the modal
   };
 
   const closeModal = () => {
@@ -42,6 +53,8 @@ export const AppProvider = ({ children }) => {
         setIsAboutInView,
         isContactInView,
         setIsContactInView,
+        modalImageUrl,
+        openImageModal,
       }}
     >
       {children}

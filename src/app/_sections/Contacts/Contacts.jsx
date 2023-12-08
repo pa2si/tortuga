@@ -19,7 +19,7 @@ const Contacts = () => {
       }}
     >
       <div
-        className="relative max-h-max text-slate-50 overflow-auto  bg-slate-200 bg-opacity-50 "
+        className="relative max-h-max mx-4 bg-opacity-0 sm:mx-0 text-slate-50 overflow-auto bg-gray-500 sm:bg-opacity-30  "
         id="contact"
       >
         <div className="my-10 sm:mx-8 max-w-6xl xl:mx-auto pt-8 pb-1 lg:py-12 lg:px-16 bg-white bg-opacity-90 rounded-xl">

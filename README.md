@@ -1,8 +1,10 @@
-v 0.8.4
+v 0.9.0
 
 What's new:
 
-- language buttons for navbar now with letters instead of flags
+- Icons view button in Events Section
+- ..> leads to all-events route.
+- nested dynamic route for single Events
 
 Done:
 

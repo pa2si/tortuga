@@ -66,7 +66,7 @@ const Navbar = () => {
               priority={true}
               width="260"
               height="260"
-              className="w-3/4 sm:w-full md:w-3/4 xl:w-full"
+              className="w-3/4  md:w-3/4 xl:w-5/6"
             />
           </Link>
           <button

@@ -7,14 +7,14 @@ const Programs = () => {
     <section
       style={{
         backgroundImage:
-          'linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url(/images/bg-tortuga-programs.webp)',
+          'linear-gradient(rgba(175, 175, 175, 0.42), rgba(186, 184, 184, 0.42)), url(/images/bg-tortuga-programs.webp)',
         backgroundAttachment: 'fixed',
         backgroundPosition: 'center',
         backgroundSize: 'cover',
       }}
     >
       <div
-        className="relative max-h-max mx-4 text-black overflow-auto bg-opacity-0 bg-slate-300 xl:mx-0 sm:bg-opacity-10 rounded-lg "
+        className="relative max-h-max mx-4 text-black overflow-auto bg-opacity-0 bg-slate-300 sm:mx-0 sm:bg-opacity-10 rounded-lg "
         id="programs"
       >
         <div className=" my-10 pt-8 pb-12 sm:mx-8 max-w-6xl xl:mx-auto lg:py-12 lg:px-16 xl:px-0 bg-white bg-opacity-95 rounded-xl slider-programs">
@@ -30,7 +30,7 @@ const Programs = () => {
           <SlickComp />
         </div>
         {/* Paragraph only on mobile view */}
-        <div className="flex mb-1 font-title text-xl absolute bottom-24 left-1/2 transform -translate-x-1/2 visible sm:hidden">
+        <div className="flex mb-1 font-title text-xl absolute bottom-24 left-1/2 transform -translate-x-1/2 visible md:hidden">
           <MdArrowBackIos />
           <p>slide for more</p>
           <MdArrowForwardIos />

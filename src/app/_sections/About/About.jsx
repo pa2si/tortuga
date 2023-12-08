@@ -15,7 +15,7 @@ const About = () => {
       }}
     >
       <div
-        className="relative max-h-max bg-gray-300 mx-4 bg-opacity-0  text-slate-50 overflow-auto sm:bg-opacity-50 xl:mx-0 rounded-lg"
+        className="relative max-h-max bg-gray-300 mx-4 bg-opacity-0  text-slate-50 overflow-auto sm:bg-opacity-40 xl:mx-0 rounded-lg"
         id="about"
       >
         <div className="my-10 sm:mx-8 max-w-6xl xl:mx-auto pt-8 pb-1 lg:py-12 lg:px-16 bg-white bg-opacity-95 rounded-xl">

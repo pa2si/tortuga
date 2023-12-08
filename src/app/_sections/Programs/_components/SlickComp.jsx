@@ -15,7 +15,7 @@ const SlickComp = () => {
     autoplay: false,
     responsive: [
       {
-        breakpoint: 640, //max width
+        breakpoint: 641, //max width
         settings: {
           arrows: false,
         },
