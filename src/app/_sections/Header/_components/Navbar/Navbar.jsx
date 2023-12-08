@@ -116,7 +116,7 @@ const Navbar = () => {
                 </li>
               );
             })}
-            <div className="flex gap-3 ml-4 md:ml-6 2xl:ml-[20%]">
+            <div className="flex gap-3 text-tortuga-dark ml-4 md:ml-6 2xl:ml-[20%]">
               {languages.map((language) => {
                 const { id, text } = language;
                 return (

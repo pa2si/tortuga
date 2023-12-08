@@ -1,10 +1,8 @@
-v 0.9.0
+v 0.9.1
 
 What's new:
 
-- Icons view button in Events Section
-- ..> leads to all-events route.
-- nested dynamic route for single Events
+language buttons now green
 
 Done:
 
@@ -19,7 +17,12 @@ Done:
   - Blur and Opacity Effect for Hero when scrolling in Desktop version
 - About Section
 - Event Carousel with modal button for more info
+
   - Motion Effect in View for Events and Programs
+  - Icons view button in Events Section
+    - --> leads to all-events route.
+    - nested dynamic route for single Events
+
 - Programs section with carousel
   - media queries for the arrows
 - contact section with buttons for privacy and imprint
