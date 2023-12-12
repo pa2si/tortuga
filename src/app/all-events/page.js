@@ -10,6 +10,10 @@ const AllEvents = async () => {
 
   const { event_cards } = storyData.events_section;
 
+  if (!event_cards) {
+    throw new Error('oops...no Events found!');
+  }
+
   return (
     <section
       className="min-w-screen min-h-screen flex items-center "
@@ -21,7 +25,7 @@ const AllEvents = async () => {
         backgroundSize: 'cover',
       }}
     >
-      <article className=" flex flex-col max-w-6xl max-h-content m-auto mt-20 mb-2 sm:mt-22  mx-4 p-3 pb-8 sm:mx-8 xl:mx-auto md:p-8 bg-white bg-opacity-95 rounded-xl">
+      <article className=" flex flex-col max-w-6xl max-h-content m-auto mt-20 mb-2 sm:mt-22  mx-4 p-3 pb-8 sm:mx-8 xl:mx-auto md:p-8 bg-white bg-opacity-95 rounded-xl ">
         {/* title */}
         <div className=" flex flex-col justify-center items-center mb-8">
           <div className="flex flex-col items-center">

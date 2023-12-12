@@ -1,11 +1,9 @@
 export const getFetchData = async () => {
-  // await new Promise((resolve) => setTimeout(resolve, 2000));
-
   const version = process.env.SB_DATA_VERSION;
   const token = process.env.SB_TOKEN;
   const url = `https://api.storyblok.com/v2/cdn/stories/landing-page?version=${version}&token=${token}`;
 
-  const response = await fetch(url, { cache: 'no-store' });
+  const response = await fetch(url, { next: { revalidate: 10 } });
   if (!response.ok) {
     throw new Error('Failed to fetch data');
   }

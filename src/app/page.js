@@ -9,6 +9,10 @@ import { getFetchData } from '@/utils/fetchingData';
 export default async function Home() {
   const storyData = await getFetchData();
 
+  if (!storyData) {
+    throw new Error('oops...there was an error!');
+  }
+
   return (
     <main className="font-abhayaLibre ">
       <Hero />

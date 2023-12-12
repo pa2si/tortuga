@@ -11,15 +11,17 @@ const SingleEvent = async ({ params }) => {
   const selectedEvent = events.find((event) => event._uid === params.id);
 
   if (!selectedEvent) {
-    // Handle the case where no event is found
-    console.error('Event not found');
-    return <div>Event not found</div>;
+    console.error('Error: Event not found for id:', params.id);
+    return (
+      <div className="w-screen h-screen flex justify-center items-center">
+        oops...No event found
+      </div>
+    );
   }
 
-  // console.log('this is the event ', selectedEvent._uid);
   return (
     <article
-      className="min-h-screen min-w-screen flex items-center "
+      className="min-h-screen min-w-screen flex items-center justify-center "
       style={{
         backgroundImage:
           'linear-gradient(to right, rgba(210, 210, 210, 0.4), rgba(170, 170, 170, 0.25), rgba(210, 210, 210, 0.45)), url(/images/bg-tortuga-events.webp)',
@@ -27,7 +29,7 @@ const SingleEvent = async ({ params }) => {
         backgroundSize: 'cover',
       }}
     >
-      <div className="max-w-6xl max-h-content m-auto mt-20 sm:my-auto mx-4 p-3 pb-8 sm:mx-8 xl:mx-auto md:p-8 bg-white bg-opacity-95 rounded-xl shadow-lg">
+      <div className="max-w-6xl max-h-content mx-4 sm:m-auto p-3 pb-8  md:p-8 bg-white bg-opacity-95 rounded-xl shadow-lg">
         <div className=" w-full flex flex-col justify-center items-center">
           {/* Title */}
           <div className="flex flex-col items-center mb-4 ">

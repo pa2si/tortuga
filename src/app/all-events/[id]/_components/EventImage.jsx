@@ -6,7 +6,7 @@ import ImageModal from '../../_components/Modal/ImageModal';
 import Image from 'next/image';
 
 const EventImage = ({ imageData }) => {
-  console.log(imageData);
+  // console.log(imageData);
 
   const { openImageModal } = useGlobalContext();
 

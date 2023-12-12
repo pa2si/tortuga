@@ -117,11 +117,16 @@ const Navbar = ({ fetchedData }) => {
                 </li>
               );
             })}
-            <div className="flex gap-3 text-tortuga-dark ml-4 md:ml-6 2xl:ml-[20%]">
+
+            {/* language buttons */}
+            <div className="flex gap-3 text-tortuga-dark  ml-4 md:ml-6 2xl:ml-[20%]">
               {languages.map((language) => {
                 const { id, text } = language;
                 return (
-                  <li key={id} className="font-kalam">
+                  <li
+                    key={id}
+                    className="font-kalam hover:scale-105 hover:text-tortuga-light transition-all duration-200 ease-in-out "
+                  >
                     <button>{text}</button>
                   </li>
                 );
@@ -138,7 +143,7 @@ const Navbar = ({ fetchedData }) => {
             return (
               <li
                 key={id}
-                className={`${styles.mailIcon} text-2xl text-tortuga-dark hover:text-tortuga-light hover:scale-105 transition-all duration-200`}
+                className={`${styles.mailIcon} text-2xl text-tortuga-dark hover:text-tortuga-light hover:scale-105 transition-all duration-200 ease-in-out`}
               >
                 <a href={`mailto:${email}`}>{icon}</a>
               </li>
@@ -154,7 +159,7 @@ const Navbar = ({ fetchedData }) => {
             return (
               <li
                 key={id}
-                className="text-xl text-tortuga-dark hover:text-tortuga-light hover:scale-105 transition-all duration-200"
+                className="text-xl text-tortuga-dark hover:text-tortuga-light hover:scale-105 transition-all duration-200 ease-in-out"
               >
                 <a
                   key={id}
