@@ -4,16 +4,19 @@ import Modal from './_sections/Events/_components/Modal/Modal';
 import Programs from './_sections/Programs/Programs';
 import About from './_sections/About/About';
 import Contacts from './_sections/Contacts/Contacts';
+import { getFetchData } from '@/utils/fetchingData';
 
-export default function Home() {
+export default async function Home() {
+  const storyData = await getFetchData();
+
   return (
     <main className="font-abhayaLibre ">
       <Hero />
-      <About />
-      <Events />
+      <About fetchedData={storyData.about_section} />
+      <Events fetchedData={storyData.events_section} />
       <Modal />
-      <Programs />
-      <Contacts />
+      <Programs fetchedData={storyData.programs_section} />
+      <Contacts fetchedData={storyData.contacts_section} />
     </main>
   );
 }

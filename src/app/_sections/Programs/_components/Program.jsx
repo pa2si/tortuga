@@ -2,7 +2,7 @@ import Image from 'next/image';
 import InView from './InView';
 import { MotionArticle } from '@/utils/MotionDiv';
 
-const Program = ({ title, image, alt, description1, description2 }) => {
+const Program = ({ title, image, description1, description2, date }) => {
   const slideIn = {
     initial: {
       opacity: 0,
@@ -38,10 +38,10 @@ const Program = ({ title, image, alt, description1, description2 }) => {
           </div>
         </div>
         {/* Program Image */}
-        <div className="relative flex justify-center items-center w-full h-[14rem] mx-auto mb-20 sm:h-[18rem] xl:w-5/6 lg:h-[26rem] xl:mb-0 xl:mt-12 xl:mx-0 xl:ml-16 order-first xl:order-last">
+        <div className="relative flex justify-center items-center w-full h-[14rem] mx-auto mb-20 lg:h-[26rem] sm:h-[18rem] xl:w-5/6  xl:mb-0 xl:place-self-center xl:mx-0 xl:ml-16 order-first xl:order-last">
           <Image
-            src={image}
-            alt={alt}
+            src={image.filename}
+            alt={image.alt}
             priority={true}
             fill
             sizes="(max-width: 768px) 80vw, 33vw"

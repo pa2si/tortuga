@@ -1,12 +1,13 @@
 'use client';
 
 import Event from './Event';
-import { eventList } from '../data';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
-const SlickComp = () => {
+const SlickComp = ({ fetchedData }) => {
+  const { event_cards } = fetchedData;
+
   const settings = {
     arrows: true,
     dots: true,
@@ -44,8 +45,8 @@ const SlickComp = () => {
 
   return (
     <Slider {...settings}>
-      {eventList.map((event) => {
-        return <Event key={event.id} {...event} />;
+      {event_cards.map((event) => {
+        return <Event key={event._uid} {...event} />;
       })}
     </Slider>
   );

@@ -3,17 +3,16 @@ import { useGlobalContext } from '@/utils/context';
 import { MotionArticle } from '@/utils/MotionDiv';
 
 const Event = ({
-  image,
-  alt,
-  copyright,
   title,
+  image,
   description,
   date,
   location,
   address,
   postal,
   city,
-  eventLink,
+  event_link,
+  btn_text,
 }) => {
   const slideIn = {
     initial: {
@@ -40,8 +39,8 @@ const Event = ({
     >
       <div className="relative w-full h-[18rem] shadow-lg">
         <Image
-          src={image}
-          alt={alt}
+          src={image.filename}
+          alt={image.alt}
           priority={true}
           fill={true}
           sizes="30vw"
@@ -49,7 +48,7 @@ const Event = ({
         />
       </div>
       <span className="inline-block rounded-full px-1 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
-        {copyright}
+        {image.copyright}
       </span>
       <div className="flex-grow px-6 py-4">
         <p className=" text-4xl  mb-2 font-kalam">{title}</p>
@@ -67,20 +66,18 @@ const Event = ({
           onClick={() =>
             openModal({
               image,
-              alt,
-              copyright,
               date,
               location,
               city,
               address,
               postal,
               description,
-              eventLink,
+              event_link,
               title,
             })
           }
         >
-          More Info
+          {btn_text}
         </button>
       </div>
     </MotionArticle>

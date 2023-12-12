@@ -1,9 +1,12 @@
 import Navbar from './_components/Navbar/Navbar';
+import { getFetchData } from '@/utils/fetchingData';
 
-const Header = () => {
+const Header = async () => {
+  const storyData = await getFetchData();
+
   return (
     <header>
-      <Navbar />
+      <Navbar fetchedData={storyData.nav_section} />
     </header>
   );
 };

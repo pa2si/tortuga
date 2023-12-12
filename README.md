@@ -1,8 +1,8 @@
-v 0.9.1
+v 0.10.0
 
 What's new:
 
-language buttons now green
+major content now served from Storyblok CMS
 
 Done:
 
@@ -22,6 +22,7 @@ Done:
   - Icons view button in Events Section
     - --> leads to all-events route.
     - nested dynamic route for single Events
+      - in Single Event modal for image on click
 
 - Programs section with carousel
   - media queries for the arrows

@@ -1,9 +1,8 @@
 import Image from 'next/image';
-import { aboutData } from './data';
 import InView from './_components/InView';
 
-const About = () => {
-  const { image, alt, copyright, description } = aboutData;
+const About = ({ fetchedData }) => {
+  const { title, description, image } = fetchedData;
 
   return (
     <section
@@ -22,7 +21,7 @@ const About = () => {
           <div className=" flex justify-center items-center gap-4">
             {/* Title */}
             <div className="flex flex-col items-center">
-              <h2 className="font-title text-black text-center">About</h2>
+              <h2 className="font-title text-black text-center">{title}</h2>
               <div className="relative w-full h-1 mt-8 sm:mt-4 md:mt-1">
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-tortuga-light to-transparent"></div>
               </div>
@@ -48,14 +47,14 @@ const About = () => {
             {/* Image  */}
             <div className="col-span-2 flex flex-col justify-center items-center lg:ml-36 order-first lg:order-last">
               <Image
-                src={image}
-                alt={alt}
+                src={image.filename}
+                alt={image.alt}
                 priority={true}
                 width={150}
                 height={250}
                 className=" mx-auto h-4/5 lg:h-full drop-shadow-lg rounded-xl "
               />
-              <p className="mt-2 mb-4  ">{copyright}</p>
+              <p className="mt-2 mb-4  ">{image.copyright}</p>
             </div>
           </div>
         </div>

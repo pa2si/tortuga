@@ -2,7 +2,9 @@ import SlickComp from './_components/SlickComp';
 import { MdArrowBackIos } from 'react-icons/md';
 import { MdArrowForwardIos } from 'react-icons/md';
 
-const Programs = () => {
+const Programs = ({ fetchedData }) => {
+  const { title, slider_text } = fetchedData;
+
   return (
     <section
       style={{
@@ -21,18 +23,18 @@ const Programs = () => {
           {/* Title */}
           <div className=" w-full flex justify-center items-center ">
             <div className="flex flex-col items-center">
-              <h2 className="font-title text-black text-center">Program</h2>
+              <h2 className="font-title text-black text-center">{title}</h2>
               <div className="relative w-full h-1 mt-8 sm:mt-4 md:mt-1">
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-tortuga-light to-transparent"></div>
               </div>
             </div>
           </div>
-          <SlickComp />
+          <SlickComp fetchedData={fetchedData} />
         </div>
         {/* Paragraph only on mobile view */}
         <div className="flex mb-1 font-title text-xl absolute bottom-24 left-1/2 transform -translate-x-1/2 visible md:hidden">
           <MdArrowBackIos />
-          <p>slide for more</p>
+          <p>{slider_text}</p>
           <MdArrowForwardIos />
         </div>
       </div>

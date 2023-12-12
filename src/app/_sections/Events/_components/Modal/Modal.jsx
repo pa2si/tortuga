@@ -27,8 +27,8 @@ const Modal = () => {
             {selectedEvent.title}
           </h5>
           <Image
-            src={selectedEvent.image}
-            alt={selectedEvent.alt}
+            src={selectedEvent.image.filename}
+            alt={selectedEvent.image.alt}
             priority={true}
             width="300"
             height="300"
@@ -47,7 +47,7 @@ const Modal = () => {
             {selectedEvent.description}
           </p>
           <a
-            href={selectedEvent.eventLink}
+            href={selectedEvent.event_link}
             target="_blank"
             rel="noopener noreferrer"
           >

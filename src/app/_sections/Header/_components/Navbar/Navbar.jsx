@@ -1,6 +1,6 @@
 'use client';
 
-import { socialLinks, email, pageLinks, languages } from './data';
+import { socialLinks, email, languages } from './data';
 import { FaBars } from 'react-icons/fa';
 import styles from './Navbar.module.css';
 import Image from 'next/image';
@@ -10,7 +10,8 @@ import { usePathname } from 'next/navigation';
 import { motion } from 'framer-motion';
 import { useGlobalContext } from '@/utils/context';
 
-const Navbar = () => {
+const Navbar = ({ fetchedData }) => {
+  const { menu_links } = fetchedData;
   const [showLinks, setShowLinks] = useState(false);
   const [hidden, setHidden] = useState(false);
   const linksContainerRef = useRef(null);
@@ -91,7 +92,7 @@ const Navbar = () => {
             className={` text-[1.2rem] md:gap-[1.1rem] mb-[-0.3rem] md:text-[1rem] md:mr-[3.1rem] lg:text-[1.2rem] lg:mr-0 lg:gap-[1.5rem] xl:gap-8 ${styles.links} ${styles.menu__links}`}
             ref={linksRef}
           >
-            {pageLinks.map((link) => {
+            {menu_links.map((link) => {
               let className = '';
               if (link.url === '#events' && isEventsInView) {
                 className = '!text-tortuga-dark';
@@ -103,7 +104,7 @@ const Navbar = () => {
                 className = '!text-tortuga-dark';
               }
 
-              const { id, url, text } = link;
+              const { id, url, menu_name } = link;
               return (
                 <li key={id} className="hover:text-tortuga-light">
                   <Link
@@ -111,7 +112,7 @@ const Navbar = () => {
                     href={`/${url}`}
                     onClick={toggleLinks}
                   >
-                    {text}
+                    {menu_name}
                   </Link>
                 </li>
               );

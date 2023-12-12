@@ -3,7 +3,7 @@ export const eventList = [
     id: 1,
     sectionTitle: 'Events',
     title: 'Geschichten für eine (R)Evolution',
-    image: '/images/program1.jpeg',
+    image: '/images/geschichten-fuer-eine-revolution.jpeg',
     alt: 'program1',
     copyright: '© Andres Beltran',
     date: '12.12.12',
