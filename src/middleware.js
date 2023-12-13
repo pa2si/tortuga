@@ -1,4 +1,4 @@
-let locales = ['en', 'es'];
+let locales = ['en', 'es', 'de'];
 
 // Get the preferred locale, similar to the above or using a library
 function getLocale(request) {
