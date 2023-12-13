@@ -6,8 +6,9 @@ import About from './_sections/About/About';
 import Contacts from './_sections/Contacts/Contacts';
 import { getFetchData } from '@/utils/fetchingData';
 
-export default async function Home() {
-  const storyData = await getFetchData();
+export default async function Home({ params: { lang } }) {
+  const storyData = await getFetchData(lang);
+  // console.log('this is lang', lang);
 
   if (!storyData) {
     throw new Error('oops...there was an error!');
@@ -15,12 +16,15 @@ export default async function Home() {
 
   return (
     <main className="font-abhayaLibre ">
-      <Hero />
+      <Hero fetchedData={storyData.hero_section} />
       <About fetchedData={storyData.about_section} />
       <Events fetchedData={storyData.events_section} />
       <Modal />
       <Programs fetchedData={storyData.programs_section} />
-      <Contacts fetchedData={storyData.contacts_section} />
+      <Contacts
+        fetchedData={storyData.contacts_section}
+        fetchedData2={storyData.contact_component}
+      />
     </main>
   );
 }

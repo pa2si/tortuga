@@ -3,13 +3,12 @@ import { MdArrowBackIos } from 'react-icons/md';
 import { MdArrowForwardIos } from 'react-icons/md';
 
 const Programs = ({ fetchedData }) => {
-  const { title, slider_text } = fetchedData;
+  const { title, slider_text, bg } = fetchedData;
 
   return (
     <section
       style={{
-        backgroundImage:
-          'linear-gradient(rgba(175, 175, 175, 0.42), rgba(186, 184, 184, 0.42)), url(/images/bg-tortuga-programs.webp)',
+        backgroundImage: `linear-gradient(rgba(175, 175, 175, 0.42), rgba(186, 184, 184, 0.42)), url(${bg.filename})`,
         backgroundAttachment: 'fixed',
         backgroundPosition: 'center',
         backgroundSize: 'cover',

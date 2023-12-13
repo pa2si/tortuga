@@ -2,10 +2,11 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { getFetchData } from '@/utils/fetchingData';
 
-const AllEvents = async () => {
-  const storyData = await getFetchData();
+const AllEvents = async ({ params }) => {
+  const lang = params;
+  const storyData = await getFetchData(lang);
 
-  const { title, btn_text, moreInfo_btn_text, hover_text } =
+  const { title, btn_text, moreInfo_btn_text, hover_text, bg } =
     storyData.all_events_section;
 
   const { event_cards } = storyData.events_section;
@@ -18,8 +19,7 @@ const AllEvents = async () => {
     <section
       className="min-w-screen min-h-screen flex items-center "
       style={{
-        backgroundImage:
-          'linear-gradient(to right, rgba(180, 180, 180, 0.37),  rgba(180, 180, 180, 0.37)), url(/images/bg-tortuga-contact.webp)',
+        backgroundImage: `linear-gradient(to right, rgba(180, 180, 180, 0.37),  rgba(180, 180, 180, 0.37)), url(${bg.filename})`,
         /*      backgroundAttachment: 'fixed', */
         backgroundPosition: 'center',
         backgroundSize: 'cover',

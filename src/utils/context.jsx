@@ -1,6 +1,6 @@
 'use client';
 
-import { eventList } from '@/app/_sections/Events/data';
+import { eventList } from '@/app/[lang]/_sections/Events/data';
 import { createContext, useState, useContext } from 'react';
 
 const AppContext = createContext();

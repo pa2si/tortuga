@@ -11,15 +11,13 @@ import { motion } from 'framer-motion';
 import { useGlobalContext } from '@/utils/context';
 
 const Navbar = ({ fetchedData }) => {
-  const { menu_links } = fetchedData;
+  const { menu_links, logo } = fetchedData;
   const [showLinks, setShowLinks] = useState(false);
   const [hidden, setHidden] = useState(false);
   const linksContainerRef = useRef(null);
   const linksRef = useRef(null);
   const { useScroll, useMotionValueEvent } = require('framer-motion');
   const { scrollY } = useScroll();
-
-  const pathname = usePathname();
 
   const toggleLinks = () => {
     setShowLinks(!showLinks);
@@ -62,8 +60,8 @@ const Navbar = ({ fetchedData }) => {
           <Link href="/">
             <Image
               href={'/'}
-              src="/logos/tortuga-logo-w-text.webp"
-              alt="tortuga logo"
+              src={logo.filename}
+              alt={logo.alt}
               priority={true}
               width="260"
               height="260"
@@ -121,13 +119,13 @@ const Navbar = ({ fetchedData }) => {
             {/* language buttons */}
             <div className="flex gap-3 text-tortuga-dark  ml-4 md:ml-6 2xl:ml-[20%]">
               {languages.map((language) => {
-                const { id, text } = language;
+                const { id, url, text } = language;
                 return (
                   <li
                     key={id}
                     className="font-kalam hover:scale-105 hover:text-tortuga-light transition-all duration-200 ease-in-out "
                   >
-                    <button>{text}</button>
+                    <Link href={url}>{text}</Link>
                   </li>
                 );
               })}

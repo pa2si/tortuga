@@ -1,11 +1,13 @@
-v 0.10.1
+v 0.11.0
 
 What's new:
 
-major content now served from Storyblok CMS
+- internationalization implementent and working teswise with the "about" menu button
+- all images are now served from cms. no files are served anymore from public folder.
 
 Done:
 
+- major content now served from Storyblok CMS
 - Custom Google Fonts
 - margin for section container in mobile version
 - Header with Navbar

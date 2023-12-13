@@ -5,13 +5,12 @@ import InView from './_components/InView';
 import Link from 'next/link';
 
 const Events = ({ fetchedData }) => {
-  const { title, gallery_view_btn, slider_text } = fetchedData;
+  const { title, gallery_view_btn, slider_text, bg } = fetchedData;
 
   return (
     <section
       style={{
-        backgroundImage:
-          'linear-gradient(to right, rgba(210, 210, 210, 0.45), rgba(0, 0, 0, 0.4), rgba(210, 210, 210, 0.45)), url(/images/bg-tortuga-events.webp)',
+        backgroundImage: `linear-gradient(to right, rgba(210, 210, 210, 0.45), rgba(0, 0, 0, 0.4), rgba(210, 210, 210, 0.45)), url(${bg.filename})`,
         backgroundPosition: 'center',
         backgroundSize: 'cover',
       }}

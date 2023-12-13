@@ -33,17 +33,17 @@ import { FaFacebook } from 'react-icons/fa';
 export const languages = [
   {
     id: 1,
-    url: '#de',
+    url: '/de',
     text: 'DE',
   },
   {
     id: 2,
-    url: '#en',
+    url: '/en',
     text: 'EN',
   },
   {
     id: 3,
-    url: '#es',
+    url: '/es',
     text: 'ES',
   },
 ];

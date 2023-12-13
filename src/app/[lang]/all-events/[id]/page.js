@@ -3,9 +3,12 @@ import EventImage from './_components/EventImage';
 import { getFetchData } from '@/utils/fetchingData';
 
 const SingleEvent = async ({ params }) => {
-  const storyData = await getFetchData();
+  const lang = params.lang;
+  const storyData = await getFetchData(lang);
+
   const events = storyData.events_section.event_cards;
   const backButton = storyData.single_event_section.single_event_back_btn;
+  const bg = storyData.single_event_section.bg;
 
   // Find the specific event by matching the UID from params.id
   const selectedEvent = events.find((event) => event._uid === params.id);
@@ -23,8 +26,7 @@ const SingleEvent = async ({ params }) => {
     <article
       className="min-h-screen min-w-screen flex items-center justify-center "
       style={{
-        backgroundImage:
-          'linear-gradient(to right, rgba(210, 210, 210, 0.4), rgba(170, 170, 170, 0.25), rgba(210, 210, 210, 0.45)), url(/images/bg-tortuga-events.webp)',
+        backgroundImage: `linear-gradient(to right, rgba(210, 210, 210, 0.4), rgba(170, 170, 170, 0.25), rgba(210, 210, 210, 0.45)), url(${bg.filename})`,
         backgroundPosition: 'center',
         backgroundSize: 'cover',
       }}

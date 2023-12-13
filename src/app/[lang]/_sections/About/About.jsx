@@ -2,12 +2,12 @@ import Image from 'next/image';
 import InView from './_components/InView';
 
 const About = ({ fetchedData }) => {
-  const { title, description, image } = fetchedData;
+  const { title, description, image, title_logo, bg } = fetchedData;
 
   return (
     <section
       style={{
-        backgroundImage: 'url(/images/bg-tortuga-about.webp)',
+        backgroundImage: `url(${bg.filename})`,
         backgroundAttachment: 'fixed',
         backgroundPosition: 'center',
         backgroundSize: 'cover',
@@ -27,8 +27,8 @@ const About = ({ fetchedData }) => {
               </div>
             </div>
             <Image
-              src="/logos/tortuga-logo.webp"
-              alt="tortuga logo"
+              src={title_logo.filename}
+              alt={title_logo.alt}
               priority={true}
               width={100}
               height={80}

@@ -6,15 +6,15 @@ import Imprint from './_components/Imprint';
 import { AnimatePresence } from 'framer-motion';
 import { useState } from 'react';
 
-const Contacts = ({ fetchedData }) => {
-  const { title, contact_btns } = fetchedData;
-  const {} = fetchedData;
+const Contacts = ({ fetchedData, fetchedData2 }) => {
+  const { title, contact_btns, bg } = fetchedData;
+
   const [activeComponent, setActiveComponent] = useState('contact');
 
   return (
     <section
       style={{
-        backgroundImage: 'url(/images/bg-tortuga-contact.webp)',
+        backgroundImage: `url(${bg.filename})`,
         /*         backgroundAttachment: 'fixed', */
         backgroundPosition: 'center',
         backgroundSize: 'cover',
@@ -57,7 +57,9 @@ const Contacts = ({ fetchedData }) => {
 
           {/* Conditional Component Rendering */}
           <AnimatePresence mode="wait">
-            {activeComponent === 'contact' && <Contact key="contact" />}
+            {activeComponent === 'contact' && (
+              <Contact key="contact" fetchedData2={fetchedData2} />
+            )}
             {activeComponent === 'imprint' && <Imprint key="imprint" />}
             {activeComponent === 'privacy' && <Privacy key="privacy" />}
           </AnimatePresence>

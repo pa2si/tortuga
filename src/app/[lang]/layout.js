@@ -24,14 +24,18 @@ export const metadata = {
   },
 };
 
-export default function RootLayout({ children }) {
+/* export async function generateStaticParams() {
+  return [{ lang: 'en' }, { lang: 'es' }];
+} */
+
+export default function RootLayout({ children, params }) {
   return (
-    <html className="scroll-smooth" lang="en">
+    <html className="scroll-smooth" /* lang="en" */>
       <body
         className={`${poorStory.variable} ${indieFlower.variable} ${kalam.variable} ${abhayaLibre.variable}`}
       >
         <AppProvider>
-          <Header />
+          <Header params={params} />
           {children}
         </AppProvider>
       </body>

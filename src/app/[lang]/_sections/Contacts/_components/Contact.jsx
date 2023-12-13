@@ -1,12 +1,11 @@
-import { contactData } from '../data';
 import Image from 'next/image';
-import { email as contactEmail } from '@/app/_sections/Header/_components/Navbar/data';
-import { socialLinks } from '@/app/_sections/Header/_components/Navbar/data';
+import { email as contactEmail } from '@/app/[lang]/_sections/Header/_components/Navbar/data';
+import { socialLinks } from '@/app/[lang]/_sections/Header/_components/Navbar/data';
 import { motion } from 'framer-motion';
 import InView from './InView';
 
-const Contact = () => {
-  const { image, alt, description } = contactData;
+const Contact = ({ fetchedData2 }) => {
+  const { image, logo, text } = fetchedData2;
   const { email } = contactEmail;
 
   const variants = {
@@ -25,7 +24,7 @@ const Contact = () => {
     >
       <div className="flex flex-col col-span-3 px-4 text-xl text-justify sm:text-2xl sm:px-8 lg:px-0 lg:mb-8 lg:text-left order-last lg:order-first ">
         <p className="text-gray-700 font-poorStory leading-8 sm:leading-9 tracking-wide text-center lg:text-left">
-          {description}
+          {text}
         </p>
         <div className=" h-full flex flex-col items-center justify-center gap-4">
           <a
@@ -57,8 +56,8 @@ const Contact = () => {
           </ul>
           {/* Tortuga Logo */}
           <Image
-            src="/logos/tortuga-logo-w-text.webp"
-            alt="tortuga logo"
+            src={logo.filename}
+            alt={logo.alt}
             priority={true}
             width={500}
             height={70}
@@ -69,8 +68,8 @@ const Contact = () => {
       {/* Contact Image */}
       <div className="col-span-2 flex flex-col justify-center items-center md:my-4 lg:my-0 lg:ml-36 order-first lg:order-last">
         <Image
-          src={image}
-          alt={alt}
+          src={image.filename}
+          alt={image.alt}
           priority={true}
           width={130}
           height={400}

@@ -5,7 +5,9 @@ import styles from './Hero.module.css';
 import { useEffect, useState } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 
-const Hero = () => {
+const Hero = ({ fetchedData }) => {
+  const { image, bg } = fetchedData;
+
   const { scrollYProgress } = useScroll();
   const [windowWidth, setWindowWidth] = useState(0);
 
@@ -27,7 +29,7 @@ const Hero = () => {
   return (
     <section
       style={{
-        backgroundImage: 'url(/images/bg-tortuga-about.webp)',
+        backgroundImage: `url(${bg.filename})`,
         backgroundAttachment: 'fixed',
         backgroundPosition: 'center',
         backgroundSize: 'cover',
@@ -41,9 +43,9 @@ const Hero = () => {
         }}
       >
         <Image
-          src="/images/tortuga-hero.jpg"
+          src={image.filename}
           fill={true}
-          alt="Johanna Wollin Tortuga Storytelling performing on stage"
+          alt={image.alt}
           sizes="100vw"
           className="object-cover overflow-hidden absolute w-auto"
           priority={true}
