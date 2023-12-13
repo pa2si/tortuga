@@ -52,8 +52,8 @@ const Modal = () => {
             rel="noopener noreferrer"
           >
             <Image
-              src="/logos/fb.png"
-              alt="facebook logo"
+              src={selectedEvent.fb_logo.filename}
+              alt={selectedEvent.fb_logo.alt}
               width={80}
               height={80}
             />

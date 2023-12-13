@@ -13,6 +13,7 @@ const Event = ({
   city,
   event_link,
   btn_text,
+  fb_logo,
 }) => {
   const slideIn = {
     initial: {
@@ -74,6 +75,7 @@ const Event = ({
               description,
               event_link,
               title,
+              fb_logo,
             })
           }
         >

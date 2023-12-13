@@ -5,10 +5,12 @@ import { indieFlower } from './fonts';
 import { kalam } from './fonts';
 import { abhayaLibre } from './fonts';
 import { AppProvider } from '@/utils/context';
+import { getFetchData } from '@/utils/fetchingData';
 
 export const metadata = {
   title: 'Tortuga Storytelling',
   description: 'Tortuga Storytolling',
+
   robots: {
     index: false,
     follow: false,
@@ -28,7 +30,7 @@ export const metadata = {
   return [{ lang: 'en' }, { lang: 'es' }];
 } */
 
-export default function RootLayout({ children, params }) {
+export default async function RootLayout({ children, params }) {
   return (
     <html className="scroll-smooth" lang={params.lang}>
       <body

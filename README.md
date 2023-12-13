@@ -1,8 +1,9 @@
-v 0.11.1
+v 0.11.2
 
 What's new:
 
-html lang is now dynamic
+- favicon now excluded in middleware and displayed correctly
+- fb logo now in event Modal
 
 Done:
 
