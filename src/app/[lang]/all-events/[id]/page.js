@@ -24,14 +24,14 @@ const SingleEvent = async ({ params }) => {
 
   return (
     <article
-      className="min-h-screen min-w-screen flex items-center justify-center "
+      className="min-h-screen min-w-screen flex items-center justify-center pt-20 pb-8 md:pt-0 md:pb-8"
       style={{
         backgroundImage: `linear-gradient(to right, rgba(210, 210, 210, 0.4), rgba(170, 170, 170, 0.25), rgba(210, 210, 210, 0.45)), url(${bg.filename})`,
         backgroundPosition: 'center',
         backgroundSize: 'cover',
       }}
     >
-      <div className="max-w-6xl max-h-content mx-4 sm:m-auto p-3 pb-8  md:p-8 bg-white bg-opacity-95 rounded-xl shadow-lg">
+      <div className="max-w-6xl max-h-content my-auto  mx-4 sm:m-auto p-3 pb-8 md:p-8 bg-white bg-opacity-95 rounded-xl shadow-lg">
         <div className=" w-full flex flex-col justify-center items-center">
           {/* Title */}
           <div className="flex flex-col items-center mb-4 ">
@@ -42,16 +42,16 @@ const SingleEvent = async ({ params }) => {
               <div className="absolute inset-0 bg-gradient-to-r from-transparent via-tortuga-light to-transparent"></div>
             </div>
           </div>
-          <div className="grid grid-cols-1 lg:grid-cols-2 lg:mt-8 lg:ml-20  ">
-            <div className="mb-8 lg:mb-0 order-2 lg:order-1 ">
+          <div className="grid grid-cols-1 lg:grid-cols-2 lg:mt-8 lg:ml-20 ">
+            <div className="mb-8 lg:mb-0 order-2 lg:order-1 mt-8 lg:mt-0">
               <p className="font-poorStory text-gray-700 text-[1.4rem] leading-7 md:text-2xl ">
                 {selectedEvent.description}
               </p>
             </div>
             <div className="mx-auto mb-2 order-1 lg:order-2 ">
               <EventImage imageData={selectedEvent.image} />
-              <div className="grid grid-cols-2 text-gray-600  text-abhayaLibre ">
-                <div className="text-gray-800">
+              <div className="grid grid-cols-2 text-gray-800  text-abhayaLibre ">
+                <div className="">
                   <p>Date: {selectedEvent.date}</p>
                   <p>Location: {selectedEvent.location}</p>
                 </div>

@@ -1,15 +1,15 @@
-v 0.11.3
+v 0.11.4
 
 What's new:
-
-- generate Static Params is active
+-some styling for single Event
 
 Done:
 
 - Major content coming from Storyblok CMS including all images
 - internationalization implementent and working testwise with the "about" menu button
 - Custom Google Fonts
-- margin for section container in mobile version
+- generate Static Params is active
+
 - Header with Navbar
   - Language Buttons in Menu (wo function so far)
   - InView for Sections: Colored Menubuttons regarding the section that is in View
