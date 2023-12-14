@@ -5,7 +5,6 @@ import { indieFlower } from './fonts';
 import { kalam } from './fonts';
 import { abhayaLibre } from './fonts';
 import { AppProvider } from '@/utils/context';
-import { getFetchData } from '@/utils/fetchingData';
 
 export const metadata = {
   title: 'Tortuga Storytelling',
@@ -26,9 +25,9 @@ export const metadata = {
   },
 };
 
-/* export async function generateStaticParams() {
-  return [{ lang: 'en' }, { lang: 'es' }];
-} */
+export async function generateStaticParams() {
+  return [{ lang: 'en' }, { lang: 'es' }, { lang: 'de' }];
+}
 
 export default async function RootLayout({ children, params }) {
   return (

@@ -1,9 +1,8 @@
-v 0.11.2
+v 0.11.3
 
 What's new:
 
-- favicon now excluded in middleware and displayed correctly
-- fb logo now in event Modal
+- generate Static Params is active
 
 Done:
 
