@@ -2,6 +2,14 @@ import Link from 'next/link';
 import EventImage from './_components/EventImage';
 import { getFetchData } from '@/utils/fetchingData';
 
+export async function generateMetadata({ params: { lang } }) {
+  const storyData = await getFetchData(lang);
+
+  return {
+    description: storyData.single_event_section.meta_data_description,
+  };
+}
+
 const SingleEvent = async ({ params }) => {
   const lang = params.lang;
   const storyData = await getFetchData(lang);

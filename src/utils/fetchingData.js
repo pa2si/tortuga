@@ -10,6 +10,7 @@ export const getFetchData = async (lang) => {
 
   const storyData = await response.json();
 
+  const { landing_page_meta_data } = storyData.story.content;
   const { nav_section } = storyData.story.content;
   const { hero_section } = storyData.story.content;
   const { about_section } = storyData.story.content;
@@ -21,6 +22,7 @@ export const getFetchData = async (lang) => {
   const { single_event_section } = storyData.story.content;
 
   return {
+    landing_page_meta_data: landing_page_meta_data[0],
     nav_section: nav_section[0],
     hero_section: hero_section[0],
     about_section: about_section[0],

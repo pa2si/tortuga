@@ -6,7 +6,7 @@ const Header = async ({ params: { lang } }) => {
 
   return (
     <header>
-      <Navbar fetchedData={storyData.nav_section} />
+      <Navbar fetchedData={storyData.nav_section} lang={lang} />
     </header>
   );
 };

@@ -10,7 +10,7 @@ import { usePathname } from 'next/navigation';
 import { motion } from 'framer-motion';
 import { useGlobalContext } from '@/utils/context';
 
-const Navbar = ({ fetchedData }) => {
+const Navbar = ({ fetchedData, lang }) => {
   const { menu_links, logo } = fetchedData;
   const [showLinks, setShowLinks] = useState(false);
   const [hidden, setHidden] = useState(false);
@@ -18,6 +18,8 @@ const Navbar = ({ fetchedData }) => {
   const linksRef = useRef(null);
   const { useScroll, useMotionValueEvent } = require('framer-motion');
   const { scrollY } = useScroll();
+
+  const homeUrl = `/${lang}/`;
 
   const toggleLinks = () => {
     setShowLinks(!showLinks);
@@ -57,7 +59,7 @@ const Navbar = ({ fetchedData }) => {
         {/* header */}
 
         <section className={styles.nav__header}>
-          <Link href="/">
+          <Link href={homeUrl}>
             <Image
               href={'/'}
               src={logo.filename}
@@ -107,7 +109,7 @@ const Navbar = ({ fetchedData }) => {
                 <li key={id} className="hover:text-tortuga-light">
                   <Link
                     className={className}
-                    href={`/${url}`}
+                    href={`/${lang}${url}`}
                     onClick={toggleLinks}
                   >
                     {menu_name}

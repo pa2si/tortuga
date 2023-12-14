@@ -1,7 +1,9 @@
-v 0.11.4
+v 0.11.5
 
 What's new:
--some styling for single Event
+
+- dynamic links with lang passed
+- dynamic meta data with lang passed
 
 Done:
 

@@ -4,8 +4,10 @@ import { MdArrowForwardIos } from 'react-icons/md';
 import InView from './_components/InView';
 import Link from 'next/link';
 
-const Events = ({ fetchedData }) => {
+const Events = ({ fetchedData, lang }) => {
   const { title, gallery_view_btn, slider_text, bg } = fetchedData;
+
+  const allEventsUrl = `/${lang}/all-events`;
 
   return (
     <section
@@ -37,7 +39,7 @@ const Events = ({ fetchedData }) => {
             <MdArrowForwardIos />
           </div>
           <button className=" flex mb-1 text-xl absolute bottom-20 left-1/2 transform -translate-x-1/2 hover:text-tortuga-light text-tortuga-dark border-2 border-tortuga-dark hover:border-tortuga-light font-kalam py-1 px-8 sm:px-12 rounded transition-all duration-200 ease-in-out">
-            <Link href={'/all-events'}>{gallery_view_btn}</Link>
+            <Link href={allEventsUrl}>{gallery_view_btn}</Link>
           </button>
         </div>
       </div>

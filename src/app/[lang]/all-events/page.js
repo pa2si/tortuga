@@ -2,8 +2,15 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { getFetchData } from '@/utils/fetchingData';
 
-const AllEvents = async ({ params }) => {
-  const lang = params;
+export async function generateMetadata({ params: { lang } }) {
+  const storyData = await getFetchData(lang);
+
+  return {
+    description: storyData.all_events_section.meta_data_description,
+  };
+}
+
+const AllEvents = async ({ params: { lang } }) => {
   const storyData = await getFetchData(lang);
 
   const { title, btn_text, moreInfo_btn_text, hover_text, bg } =
@@ -38,7 +45,8 @@ const AllEvents = async ({ params }) => {
         {/* events container */}
         <ul className="flex flex-wrap gap-5 sm:gap-10 justify-center">
           {event_cards.map((event) => {
-            // console.log('this is event', event);
+            // console.log('lang is', lang);
+            const singleEventUrl = `/${lang}/all-events/${event._uid}`;
 
             return (
               <li
@@ -46,7 +54,7 @@ const AllEvents = async ({ params }) => {
                 className="flex flex-col border-2 border-tortuga-light bg-opacity-80 w-[10rem] md:w-[15rem] group rounded-lg hover:scale-105 transition-all duration-400 ease-in-out"
               >
                 <Link
-                  href={`/all-events/${event._uid}`}
+                  href={singleEventUrl}
                   className="block relative w-full h-[9rem] sm:h-[12rem] shadow-lg "
                 >
                   <Image
@@ -68,7 +76,7 @@ const AllEvents = async ({ params }) => {
                 </div>
                 <div className="text-sm px-6 ot-1 sm:pt-4 pb-2 flex justify-center lg:hidden ">
                   <Link
-                    href={`/all-events/${event._uid}`}
+                    href={singleEventUrl}
                     className="bg-tortuga-dark hover:bg-tortuga-light text-white font-kalam py-2 px-4 rounded transition-all duration-200 ease-in-out"
                   >
                     {moreInfo_btn_text}
