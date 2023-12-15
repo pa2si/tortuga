@@ -1,10 +1,9 @@
-v 0.11.6
+v 0.11.7
 
 What's new:
 
-- robots js
-- dynamic sitemap
-- dynamic title
+- opengraph and twitter image in root and all events route.
+  single Event route is still missing and needs to be dynamic.
 
 Done:
 
@@ -32,3 +31,10 @@ Done:
 - Programs section with carousel
   - media queries for the arrows
 - contact section with buttons for privacy and imprint
+
+- SEO
+  - robots js
+  - static and dynamic sitemap
+  - static and dynamic title
+  - static and dynamic opengraph
+  -

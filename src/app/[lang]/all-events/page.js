@@ -6,6 +6,12 @@ export async function generateMetadata({ params: { lang } }) {
   const storyData = await getFetchData(lang);
 
   return {
+    openGraph: {
+      images: storyData.landing_page_meta_data.open_graph_image.filename,
+    },
+    twitter: {
+      images: storyData.landing_page_meta_data.twitter_image.filename,
+    },
     title: storyData.all_events_section.title,
     description: storyData.all_events_section.meta_data_description,
   };

@@ -11,6 +11,14 @@ export async function generateMetadata({ params: { lang, id } }) {
   return {
     title: selectedEvent.title,
     description: storyData.single_event_section.meta_data_description,
+    alternates: {
+      canonical: `/all-avents${id}`,
+      languages: {
+        'en-US': `/en/all-events/${id}`,
+        'de-DE': `/de/all-events/${id}`,
+        'es-ES': `/es/all-events/${id}`,
+      },
+    },
   };
 }
 

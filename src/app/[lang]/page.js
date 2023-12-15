@@ -10,10 +10,20 @@ export async function generateMetadata({ params: { lang } }) {
   const storyData = await getFetchData(lang);
 
   return {
+    openGraph: {
+      images: storyData.landing_page_meta_data.open_graph_image.filename,
+    },
+    twitter: {
+      images: storyData.landing_page_meta_data.twitter_image.filename,
+    },
     title: 'Tortuga Storytelling',
-    keywords: storyData.landing_page_meta_data.keywords,
+    keywords: [storyData.landing_page_meta_data.keywords],
     description: storyData.landing_page_meta_data.description,
     category: storyData.landing_page_meta_data.category,
+    icons: {
+      icon: '/favicon.ico',
+      apple: storyData.landing_page_meta_data.apple_touch_icon.filename,
+    },
     robots: {
       index: false,
       follow: false,

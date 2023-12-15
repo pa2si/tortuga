@@ -1,7 +1,7 @@
-/* import { getFetchData } from '@/utils/fetchingData';
+import { getFetchData } from '@/utils/fetchingData';
 
 export default async function sitemap() {
-  const baseUrl = 'https://tortuga-cms.vercel.app/';
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000';
 
   const storyData = await getFetchData();
 
@@ -29,4 +29,3 @@ export default async function sitemap() {
 
   return sitemapUrls;
 }
- */

@@ -7,9 +7,13 @@ import { abhayaLibre } from './fonts';
 import { AppProvider } from '@/utils/context';
 
 export const metadata = {
+  metadataBase: new URL(
+    process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000'
+  ),
   title: {
     default: 'Tortuga Storytelling',
     template: '%s | Tortuga Storytelling',
+    siteName: 'Tortuga Storytelling',
   },
 };
 
