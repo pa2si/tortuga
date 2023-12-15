@@ -21,14 +21,14 @@ const ImageModal = () => {
       }`}
       onClick={handleOverlayClick}
     >
-      <div className={`rounded-lg ${styles.modal__container}`}>
+      <div className="mt-20 m-2 lg:m-0">
         <Image
           src={modalImageUrl}
           alt="Modal Content"
           width={700}
           height={500}
           priority
-          className=" w-full h-full p-8 sm:p-10 md:p-16 rounded-lg xl:w-3/4"
+          className=" w-full h-full rounded-lg "
         />
 
         <button

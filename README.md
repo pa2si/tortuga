@@ -1,9 +1,10 @@
-v 0.11.7
+v 0.11.8
 
 What's new:
 
 - opengraph and twitter image in root and all events route.
   single Event route is still missing and needs to be dynamic.
+- Modal for slug image adapted (no background anymore when displaying modal)
 
 Done:
 
@@ -37,4 +38,5 @@ Done:
   - static and dynamic sitemap
   - static and dynamic title
   - static and dynamic opengraph
-  -
+  - static OpenGraph and twitter image in root and all events route.
+  - dynamic OpenGraph for event slug
