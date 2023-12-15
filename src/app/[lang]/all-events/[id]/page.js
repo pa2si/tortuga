@@ -2,10 +2,14 @@ import Link from 'next/link';
 import EventImage from './_components/EventImage';
 import { getFetchData } from '@/utils/fetchingData';
 
-export async function generateMetadata({ params: { lang } }) {
+export async function generateMetadata({ params: { lang, id } }) {
   const storyData = await getFetchData(lang);
 
+  const events = storyData.events_section.event_cards;
+  const selectedEvent = events.find((event) => event._uid === id);
+
   return {
+    title: selectedEvent.title,
     description: storyData.single_event_section.meta_data_description,
   };
 }
@@ -39,7 +43,7 @@ const SingleEvent = async ({ params }) => {
         backgroundSize: 'cover',
       }}
     >
-      <div className="max-w-6xl max-h-content my-auto  mx-4 sm:m-auto p-3 pb-8 md:p-8 bg-white bg-opacity-95 rounded-xl shadow-lg">
+      <div className="max-w-6xl max-h-content my-auto mx-4  p-3 pb-8 md:p-8 lg:mx-8 xl:mt-24 bg-white bg-opacity-95 rounded-xl shadow-lg">
         <div className=" w-full flex flex-col justify-center items-center">
           {/* Title */}
           <div className="flex flex-col items-center mb-4 ">
@@ -50,7 +54,7 @@ const SingleEvent = async ({ params }) => {
               <div className="absolute inset-0 bg-gradient-to-r from-transparent via-tortuga-light to-transparent"></div>
             </div>
           </div>
-          <div className="grid grid-cols-1 lg:grid-cols-2 lg:mt-8 lg:ml-20 ">
+          <div className="grid grid-cols-1 lg:grid-cols-2 lg:mt-8 lg:ml-8 xl:ml-20 ">
             <div className="mb-8 lg:mb-0 order-2 lg:order-1 mt-8 lg:mt-0">
               <p className="font-poorStory text-gray-700 text-[1.4rem] leading-7 md:text-2xl ">
                 {selectedEvent.description}

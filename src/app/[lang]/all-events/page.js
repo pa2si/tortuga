@@ -6,6 +6,7 @@ export async function generateMetadata({ params: { lang } }) {
   const storyData = await getFetchData(lang);
 
   return {
+    title: storyData.all_events_section.title,
     description: storyData.all_events_section.meta_data_description,
   };
 }

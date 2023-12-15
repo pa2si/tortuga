@@ -5,50 +5,13 @@ import { indieFlower } from './fonts';
 import { kalam } from './fonts';
 import { abhayaLibre } from './fonts';
 import { AppProvider } from '@/utils/context';
-import { getFetchData } from '@/utils/fetchingData';
 
-/* export const metadata = {
-  title: 'Tortuga Storytelling',
-  description: 'Tortuga Storytolling',
-
-  robots: {
-    index: false,
-    follow: false,
-    nocache: true,
-    googleBot: {
-      index: false,
-      follow: false,
-      noimageindex: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
+export const metadata = {
+  title: {
+    default: 'Tortuga Storytelling',
+    template: '%s | Tortuga Storytelling',
   },
-}; */
-
-export async function generateMetadata({ params }) {
-  const lang = params.lang;
-  const storyData = await getFetchData(lang);
-
-  console.log('this is storyData', storyData);
-  return {
-    title: 'Tortuga Storytelling',
-    description: 'test',
-    robots: {
-      index: false,
-      follow: false,
-      nocache: true,
-      googleBot: {
-        index: false,
-        follow: false,
-        noimageindex: true,
-        'max-video-preview': -1,
-        'max-image-preview': 'large',
-        'max-snippet': -1,
-      },
-    },
-  };
-}
+};
 
 export async function generateStaticParams() {
   return [{ lang: 'en' }, { lang: 'es' }, { lang: 'de' }];

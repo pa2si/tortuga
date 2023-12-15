@@ -1,9 +1,10 @@
-v 0.11.5
+v 0.11.6
 
 What's new:
 
-- dynamic links with lang passed
-- dynamic meta data with lang passed
+- robots js
+- dynamic sitemap
+- dynamic title
 
 Done:
 
