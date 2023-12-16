@@ -1,10 +1,9 @@
-v 0.11.8
+v 0.11.9
 
 What's new:
 
-- opengraph and twitter image in root and all events route.
-  single Event route is still missing and needs to be dynamic.
-- Modal for slug image adapted (no background anymore when displaying modal)
+- middleware now set to get automatically the locale of the browsersetting
+- single event slugs are now served as static pages
 
 Done:
 

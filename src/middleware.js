@@ -1,33 +1,32 @@
 let locales = ['en', 'es', 'de'];
 
-// Get the preferred locale, similar to the above or using a library
+// Get the preferred locale from the 'Accept-Language' header
 function getLocale(request) {
-  return 'en';
+  const acceptLanguage = request.headers.get('accept-language');
+  const preferredLocale = acceptLanguage
+    ? acceptLanguage.split(',')[0].split('-')[0] // Extracts the base language
+    : 'en'; // Default locale
+
+  // Check if the preferred locale is supported
+  return locales.includes(preferredLocale) ? preferredLocale : 'en';
 }
 
 export function middleware(request) {
-  // Check if there is any supported locale in the pathname
   const { pathname } = request.nextUrl;
+
+  // Check if the URL already has a supported locale
   const pathnameHasLocale = locales.some(
     (locale) => pathname.startsWith(`/${locale}/`) || pathname === `/${locale}`
   );
 
   if (pathnameHasLocale) return;
 
-  // Redirect if there is no locale
+  // Redirect to the URL with the preferred locale
   const locale = getLocale(request);
   request.nextUrl.pathname = `/${locale}${pathname}`;
-  // e.g. incoming request is /products
-  // The new URL is now /en-US/products
   return Response.redirect(request.nextUrl);
 }
 
 export const config = {
-  matcher: [
-    // Exclude specific paths like favicon.ico
-    '/((?!_next|favicon.ico).*)',
-
-    // Optional: only run on root (/) URL
-    // '/'
-  ],
+  matcher: '/((?!_next|favicon.ico).*)',
 };
