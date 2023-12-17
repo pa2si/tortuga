@@ -1,14 +1,14 @@
-v 0.11.9
+v 0.11.10
 
 What's new:
 
-- middleware now set to get automatically the locale of the browsersetting
-- single event slugs are now served as static pages
+- some margin fixing
 
 Done:
 
 - Major content coming from Storyblok CMS including all images
 - internationalization implementent and working testwise with the "about" menu button
+- middleware checking the prefered locale
 - Custom Google Fonts
 - generate Static Params is active
 

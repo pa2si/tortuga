@@ -31,7 +31,7 @@ const AllEvents = async ({ params: { lang } }) => {
 
   return (
     <section
-      className="min-w-screen min-h-screen flex items-center "
+      className="min-w-screen min-h-screen flex items-center justify-center"
       style={{
         backgroundImage: `linear-gradient(to right, rgba(180, 180, 180, 0.37),  rgba(180, 180, 180, 0.37)), url(${bg.filename})`,
         /*      backgroundAttachment: 'fixed', */
@@ -39,7 +39,7 @@ const AllEvents = async ({ params: { lang } }) => {
         backgroundSize: 'cover',
       }}
     >
-      <article className=" flex flex-col max-w-6xl max-h-content m-auto mt-20 mb-2 sm:mt-22  mx-4 p-3 pb-8 sm:mx-8 xl:mx-auto md:p-8 bg-white bg-opacity-95 rounded-xl ">
+      <article className=" flex flex-col max-w-6xl max-h-content m-auto mt-20 mb-2 sm:mt-22 mx-4 p-3 pb-8 sm:mx-8 md:p-8 bg-white bg-opacity-95 rounded-xl ">
         {/* title */}
         <div className=" flex flex-col justify-center items-center mb-8">
           <div className="flex flex-col items-center">
