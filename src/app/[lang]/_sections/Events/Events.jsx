@@ -13,8 +13,8 @@ const Events = ({ fetchedData, lang }) => {
     <section
       style={{
         backgroundImage: `linear-gradient(to right, rgba(210, 210, 210, 0.45), rgba(0, 0, 0, 0.4), rgba(210, 210, 210, 0.45)), url(${bg.filename})`,
+        backgroundSize: '120%',
         backgroundPosition: 'center',
-        backgroundSize: 'cover',
       }}
     >
       <div
