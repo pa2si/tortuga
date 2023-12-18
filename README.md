@@ -1,8 +1,8 @@
-v 0.11.11
+v 0.11.12
 
 What's new:
 
-- some margin fixing
+- more margin fixing for sections
 
 Done:
 

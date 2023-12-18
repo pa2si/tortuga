@@ -18,10 +18,10 @@ const Events = ({ fetchedData, lang }) => {
       }}
     >
       <div
-        className="relative mx-4 max-h-max overflow-auto bg-gray-100 bg-opacity-0 sm:mx-0 sm:bg-opacity-5 rounded-lg"
+        className="relative mx-4 max-h-max overflow-auto bg-gray-100 bg-opacity-0 sm:mx-0 sm:bg-opacity-5 lg:mx-8 xl:mx-0 rounded-lg"
         id="events"
       >
-        <div className="my-10 pt-8 pb-36 sm:mx-8 max-w-6xl xl:mx-auto lg:pt-12 lg:pb-36 lg:px-16 bg-white bg-opacity-95 rounded-xl slider-events">
+        <div className="my-10 pt-8 pb-36 sm:mx-8 max-w-6xl lg:mx-auto lg:pt-12 lg:pb-36 lg:px-16 bg-white bg-opacity-95 rounded-xl slider-events">
           {/* Title */}
           <div className=" w-full flex flex-col justify-center items-center md:mb-8 xl:mb-0">
             <div className="flex flex-col items-center">

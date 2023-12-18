@@ -21,10 +21,10 @@ const Contacts = ({ fetchedData, fetchedData2 }) => {
       }}
     >
       <div
-        className="relative max-h-max mx-4 bg-opacity-0 sm:mx-0 text-slate-50 overflow-auto bg-gray-500 sm:bg-opacity-30  "
+        className="relative max-h-max mx-4 bg-opacity-0 sm:mx-0 lg:mx-8 xl:mx-0 text-slate-50 overflow-auto bg-gray-500 sm:bg-opacity-30  "
         id="contact"
       >
-        <div className="my-10 sm:mx-8 max-w-6xl xl:mx-auto pt-8 pb-1 lg:py-12 lg:px-16 bg-white bg-opacity-90 rounded-xl">
+        <div className="my-10 sm:mx-8 max-w-6xl lg:mx-auto pt-8 pb-1 lg:py-12 lg:px-16 bg-white bg-opacity-90 rounded-xl">
           <div className=" w-full flex justify-center items-center ">
             <div className="flex flex-col items-center">
               <h2 className="font-title text-black text-center">{title}</h2>
