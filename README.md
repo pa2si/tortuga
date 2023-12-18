@@ -1,8 +1,8 @@
-v 0.11.12
+v 0.11.13
 
 What's new:
 
-- more margin fixing for sections
+- navbar margin adaptions
 
 Done:
 

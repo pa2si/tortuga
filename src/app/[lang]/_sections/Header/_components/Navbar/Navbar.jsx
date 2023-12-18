@@ -67,7 +67,7 @@ const Navbar = ({ fetchedData, lang }) => {
               priority={true}
               width="260"
               height="260"
-              className="w-3/4  md:w-3/4 xl:w-5/6"
+              className="w-3/4  md:w-4/4 lg:3/4 xl:w-5/6"
             />
           </Link>
           <button
@@ -137,7 +137,7 @@ const Navbar = ({ fetchedData, lang }) => {
 
         {/* email */}
 
-        <ul className={`mr-4 ${styles.social__icons}`}>
+        <ul className={`mr-4 lg:ml-[10%] xl:ml-0 ${styles.social__icons}`}>
           {email.map((item) => {
             const { id, email, icon } = item;
             return (
@@ -153,7 +153,7 @@ const Navbar = ({ fetchedData, lang }) => {
 
         {/* social media */}
 
-        <ul className={styles.social__icons}>
+        <ul className={`md:mr-2 xl:mr-0 ${styles.social__icons}`}>
           {socialLinks.map((socialIcon) => {
             const { id, url, icon } = socialIcon;
             return (
