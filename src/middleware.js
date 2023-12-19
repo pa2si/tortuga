@@ -5,10 +5,10 @@ function getLocale(request) {
   const acceptLanguage = request.headers.get('accept-language');
   const preferredLocale = acceptLanguage
     ? acceptLanguage.split(',')[0].split('-')[0] // Extracts the base language
-    : 'de'; // Default locale
+    : 'en'; // Default locale
 
   // Check if the preferred locale is supported
-  return locales.includes(preferredLocale) ? preferredLocale : 'de';
+  return locales.includes(preferredLocale) ? preferredLocale : 'en';
 }
 
 export function middleware(request) {

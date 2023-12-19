@@ -1,8 +1,8 @@
-v 0.11.16
+v 0.11.17
 
 What's new:
 
-- getFetchData now in try, catch block
+- middleware locale back to english as standard
 
 Done:
 
