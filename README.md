@@ -1,8 +1,8 @@
-v 0.11.18
+v 0.11.19
 
 What's new:
 
-- removed generate static pages
+- working now wo generateStaticPages. middleware back to "standard locale" is english
 
 Done:
 
