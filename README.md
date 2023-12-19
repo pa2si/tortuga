@@ -1,8 +1,8 @@
-v 0.11.13
+v 0.11.14
 
 What's new:
 
-- navbar margin adaptions
+- standard locale in middleware is now german
 
 Done:
 
