@@ -1,8 +1,8 @@
-v 0.11.14
+v 0.11.15
 
 What's new:
 
-- standard locale in middleware is now german
+- just re commit a new version for redeply
 
 Done:
 
