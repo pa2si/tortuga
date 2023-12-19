@@ -1,8 +1,8 @@
-v 0.11.17
+v 0.11.18
 
 What's new:
 
-- middleware locale back to english as standard
+- removed generate static pages
 
 Done:
 
