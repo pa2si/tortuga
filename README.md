@@ -1,8 +1,8 @@
-v 0.11.15
+v 0.11.16
 
 What's new:
 
-- just re commit a new version for redeply
+- getFetchData now in try, catch block
 
 Done:
 
