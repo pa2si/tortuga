@@ -22,7 +22,7 @@ export async function generateMetadata({ params: { lang, id } }) {
   };
 }
 
-/* export async function generateStaticParams() {
+export async function generateStaticParams() {
   const languages = ['de', 'en', 'es'];
   const storyData = await getFetchData(); // Replace with your logic to fetch event IDs
   const events = storyData.events_section.event_cards;
@@ -35,7 +35,7 @@ export async function generateMetadata({ params: { lang, id } }) {
   });
 
   return params;
-} */
+}
 
 const SingleEvent = async ({ params }) => {
   const lang = params.lang;
@@ -52,7 +52,7 @@ const SingleEvent = async ({ params }) => {
     console.error('Error: Event not found for id:', params.id);
     return (
       <div className="w-screen h-screen flex justify-center items-center">
-        oops...No event found
+        Oops...No event found
       </div>
     );
   }

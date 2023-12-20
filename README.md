@@ -1,10 +1,8 @@
-v 0.11.22
+v 0.11.23
 
 What's new:
 
-- bottom-10 for all Events button
-
--
+- generateStaticParams is again set for both layout and dynamic route
 
 Done:
 
