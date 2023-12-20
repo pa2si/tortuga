@@ -1,8 +1,8 @@
-v 0.11.23
+v 0.11.24
 
 What's new:
 
-- generateStaticParams is again set for both layout and dynamic route
+- changed text color in event cards
 
 Done:
 

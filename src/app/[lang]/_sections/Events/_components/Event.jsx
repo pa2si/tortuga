@@ -55,24 +55,24 @@ const Event = ({
         <p className=" text-4xl xl:text-4xl  mb-4 font-kalam">{title}</p>
         <div className="text-[1.4rem] md:text-[1.4rem] leading-6 lg:text-[1.2rem]">
           <div className="flex mb-1">
-            <p className="text-gray-700 w-1/2">Date:</p>
-            <p className="text-gray-500 w-1/2">{date}</p>
+            <p className="text-gray-500 w-1/2">Date:</p>
+            <p className="text-gray-700 w-1/2">{date}</p>
           </div>
           <div className="flex mb-1">
-            <p className="text-gray-700 w-1/2">Location:</p>
-            <p className="text-gray-500 w-1/2">{location}</p>
+            <p className="text-gray-500 w-1/2">Location:</p>
+            <p className="text-gray-700 w-1/2">{location}</p>
           </div>
           <div className="flex mb-1">
-            <p className="text-gray-700 w-1/2">City:</p>
-            <p className="text-gray-500 w-1/2">{city}</p>
+            <p className="text-gray-500 w-1/2">City:</p>
+            <p className="text-gray-700 w-1/2">{city}</p>
           </div>
           <div className="flex mb-1">
-            <p className="text-gray-700 w-1/2">Address:</p>
-            <p className="text-gray-500 w-1/2">{address}</p>
+            <p className="text-gray-500 w-1/2">Address:</p>
+            <p className="text-gray-700 w-1/2">{address}</p>
           </div>
           <div className="flex">
-            <p className="text-gray-700 w-1/2">Postal:</p>
-            <p className="text-gray-500 w-1/2">{postal}</p>
+            <p className="text-gray-500 w-1/2">Postal:</p>
+            <p className="text-gray-700 w-1/2">{postal}</p>
           </div>
         </div>
       </div>

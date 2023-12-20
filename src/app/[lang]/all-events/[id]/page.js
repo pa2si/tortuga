@@ -91,17 +91,17 @@ const SingleEvent = async ({ params }) => {
                   <EventImage imageData={selectedEvent.image} />
                 </div>
                 {/* Event address */}
-                <div className="grid grid-cols-2 text-gray-800  text-abhayaLibre ">
+                <div className="grid grid-cols-2 text-gray-500  text-abhayaLibre ">
                   <div className="">
                     <p>
                       Date:{' '}
-                      <span className="text-gray-500">
+                      <span className="text-gray-700">
                         {selectedEvent.date}
                       </span>
                     </p>
                     <p>
                       Location:{' '}
-                      <span className="text-gray-500">
+                      <span className="text-gray-700">
                         {selectedEvent.location}
                       </span>
                     </p>
@@ -109,19 +109,19 @@ const SingleEvent = async ({ params }) => {
                   <div className="text-right">
                     <p>
                       City:{' '}
-                      <span className="text-gray-500">
+                      <span className="text-gray-700">
                         {selectedEvent.city}
                       </span>
                     </p>
                     <p>
                       Address:{' '}
-                      <span className="text-gray-500">
+                      <span className="text-gray-700">
                         {selectedEvent.address}
                       </span>
                     </p>
                     <p>
                       Postal Code:{' '}
-                      <span className="text-gray-500">
+                      <span className="text-gray-700">
                         {selectedEvent.postal}
                       </span>
                     </p>
