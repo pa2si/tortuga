@@ -14,16 +14,16 @@ export async function generateMetadata({ params: { lang, id } }) {
     alternates: {
       canonical: `/all-avents${id}`,
       languages: {
-        'en-US': `/en/all-events/${id}`,
         'de-DE': `/de/all-events/${id}`,
+        'en-US': `/en/all-events/${id}`,
         'es-ES': `/es/all-events/${id}`,
       },
     },
   };
 }
 
-/* export async function generateStaticParams() {
-  const languages = ['en', 'es', 'de'];
+export async function generateStaticParams() {
+  const languages = ['de', 'en', 'es'];
   const storyData = await getFetchData(); // Replace with your logic to fetch event IDs
   const events = storyData.events_section.event_cards;
   const params = [];
@@ -35,7 +35,7 @@ export async function generateMetadata({ params: { lang, id } }) {
   });
 
   return params;
-} */
+}
 
 const SingleEvent = async ({ params }) => {
   const lang = params.lang;
@@ -66,7 +66,7 @@ const SingleEvent = async ({ params }) => {
         backgroundSize: 'cover',
       }}
     >
-      <div className="max-w-6xl max-h-content my-auto mx-4  p-3 pb-8 md:p-8 lg:mx-8 xl:mt-24 bg-white bg-opacity-95 rounded-xl shadow-lg">
+      <div className=" max-w-6xl max-h-content my-auto mx-4  p-3 pb-8 md:p-8 lg:mx-8 lg:mt-20 bg-white bg-opacity-95 rounded-xl shadow-lg">
         <div className=" w-full flex flex-col justify-center items-center">
           {/* Title */}
           <div className="flex flex-col items-center mb-4 ">
@@ -77,23 +77,55 @@ const SingleEvent = async ({ params }) => {
               <div className="absolute inset-0 bg-gradient-to-r from-transparent via-tortuga-light to-transparent"></div>
             </div>
           </div>
+          {/* Description */}
           <div className="grid grid-cols-1 lg:grid-cols-2 lg:mt-8 lg:ml-8 xl:ml-20 ">
             <div className="mb-8 lg:mb-0 order-2 lg:order-1 mt-8 lg:mt-0">
               <p className="font-poorStory text-gray-700 text-[1.4rem] leading-7 md:text-2xl ">
                 {selectedEvent.description}
               </p>
             </div>
-            <div className="mx-auto mb-2 order-1 lg:order-2 ">
-              <EventImage imageData={selectedEvent.image} />
-              <div className="grid grid-cols-2 text-gray-800  text-abhayaLibre ">
-                <div className="">
-                  <p>Date: {selectedEvent.date}</p>
-                  <p>Location: {selectedEvent.location}</p>
+            <div className="mx-auto mb-2 order-1 lg:order-2 md:w-1/2 lg:w-3/4">
+              {/* Image */}
+              <div>
+                <div className="flex justify-center">
+                  <EventImage imageData={selectedEvent.image} />
                 </div>
-                <div className="text-right">
-                  <p>City: {selectedEvent.city}</p>
-                  <p>Address: {selectedEvent.address}</p>
-                  <p>Postal Code: {selectedEvent.postal}</p>
+                {/* Event address */}
+                <div className="grid grid-cols-2 text-gray-800  text-abhayaLibre ">
+                  <div className="">
+                    <p>
+                      Date:{' '}
+                      <span className="text-gray-500">
+                        {selectedEvent.date}
+                      </span>
+                    </p>
+                    <p>
+                      Location:{' '}
+                      <span className="text-gray-500">
+                        {selectedEvent.location}
+                      </span>
+                    </p>
+                  </div>
+                  <div className="text-right">
+                    <p>
+                      City:{' '}
+                      <span className="text-gray-500">
+                        {selectedEvent.city}
+                      </span>
+                    </p>
+                    <p>
+                      Address:{' '}
+                      <span className="text-gray-500">
+                        {selectedEvent.address}
+                      </span>
+                    </p>
+                    <p>
+                      Postal Code:{' '}
+                      <span className="text-gray-500">
+                        {selectedEvent.postal}
+                      </span>
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>

@@ -1,8 +1,12 @@
-v 0.11.19
+v 0.11.20
 
 What's new:
 
-- working now wo generateStaticPages. middleware back to "standard locale" is english
+- some margin work in events and modal
+- my removed from events and contacts section as well as background fixed
+- generatestaticParams again activated for a test
+
+-
 
 Done:
 
