@@ -22,7 +22,7 @@ export async function generateMetadata({ params: { lang, id } }) {
   };
 }
 
-export async function generateStaticParams() {
+/* export async function generateStaticParams() {
   const languages = ['de', 'en', 'es'];
   const storyData = await getFetchData(); // Replace with your logic to fetch event IDs
   const events = storyData.events_section.event_cards;
@@ -35,7 +35,7 @@ export async function generateStaticParams() {
   });
 
   return params;
-}
+} */
 
 const SingleEvent = async ({ params }) => {
   const lang = params.lang;

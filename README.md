@@ -1,10 +1,8 @@
-v 0.11.20
+v 0.11.21
 
 What's new:
 
-- some margin work in events and modal
-- my removed from events and contacts section as well as background fixed
-- generatestaticParams again activated for a test
+- generatestaticParams again removed only for slug
 
 -
 
