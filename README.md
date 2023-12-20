@@ -1,8 +1,8 @@
-v 0.11.21
+v 0.11.22
 
 What's new:
 
-- generatestaticParams again removed only for slug
+- bottom-10 for all Events button
 
 -
 
