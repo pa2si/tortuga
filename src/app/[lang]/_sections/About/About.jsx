@@ -37,7 +37,7 @@ const About = ({ fetchedData }) => {
             />
           </div>
           {/* About Description */}
-          <div className="grid grid-cols-1 text-slate-900 mt-8 mb-12 lg:grid-cols-5 lg:items-center lg:mb-8">
+          <article className="grid grid-cols-1 text-slate-900 mt-8 mb-12 lg:grid-cols-5 lg:items-center lg:mb-8">
             <div className="col-span-3 px-4 sm:px-8 text-xl sm:text-xl md:text-[1.4rem] lg:text-[1.6rem]] text-justify lg:px-0 lg:text-left order-last lg:order-first ">
               <p className="text-gray-800 font-poorStory leading-7 sm:leading-8 lg:leading-9 tracking-wide">
                 {description}
@@ -56,7 +56,7 @@ const About = ({ fetchedData }) => {
               />
               <p className="mt-2 mb-4  ">{image.copyright}</p>
             </div>
-          </div>
+          </article>
         </div>
       </div>
     </section>

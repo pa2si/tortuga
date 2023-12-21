@@ -1,8 +1,8 @@
-v 0.11.24
+v 0.11.25
 
 What's new:
 
-- changed text color in event cards
+- article element instead of div in about section
 
 Done:
 
