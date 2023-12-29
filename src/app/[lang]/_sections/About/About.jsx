@@ -38,8 +38,8 @@ const About = ({ fetchedData }) => {
           </div>
           {/* About Description */}
           <article className="grid grid-cols-1 text-slate-900 mt-8 mb-12 lg:grid-cols-5 lg:items-center lg:mb-8">
-            <div className="col-span-3 px-4 sm:px-8 text-xl sm:text-xl md:text-[1.4rem] lg:text-[1.6rem]] text-justify lg:px-0 lg:text-left order-last lg:order-first ">
-              <p className="text-gray-800 font-poorStory leading-7 sm:leading-8 lg:leading-9 tracking-wide">
+            <div className="col-span-3 px-4 sm:px-8 sm:text-xl lg:text-xl text-justify lg:px-0 lg:text-left order-last lg:order-first ">
+              <p className="text-gray-800 font-text leading-7 sm:leading-8 xl:leading-9 ">
                 {description}
               </p>
               <InView />

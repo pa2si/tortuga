@@ -6,7 +6,7 @@ import InView from './InView';
 
 const Contact = ({ fetchedData2 }) => {
   const { image, logo, text } = fetchedData2;
-  const { email } = contactEmail;
+  const { email } = contactEmail[0];
 
   const variants = {
     hidden: { x: '100%', opacity: 0 },

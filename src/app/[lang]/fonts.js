@@ -1,12 +1,12 @@
-import { Poor_Story } from 'next/font/google';
+import { Playpen_Sans, Poor_Story } from 'next/font/google';
 import { Indie_Flower } from 'next/font/google';
 import { Kalam } from 'next/font/google';
 import { Abhaya_Libre } from 'next/font/google';
 
-export const poorStory = Poor_Story({
+export const playpenSans = Playpen_Sans({
   subsets: ['latin'],
   weight: '400',
-  variable: '--font-poorStory',
+  variable: '--font-playpenSans',
 });
 
 export const indieFlower = Indie_Flower({

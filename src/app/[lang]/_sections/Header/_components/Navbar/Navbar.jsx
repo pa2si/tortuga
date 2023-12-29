@@ -54,7 +54,7 @@ const Navbar = ({ fetchedData, lang }) => {
       transition={{ duration: 0.35, ease: 'easeInOut' }}
     >
       <div
-        className={` mx-auto max-w-screen-2xl px-0 md:px-3 xl:px-20  ${styles.nav_center}`}
+        className={` mx-auto max-w-screen-2xl px-0 md:px-3 xl:px-10  ${styles.nav_center}`}
       >
         {/* header */}
 
@@ -67,7 +67,7 @@ const Navbar = ({ fetchedData, lang }) => {
               priority={true}
               width="260"
               height="260"
-              className="w-3/4  md:w-4/4 lg:3/4 xl:w-5/6"
+              className="w-3/4 md:w-4/6 lg:4/4 xl:w-5/6"
             />
           </Link>
           <button
@@ -89,7 +89,7 @@ const Navbar = ({ fetchedData, lang }) => {
           transition={{ duration: 1.3, ease: 'easeInOut' }}
         >
           <ul
-            className={` text-[1.2rem] md:gap-[1.1rem] mb-[-0.3rem] md:text-[1rem] md:mr-[3.1rem] lg:text-[1.2rem] lg:mr-0 lg:gap-[1.5rem] xl:gap-8 ${styles.links} ${styles.menu__links}`}
+            className={` text-[1.2rem] md:gap-[1.1rem] mb-[-0.3rem] md:text-[1rem] md:mr-[3.1rem] lg:text-[1.1rem] xl:text-[1.2rem] lg:mr-0 lg:gap-[1.5rem] xl:gap-8 ${styles.links} ${styles.menu__links}`}
             ref={linksRef}
           >
             {menu_links.map((link) => {

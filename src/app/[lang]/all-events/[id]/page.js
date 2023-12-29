@@ -59,15 +59,15 @@ const SingleEvent = async ({ params }) => {
 
   return (
     <article
-      className="min-h-screen min-w-screen flex items-center justify-center pt-20 pb-8 md:pt-0 md:pb-8"
+      className="flex items-center justify-center min-h-screen min-w-screen md:pb-8"
       style={{
         backgroundImage: `linear-gradient(to right, rgba(210, 210, 210, 0.4), rgba(170, 170, 170, 0.25), rgba(210, 210, 210, 0.45)), url(${bg.filename})`,
         backgroundPosition: 'center',
         backgroundSize: 'cover',
       }}
     >
-      <div className=" max-w-6xl max-h-content my-auto mx-4  p-3 pb-8 md:p-8 lg:mx-8 lg:mt-20 bg-white bg-opacity-95 rounded-xl shadow-lg">
-        <div className=" w-full flex flex-col justify-center items-center">
+      <div className="max-w-6xl mx-4 my-auto p-3 pb-8 md:p-8 lg:mx-8 lg:mt-20 bg-white bg-opacity-95 rounded-xl shadow-lg">
+        <div className=" w-full flex flex-col justify-center items-center ">
           {/* Title */}
           <div className="flex flex-col items-center mb-4 ">
             <h5 className="text-4xl mb-2 mt-4 font-kalam">
@@ -78,10 +78,13 @@ const SingleEvent = async ({ params }) => {
             </div>
           </div>
           {/* Description */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 lg:mt-8 lg:ml-8 xl:ml-20 ">
-            <div className="mb-8 lg:mb-0 order-2 lg:order-1 mt-8 lg:mt-0">
-              <p className="font-poorStory text-gray-700 text-[1.4rem] leading-7 md:text-2xl ">
+          <div className="grid grid-cols-1 lg:grid-cols-2 lg:mt-8 lg:ml-8 xl:ml-20 sm:mx-20 md:max-w-none ">
+            <div className="mb-8 lg:mb-0 order-2 lg:order-1 mt-8 lg:mt-0 ">
+              <p className="font-text text-gray-700 text-lg md:text-xl line-height">
                 {selectedEvent.description}
+              </p>
+              <p className="font-text text-gray-700 text-lg md:text-xl line-height">
+                {selectedEvent.description2}
               </p>
             </div>
             <div className="mx-auto mb-2 order-1 lg:order-2 md:w-1/2 lg:w-3/4">
@@ -91,39 +94,15 @@ const SingleEvent = async ({ params }) => {
                   <EventImage imageData={selectedEvent.image} />
                 </div>
                 {/* Event address */}
-                <div className="grid grid-cols-2 text-gray-500  text-abhayaLibre ">
+                <div className="grid grid-cols-2 text-gray-700  text-abhayaLibre ">
                   <div className="">
-                    <p>
-                      Date:{' '}
-                      <span className="text-gray-700">
-                        {selectedEvent.date}
-                      </span>
-                    </p>
-                    <p>
-                      Location:{' '}
-                      <span className="text-gray-700">
-                        {selectedEvent.location}
-                      </span>
-                    </p>
+                    <p>{selectedEvent.date}</p>
                   </div>
                   <div className="text-right">
+                    <p>{selectedEvent.city}</p>
+                    <p>{selectedEvent.location}</p>
                     <p>
-                      City:{' '}
-                      <span className="text-gray-700">
-                        {selectedEvent.city}
-                      </span>
-                    </p>
-                    <p>
-                      Address:{' '}
-                      <span className="text-gray-700">
-                        {selectedEvent.address}
-                      </span>
-                    </p>
-                    <p>
-                      Postal Code:{' '}
-                      <span className="text-gray-700">
-                        {selectedEvent.postal}
-                      </span>
+                      {selectedEvent.address}, {selectedEvent.postal}
                     </p>
                   </div>
                 </div>

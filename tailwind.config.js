@@ -19,7 +19,7 @@ module.exports = {
         'erdkugel-text': '#404040',
       },
       fontFamily: {
-        poorStory: ['var(--font-poorStory)', 'sans-serif'],
+        text: ['var(--font-playpenSans)', 'sans-serif'],
         title: ['var(--font-indieFlower)', 'sans-serif'],
         kalam: ['var(--font-kalam)', 'sans-serif'],
         abhayaLibre: ['var(--font-abhayaLibre)', 'sans-serif'],

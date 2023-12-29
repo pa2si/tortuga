@@ -15,7 +15,7 @@ const Programs = ({ fetchedData }) => {
       }}
     >
       <div
-        className="relative max-h-max mx-4 text-black overflow-auto bg-opacity-0 bg-slate-300 sm:mx-0 sm:bg-opacity-10 lg:mx-8 xl:mx-0 rounded-lg "
+        className="relative max-h-fit mx-4 text-black overflow-auto bg-opacity-0 bg-slate-300 sm:mx-0 sm:bg-opacity-10 lg:mx-8 xl:mx-0 rounded-lg "
         id="programs"
       >
         <div className=" my-10 pt-8 pb-12 sm:mx-8 max-w-6xl lg:mx-auto lg:py-12 lg:px-16 xl:px-0 bg-white bg-opacity-95 rounded-xl slider-programs">

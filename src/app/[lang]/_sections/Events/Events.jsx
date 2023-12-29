@@ -34,7 +34,7 @@ const Events = ({ fetchedData, lang }) => {
           </div>
           <SlickComp fetchedData={fetchedData} />
           <InView />
-          <div className="flex mb-1 font-title text-xl absolute bottom-48 left-1/2 transform -translate-x-1/2 visible md:hidden">
+          <div className="flex mb-1 font-title text-xl absolute bottom-40 left-1/2 transform -translate-x-1/2 visible md:hidden">
             <MdArrowBackIos />
             <p>{slider_text}</p>
             <MdArrowForwardIos />

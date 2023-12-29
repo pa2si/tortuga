@@ -242,3 +242,9 @@ body {
     margin-top: -2rem;
   }
 }
+
+@media (min-width: 768px) {
+  .line-height {
+    line-height: 2rem !important;
+  }
+}

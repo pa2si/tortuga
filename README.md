@@ -1,8 +1,12 @@
-v 0.11.25
+v 0.12.0
 
 What's new:
 
-- article element instead of div in about section
+- new font used in About Event and Program description
+- some formatting all around...
+- Navbar collapses now earlier
+- Event Cards now have straight info without categories.
+- same for Event Details
 
 Done:
 

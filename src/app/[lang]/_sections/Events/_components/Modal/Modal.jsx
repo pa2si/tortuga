@@ -32,10 +32,13 @@ const Modal = () => {
             priority={true}
             width="300"
             height="300"
-            className="rounded-md h-[10rem] md:h-[15rem] shadow-lg mb-5"
+            className="rounded-md h-[10rem] md:h-[15rem] shadow-lg mb-10 mt-1"
           />
-          <p className="max-w-xl md:text-[1.2rem] lg:text-[1.3rem]">
+          <p className="max-w-xl text-block font-text md:text-lg lg:text-xl text-neutral-700 mb-4">
             {selectedEvent.description}
+          </p>
+          <p className="max-w-xl text-block font-text md:text-lg lg:text-xl text-neutral-700 mb-4">
+            {selectedEvent.description2}
           </p>
           <div className="my-4 pt-1 leading-[1.4rem] text-[1.1rem] md:text-[1.2rem] md:leading-[1.5rem] lg:text-[1.3rem] lg:leading-[1.6rem]">
             <p className="text-gray-700 ">Date: {selectedEvent.date}</p>

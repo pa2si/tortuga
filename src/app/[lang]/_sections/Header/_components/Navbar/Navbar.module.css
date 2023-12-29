@@ -62,7 +62,7 @@
 
 /* MEDIA QUERIES */
 
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 930px) {
   .nav__toggle {
     display: none;
   }

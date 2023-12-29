@@ -33,7 +33,7 @@ const SlickComp = ({ fetchedData }) => {
         },
       },
       {
-        breakpoint: 769,
+        breakpoint: 960,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 1,

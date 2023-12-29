@@ -81,7 +81,7 @@ const AllEvents = async ({ params: { lang } }) => {
                     {event.title}
                   </p>
                 </div>
-                <div className="text-sm px-6 ot-1 sm:pt-4 pb-2 flex justify-center lg:hidden ">
+                <div className="text-sm px-6 ot-1 sm:pt-4 pb-2 flex justify-center xl:hidden ">
                   <Link
                     href={singleEventUrl}
                     className="bg-tortuga-dark hover:bg-tortuga-light text-white font-kalam py-2 px-4 rounded transition-all duration-200 ease-in-out"
