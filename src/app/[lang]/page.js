@@ -58,6 +58,7 @@ export default async function Home({ params: { lang } }) {
       <Contacts
         fetchedData={storyData.contacts_section}
         fetchedData2={storyData.contact_component}
+        fetchedData3={storyData.imprint_section}
       />
     </main>
   );

@@ -66,13 +66,13 @@ const SingleEvent = async ({ params }) => {
         backgroundSize: 'cover',
       }}
     >
-      <div className="max-w-6xl mx-4 my-auto p-3 pb-8 md:p-8 lg:mx-8 lg:mt-20 bg-white bg-opacity-95 rounded-xl shadow-lg">
+      <div className="max-w-6xl mx-4 my-auto p-3 pb-8 md:p-8 lg:mx-8 mt-20 bg-white bg-opacity-95 rounded-xl shadow-lg">
         <div className=" w-full flex flex-col justify-center items-center ">
           {/* Title */}
           <div className="flex flex-col items-center mb-4 ">
-            <h5 className="text-4xl mb-2 mt-4 font-kalam">
+            <h3 className="text-4xl mb-2 mt-4 font-kalam">
               {selectedEvent.title}
-            </h5>
+            </h3>
             <div className="relative w-full h-1 mt-1 sm:mt-4 md:mt-1">
               <div className="absolute inset-0 bg-gradient-to-r from-transparent via-tortuga-light to-transparent"></div>
             </div>

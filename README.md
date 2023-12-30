@@ -1,8 +1,8 @@
-v 0.12.2
+v 0.13.0
 
 What's new:
 
-- Nav lang buttons margin right adapted
+- imprint set
 
 Done:
 

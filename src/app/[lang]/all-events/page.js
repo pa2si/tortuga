@@ -58,7 +58,7 @@ const AllEvents = async ({ params: { lang } }) => {
             return (
               <li
                 key={event._uid}
-                className="flex flex-col border-2 border-tortuga-light bg-opacity-80 w-[10rem] md:w-[15rem] group rounded-lg hover:scale-105 transition-all duration-400 ease-in-out"
+                className="flex flex-col min-w-[13rem] border-2 border-tortuga-light bg-opacity-80 w-[10rem] md:w-[15rem] group rounded-lg hover:scale-105 transition-all duration-400 ease-in-out"
               >
                 <Link
                   href={singleEventUrl}
@@ -77,9 +77,9 @@ const AllEvents = async ({ params: { lang } }) => {
                   </div>
                 </Link>
                 <div className="px-6 py-4 flex-grow">
-                  <p className="text-xl sm:text-2xl mb-2 font-kalam">
+                  <h3 className="text-xl sm:text-2xl mb-2 font-kalam">
                     {event.title}
-                  </p>
+                  </h3>
                 </div>
                 <div className="text-sm px-6 ot-1 sm:pt-4 pb-2 flex justify-center xl:hidden ">
                   <Link

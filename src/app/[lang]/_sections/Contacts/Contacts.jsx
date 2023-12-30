@@ -6,10 +6,10 @@ import Imprint from './_components/Imprint';
 import { AnimatePresence } from 'framer-motion';
 import { useState } from 'react';
 
-const Contacts = ({ fetchedData, fetchedData2 }) => {
+const Contacts = ({ fetchedData, fetchedData2, fetchedData3 }) => {
   const { title, contact_btns, bg } = fetchedData;
 
-  const [activeComponent, setActiveComponent] = useState('contact');
+  const [activeComponent, setActiveComponent] = useState('Contact');
 
   return (
     <section
@@ -57,11 +57,29 @@ const Contacts = ({ fetchedData, fetchedData2 }) => {
 
           {/* Conditional Component Rendering */}
           <AnimatePresence mode="wait">
-            {activeComponent === 'contact' && (
-              <Contact key="contact" fetchedData2={fetchedData2} />
+            {activeComponent === 'Contact' && (
+              <Contact key="Contact" fetchedData2={fetchedData2} />
             )}
-            {activeComponent === 'imprint' && <Imprint key="imprint" />}
-            {activeComponent === 'privacy' && <Privacy key="privacy" />}
+            {activeComponent === 'Kontakt' && (
+              <Contact key="Kontakt" fetchedData2={fetchedData2} />
+            )}
+            {activeComponent === 'Contacto' && (
+              <Contact key="Contacto" fetchedData2={fetchedData2} />
+            )}
+            {activeComponent === 'Imprint' && (
+              <Imprint key="Imprint" fetchedData3={fetchedData3} />
+            )}
+            {activeComponent === 'Impressum' && (
+              <Imprint key="Impressum" fetchedData3={fetchedData3} />
+            )}
+            {activeComponent === 'Aviso Legal' && (
+              <Imprint key="Aviso Legal" fetchedData3={fetchedData3} />
+            )}
+            {activeComponent === 'Privay' && <Privacy key="Privacy" />}
+            {activeComponent === 'Datenschutz' && <Privacy key="Datenschutz" />}
+            {activeComponent === 'Protección de Datos' && (
+              <Privacy key="Protección de Datos" />
+            )}
           </AnimatePresence>
         </div>
         {/* <div className="absolute inset-0 bg-gradient-to-b from-white via-transparent to-white  z-10"></div> */}

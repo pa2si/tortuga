@@ -18,7 +18,7 @@ const Program = ({ title, image, description1, description2, date }) => {
   return (
     <>
       <MotionArticle
-        className="grid grid-cols-1 bg-white border-2 xl:p-8 shadow-xl rounded-xl xl:px-2 xl:py-4 xl:grid-cols-2 program-margin"
+        className="grid grid-cols-1 bg-white border-2 xl:p-8 drop-shadow-2xl rounded-xl xl:px-2 xl:py-4 xl:grid-cols-2 program-margin"
         variants={slideIn}
         initial="initial"
         whileInView="animate"

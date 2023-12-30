@@ -53,7 +53,7 @@ const Event = ({
         {image.copyright}
       </span>
       <div className="flex-grow px-6 py-4">
-        <p className="text-4xl xl:text-4xl mb-4 font-kalam">{title}</p>
+        <h3 className="text-4xl xl:text-4xl mb-4 font-kalam">{title}</h3>
         <div className="text-[1.4rem] md:text-[1.4rem] leading-6 lg:text-[1.2rem]">
           <p className="text-gray-800 text-2xl mb-2">{date}</p>
           <p className="text-gray-700 mb-1">{city}</p>
