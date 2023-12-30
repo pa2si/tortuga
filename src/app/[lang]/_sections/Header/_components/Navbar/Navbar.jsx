@@ -118,7 +118,7 @@ const Navbar = ({ fetchedData, lang }) => {
               );
             })}
             {/* language buttons */}
-            <div className="flex gap-1 items-center  text-tortuga-dark text-[1rem] lg:gap-2 xl:text-lg xl:gap-3 ml-4 xl:ml-15">
+            <div className="flex gap-1 items-center  text-tortuga-dark text-[1rem] lg:gap-2 lg:mr-2 xl:text-lg xl:gap-3 ml-4 xl:ml-20">
               {languages.map((language) => {
                 const { id, url, text } = language;
                 return (

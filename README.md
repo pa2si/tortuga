@@ -1,9 +1,8 @@
-v 0.12.1
+v 0.12.2
 
 What's new:
 
-- better styling for Navbar
-- Contact font changed to new font
+- Nav lang buttons margin right adapted
 
 Done:
 
