@@ -1,12 +1,9 @@
-v 0.12.0
+v 0.12.1
 
 What's new:
 
-- new font used in About Event and Program description
-- some formatting all around...
-- Navbar collapses now earlier
-- Event Cards now have straight info without categories.
-- same for Event Details
+- better styling for Navbar
+- Contact font changed to new font
 
 Done:
 

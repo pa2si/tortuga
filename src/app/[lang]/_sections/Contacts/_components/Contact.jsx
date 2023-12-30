@@ -23,7 +23,7 @@ const Contact = ({ fetchedData2 }) => {
       transition={{ type: 'spring', stiffness: 50 }}
     >
       <div className="flex flex-col col-span-3 px-4 text-xl text-justify sm:text-2xl sm:px-8 lg:px-0 lg:mb-8 lg:text-left order-last lg:order-first ">
-        <p className="text-gray-700 font-poorStory leading-8 sm:leading-9 tracking-wide text-center lg:text-left">
+        <p className="text-gray-700 leading-8 sm:leading-9 tracking-wide text-center lg:text-left font-text text-xl xl:text-2xl">
           {text}
         </p>
         <div className=" h-full flex flex-col items-center justify-center gap-4">
