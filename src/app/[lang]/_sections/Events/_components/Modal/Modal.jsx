@@ -58,8 +58,8 @@ const Modal = () => {
             <Image
               src={selectedEvent.fb_logo.filename}
               alt={selectedEvent.fb_logo.alt}
-              width={35}
-              height={35}
+              width={100}
+              height={100}
             />
           </a>
 
