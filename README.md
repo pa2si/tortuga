@@ -1,8 +1,8 @@
-v 0.16.6
+v 0.16.7
 
 What's new:
 
-- re edited fb logo for madal
+- leading for buttons adapted
 
 Done:
 

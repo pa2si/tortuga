@@ -47,7 +47,7 @@ const Contacts = ({
               return (
                 <button
                   key={_uid}
-                  className={` hover:bg-tortuga-light text-white font-kalam py-1 px-4 rounded transition-all duration-200 ease-in-out ${
+                  className={` hover:bg-tortuga-light leading-tight text-white font-kalam py-1 px-4 rounded transition-all duration-200 ease-in-out ${
                     activeComponent === btn_name
                       ? 'bg-tortuga-light text-white'
                       : 'bg-tortuga-dark'
