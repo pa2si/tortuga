@@ -1,8 +1,8 @@
-v 0.14.0
+v 0.14.1
 
 What's new:
 
-- new desktop layout for single event
+- now passing locale when going back from single event or all events
 
 Done:
 

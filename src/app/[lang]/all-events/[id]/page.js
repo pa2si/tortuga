@@ -113,7 +113,7 @@ const SingleEvent = async ({ params }) => {
 
           <div className="flex justify-center">
             <Link
-              href={'/all-events'}
+              href={`/${lang}/all-events/`}
               className="mt-4 sm:mt-8 text-md sm:text-lg text-tortuga-dark hover:text-tortuga-light border-2 border-tortuga-dark hover:border-tortuga-light font-kalam py-1 px-8 rounded transition-all duration-200 ease-in-out"
             >
               {' '}

@@ -25,7 +25,7 @@ const Program = ({ title, image, description1, description2, date }) => {
         viewport={{ once: true }}
       >
         {/* Program Description */}
-        <div className="font-text flex flex-col p-8 xl:p-0 justify-center order-last xl:order-first">
+        <div className="font-text flex flex-col p-4 xl:p-0 justify-center order-last xl:order-first">
           <h3 className="text-2xl font-bold md:text-3xl xl:text-4xl mb-8 font-kalam  xl:pl-2">
             {title}
           </h3>
