@@ -1,8 +1,8 @@
-v 0.16.0
+v 0.16.1
 
 What's new:
 
-- Program has again no "show more" button becauase i implemented now dynamic height for the slick slider
+- br in between description 1 and 2 of event modal
 
 Done:
 

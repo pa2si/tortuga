@@ -36,10 +36,10 @@ const Modal = () => {
           />
           <p className="max-w-xl text-block font-text md:text-lg lg:text-xl text-neutral-700 mb-4">
             {selectedEvent.description}
-          </p>
-          <p className="max-w-xl text-block font-text md:text-lg lg:text-xl text-neutral-700 mb-4">
+            <br />
             {selectedEvent.description2}
           </p>
+
           <div className="my-4 pt-1 leading-[1.4rem] text-[1.1rem] md:text-[1.2rem] md:leading-[1.5rem] lg:text-[1.3rem] lg:leading-[1.6rem]">
             <p className="text-gray-700 ">Date: {selectedEvent.date}</p>
             <p className="text-gray-700 ">Location: {selectedEvent.location}</p>
