@@ -13,8 +13,6 @@ const Contact = ({ fetchedData2 }) => {
     visible: { x: 0, opacity: 1 },
   };
 
-  console.log('Contact was loaded');
-
   return (
     <motion.article
       className="grid grid-cols-1 lg:grid-cols-5  text-slate-900 lg:mt-8 mb-12 lg:mb-8  "

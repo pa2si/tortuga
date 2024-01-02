@@ -1,8 +1,8 @@
-v 0.13.0
+v 0.14.0
 
 What's new:
 
-- imprint set
+- new desktop layout for single event
 
 Done:
 

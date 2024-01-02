@@ -62,24 +62,46 @@ const SingleEvent = async ({ params }) => {
       className="flex items-center justify-center min-h-screen min-w-screen md:pb-8"
       style={{
         backgroundImage: `linear-gradient(to right, rgba(210, 210, 210, 0.4), rgba(170, 170, 170, 0.25), rgba(210, 210, 210, 0.45)), url(${bg.filename})`,
+        backgroundSize: '140%',
         backgroundPosition: 'center',
-        backgroundSize: 'cover',
       }}
     >
       <div className="max-w-6xl mx-4 my-auto p-3 pb-8 md:p-8 lg:mx-8 mt-20 bg-white bg-opacity-95 rounded-xl shadow-lg">
-        <div className=" w-full flex flex-col justify-center items-center ">
-          {/* Title */}
-          <div className="flex flex-col items-center mb-4 ">
-            <h3 className="text-4xl mb-2 mt-4 font-kalam">
-              {selectedEvent.title}
-            </h3>
-            <div className="relative w-full h-1 mt-1 sm:mt-4 md:mt-1">
-              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-tortuga-light to-transparent"></div>
+        <div className="grid">
+          <div className=" w-full">
+            {/* Title */}
+            <div className=" w-full flex flex-col justify-center items-center ">
+              <div className="flex flex-col items-center mb-4 ">
+                <h3 className="text-4xl mb-2 mt-4 font-kalam">
+                  {selectedEvent.title}
+                </h3>
+                <div className="relative w-full h-1 mt-1 sm:mt-4 md:mt-1">
+                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-tortuga-light to-transparent"></div>
+                </div>
+              </div>
             </div>
-          </div>
-          {/* Description */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 lg:mt-8 lg:ml-8 xl:ml-20 sm:mx-20 md:max-w-none ">
-            <div className="mb-8 lg:mb-0 order-2 lg:order-1 mt-8 lg:mt-0 ">
+
+            {/* Image */}
+
+            <div className="w-3/4 mx-auto lg:w-1/2 lg:float-right lg:ml-8 lg:mt-4">
+              <EventImage imageData={selectedEvent.image} />
+              {/* Event address */}
+              <div className="grid grid-cols-2 text-gray-700 text-abhayaLibre justify-center  ">
+                <div>
+                  <p>{selectedEvent.date}</p>
+                </div>
+                <div className="text-right">
+                  <p>{selectedEvent.city}</p>
+                  <p>{selectedEvent.location}</p>
+                  <p>
+                    {selectedEvent.address}, {selectedEvent.postal}
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Description */}
+            <div className="mb-8 lg:mb-0 mt-8 lg:mt-0">
               <p className="font-text text-gray-700 text-lg md:text-xl line-height">
                 {selectedEvent.description}
               </p>
@@ -87,35 +109,17 @@ const SingleEvent = async ({ params }) => {
                 {selectedEvent.description2}
               </p>
             </div>
-            <div className="mx-auto mb-2 order-1 lg:order-2 md:w-1/2 lg:w-3/4">
-              {/* Image */}
-              <div>
-                <div className="flex justify-center">
-                  <EventImage imageData={selectedEvent.image} />
-                </div>
-                {/* Event address */}
-                <div className="grid grid-cols-2 text-gray-700  text-abhayaLibre ">
-                  <div className="">
-                    <p>{selectedEvent.date}</p>
-                  </div>
-                  <div className="text-right">
-                    <p>{selectedEvent.city}</p>
-                    <p>{selectedEvent.location}</p>
-                    <p>
-                      {selectedEvent.address}, {selectedEvent.postal}
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
           </div>
-          <Link
-            href={'/all-events'}
-            className="mt-4 sm:mt-8 text-md sm:text-lg text-tortuga-dark hover:text-tortuga-light border-2 border-tortuga-dark hover:border-tortuga-light font-kalam py-1 px-8 rounded transition-all duration-200 ease-in-out"
-          >
-            {' '}
-            {backButton}
-          </Link>
+
+          <div className="flex justify-center">
+            <Link
+              href={'/all-events'}
+              className="mt-4 sm:mt-8 text-md sm:text-lg text-tortuga-dark hover:text-tortuga-light border-2 border-tortuga-dark hover:border-tortuga-light font-kalam py-1 px-8 rounded transition-all duration-200 ease-in-out"
+            >
+              {' '}
+              {backButton}
+            </Link>
+          </div>
         </div>
       </div>
     </article>

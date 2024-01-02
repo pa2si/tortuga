@@ -1,4 +1,4 @@
-import { Playpen_Sans, Poor_Story } from 'next/font/google';
+import { Playpen_Sans } from 'next/font/google';
 import { Indie_Flower } from 'next/font/google';
 import { Kalam } from 'next/font/google';
 import { Abhaya_Libre } from 'next/font/google';

@@ -19,13 +19,13 @@ const EventImage = ({ imageData }) => {
   }
 
   return (
-    <div className="hover:cursor-pointer">
+    <div className="hover:cursor-pointer flex justify-center">
       <Image
         src={imageData.filename}
         alt={imageData.filename.alt}
         priority={true}
-        width="350"
-        height="300"
+        width="650"
+        height="350"
         className="mb-4 rounded-md shadow-lg hover:scale-105"
         onClick={handleImageClick}
       />
