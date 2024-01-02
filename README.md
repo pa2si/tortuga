@@ -1,8 +1,8 @@
-v 0.16.2
+v 0.16.3
 
 What's new:
 
-- event modal now has smaller h
+- event modal no titles for direction and max height smaller
 
 Done:
 
