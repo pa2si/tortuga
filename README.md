@@ -1,9 +1,8 @@
-v 0.16.8
+v 0.16.9
 
 What's new:
 
-- leading for buttons adapted
-- read more button implemented for Programs with adaptive height true
+- smaller text for program in mobile version
 
 Done:
 

@@ -37,10 +37,10 @@ const Program = ({
       >
         {/* Program Description */}
         <div className="font-text flex flex-col p-4 xl:p-0 justify-center order-last xl:order-first">
-          <h3 className="text-2xl font-bold md:text-3xl xl:text-4xl mb-8 font-kalam  xl:pl-2">
+          <h3 className="font-bold text-3xl xl:text-4xl mb-8 font-kalam  xl:pl-2">
             {title}
           </h3>
-          <div className="text-gray-700 text-2xl sm:text-[1.65rem] md:text-2xl sm:text-justify lg:text-left xl:pl-2">
+          <div className="text-gray-700 text-[1.4rem] sm:text-[1.65rem] md:text-2xl sm:text-justify lg:text-left xl:pl-2">
             <div className="leading-8 md:leading-9 xl:leading-10">
               {readMore ? (
                 <>
@@ -53,7 +53,7 @@ const Program = ({
               )}
               <p>
                 <button
-                  className="text-tortuga-dark text-[1.9rem] mt-2 font-abhayaLibre hover:text-tortuga-light transition-all duration-200 ease-in-out"
+                  className="text-tortuga-dark text-[1.7rem] mt-2 font-abhayaLibre hover:text-tortuga-light transition-all duration-200 ease-in-out"
                   onClick={toggleReadMore}
                 >
                   {readMore ? show_less : read_more}
