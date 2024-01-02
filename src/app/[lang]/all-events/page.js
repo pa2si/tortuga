@@ -93,7 +93,7 @@ const AllEvents = async ({ params: { lang } }) => {
             );
           })}
         </ul>
-        <button className=" w-fit mx-auto mt-16 text-md sm:text-xl hover:text-tortuga-light text-tortuga-dark border-2 border-tortuga-dark hover:border-tortuga-light font-kalam py-1 px-12 rounded transition-all duration-200 ease-in-out">
+        <button className=" w-fit mx-auto mt-16 text-md sm:text-xl hover:text-tortuga-light text-tortuga-dark border-2 border-tortuga-dark hover:border-tortuga-light font-kalam py-1 px-4 rounded transition-all duration-200 ease-in-out">
           <Link href={`/${lang}`}>{btn_text}</Link>
         </button>
       </article>

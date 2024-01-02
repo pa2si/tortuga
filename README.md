@@ -1,8 +1,8 @@
-v 0.16.9
+v 0.16.10
 
 What's new:
 
-- smaller text for program in mobile version
+- all Events and back buttons padding adapted
 
 Done:
 
