@@ -6,7 +6,12 @@ import Imprint from './_components/Imprint';
 import { AnimatePresence } from 'framer-motion';
 import { useState } from 'react';
 
-const Contacts = ({ fetchedData, fetchedData2, fetchedData3 }) => {
+const Contacts = ({
+  fetchedData,
+  fetchedData2,
+  fetchedData3,
+  fetchedData4,
+}) => {
   const { title, contact_btns, bg } = fetchedData;
 
   const [activeComponent, setActiveComponent] = useState('Contact');
@@ -75,10 +80,14 @@ const Contacts = ({ fetchedData, fetchedData2, fetchedData3 }) => {
             {activeComponent === 'Aviso Legal' && (
               <Imprint key="Aviso Legal" fetchedData3={fetchedData3} />
             )}
-            {activeComponent === 'Privay' && <Privacy key="Privacy" />}
-            {activeComponent === 'Datenschutz' && <Privacy key="Datenschutz" />}
-            {activeComponent === 'Protección de Datos' && (
-              <Privacy key="Protección de Datos" />
+            {activeComponent === 'Privacy' && (
+              <Privacy key="Privacy" fetchedData4={fetchedData4} />
+            )}
+            {activeComponent === 'Datenschutz' && (
+              <Privacy key="Datenschutz" fetchedData4={fetchedData4} />
+            )}
+            {activeComponent === 'Protección de datos' && (
+              <Privacy key="Protección de datos" fetchedData4={fetchedData4} />
             )}
           </AnimatePresence>
         </div>

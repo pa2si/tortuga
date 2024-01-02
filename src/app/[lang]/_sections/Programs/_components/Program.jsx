@@ -1,6 +1,8 @@
 import Image from 'next/image';
 import InView from './InView';
 import { MotionArticle } from '@/utils/MotionDiv';
+import { useState } from 'react';
+import Link from 'next/link';
 
 const Program = ({ title, image, description1, description2, date }) => {
   const slideIn = {
@@ -15,6 +17,9 @@ const Program = ({ title, image, description1, description2, date }) => {
       },
     }),
   };
+
+  const [readMore, setReadMore] = useState(false);
+
   return (
     <>
       <MotionArticle
@@ -30,11 +35,17 @@ const Program = ({ title, image, description1, description2, date }) => {
             {title}
           </h3>
           <div className="text-gray-700 text-2xl sm:text-[1.65rem] md:text-2xl sm:text-justify lg:text-left xl:pl-2">
-            <p className="leading-8 md:leading-9 xl:leading-10">
-              {description1}
-              <br />
-              {description2}
-            </p>
+            <div className="leading-8 md:leading-9 xl:leading-10">
+              {`${description1.substring(0, 250)}...`}
+              <p className="mt-2 flex justify-center">
+                <Link
+                  href="/your-link-url"
+                  className=" hover:bg-tortuga-light bg-tortuga-dark text-white text-[1.2rem] font-kalam py-[3px] px-4 rounded transition-all duration-200 ease-in-out "
+                >
+                  Read More
+                </Link>
+              </p>
+            </div>
           </div>
         </div>
         {/* Program Image */}

@@ -24,6 +24,7 @@ export const getFetchData = async (lang) => {
       all_events_section,
       single_event_section,
       imprint_section,
+      privacy_section,
     } = storyData.story.content;
 
     return {
@@ -38,6 +39,7 @@ export const getFetchData = async (lang) => {
       all_events_section: all_events_section[0],
       single_event_section: single_event_section[0],
       imprint_section: imprint_section[0],
+      privacy_section: privacy_section[0],
     };
   } catch (error) {
     console.error('Error fetching data:', error);

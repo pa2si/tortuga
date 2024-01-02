@@ -1,8 +1,9 @@
-v 0.14.1
+v 0.15.0
 
 What's new:
 
-- now passing locale when going back from single event or all events
+- now with privacy text
+- Program has now a Link which is not fully working...
 
 Done:
 

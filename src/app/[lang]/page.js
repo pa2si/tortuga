@@ -59,6 +59,7 @@ export default async function Home({ params: { lang } }) {
         fetchedData={storyData.contacts_section}
         fetchedData2={storyData.contact_component}
         fetchedData3={storyData.imprint_section}
+        fetchedData4={storyData.privacy_section}
       />
     </main>
   );
