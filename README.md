@@ -1,8 +1,8 @@
-v 0.16.3
+v 0.16.4
 
 What's new:
 
-- event modal no titles for direction and max height smaller
+- re edited fb logo for madal
 
 Done:
 
