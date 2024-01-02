@@ -14,6 +14,7 @@ const SlickComp = ({ fetchedData }) => {
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: false,
+    adaptiveHeight: true,
     responsive: [
       {
         breakpoint: 641, //max width

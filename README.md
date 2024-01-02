@@ -1,9 +1,8 @@
-v 0.15.0
+v 0.16.0
 
 What's new:
 
-- now with privacy text
-- Program has now a Link which is not fully working...
+- Program has again no "show more" button becauase i implemented now dynamic height for the slick slider
 
 Done:
 
