@@ -1,8 +1,9 @@
-v 0.16.7
+v 0.16.8
 
 What's new:
 
 - leading for buttons adapted
+- read more button implemented for Programs with adaptive height true
 
 Done:
 

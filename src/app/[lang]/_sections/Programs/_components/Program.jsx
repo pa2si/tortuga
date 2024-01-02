@@ -2,7 +2,17 @@ import Image from 'next/image';
 import InView from './InView';
 import { MotionArticle } from '@/utils/MotionDiv';
 
-const Program = ({ title, image, description1, description2, date }) => {
+const Program = ({
+  title,
+  image,
+  description1,
+  description2,
+  date,
+  read_more,
+  show_less,
+  readMore,
+  toggleReadMore,
+}) => {
   const slideIn = {
     initial: {
       opacity: 0,
@@ -15,6 +25,7 @@ const Program = ({ title, image, description1, description2, date }) => {
       },
     }),
   };
+
   return (
     <>
       <MotionArticle
@@ -26,15 +37,29 @@ const Program = ({ title, image, description1, description2, date }) => {
       >
         {/* Program Description */}
         <div className="font-text flex flex-col p-4 xl:p-0 justify-center order-last xl:order-first">
-          <h3 className="font-bold text-3xl xl:text-4xl mb-8 font-kalam  xl:pl-2">
+          <h3 className="text-2xl font-bold md:text-3xl xl:text-4xl mb-8 font-kalam  xl:pl-2">
             {title}
           </h3>
-          <div className="text-gray-700 text-xl sm:text-[1.65rem] md:text-2xl sm:text-justify lg:text-left xl:pl-2">
-            <p className="leading-8 md:leading-9 xl:leading-10">
-              {description1}
-              <br />
-              {description2}
-            </p>
+          <div className="text-gray-700 text-2xl sm:text-[1.65rem] md:text-2xl sm:text-justify lg:text-left xl:pl-2">
+            <div className="leading-8 md:leading-9 xl:leading-10">
+              {readMore ? (
+                <>
+                  {description1}
+                  <br />
+                  {description2}
+                </>
+              ) : (
+                `${description1.substring(0, 200)}...`
+              )}
+              <p>
+                <button
+                  className="text-tortuga-dark text-[1.9rem] mt-2 font-abhayaLibre hover:text-tortuga-light transition-all duration-200 ease-in-out"
+                  onClick={toggleReadMore}
+                >
+                  {readMore ? show_less : read_more}
+                </button>
+              </p>
+            </div>
           </div>
         </div>
         {/* Program Image */}

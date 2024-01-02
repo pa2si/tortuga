@@ -31,7 +31,7 @@ const Programs = ({ fetchedData }) => {
           <SlickComp fetchedData={fetchedData} />
         </div>
         {/* Paragraph only on mobile view */}
-        <div className="flex mb-1 font-title text-xl absolute bottom-24 left-1/2 transform -translate-x-1/2 visible md:hidden">
+        <div className="flex mb-1 font-title text-xl absolute bottom-24 left-1/2 transform -translate-x-1/2 visible xl:hidden">
           <MdArrowBackIos />
           <p>{slider_text}</p>
           <MdArrowForwardIos />
