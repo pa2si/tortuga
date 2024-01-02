@@ -22,7 +22,7 @@ const Modal = () => {
       onClick={handleOverlayClick}
     >
       {isModalOpen && selectedEvent ? (
-        <div className="relative bg-white max-h-screen lg:max-w-3xl xl:max-w-4xl text-center grid place-items-center p-8 rounded-md overflow-scroll">
+        <div className="relative bg-white max-h-screen-30 lg:max-w-3xl xl:max-w-4xl text-center grid place-items-center p-8 rounded-md overflow-scroll">
           <h5 className="text-3xl lg:text-4xl mb-4 mt-4 font-kalam">
             {selectedEvent.title}
           </h5>

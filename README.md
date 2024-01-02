@@ -1,8 +1,8 @@
-v 0.16.1
+v 0.16.2
 
 What's new:
 
-- br in between description 1 and 2 of event modal
+- event modal now has smaller h
 
 Done:
 
