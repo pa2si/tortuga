@@ -1,8 +1,9 @@
-v 0.16.15
+v 0.17.0
 
 What's new:
 
-- Single Event images formated. Prepare for different dimensions
+- Single Event is now in lg format not displayed in float
+- About description with a bit more margin
 
 Done:
 
