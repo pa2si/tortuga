@@ -1,8 +1,8 @@
-v 0.16.14
+v 0.16.15
 
 What's new:
 
-- Program font-size adapted
+- Single Event images formated. Prepare for different dimensions
 
 Done:
 

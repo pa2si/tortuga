@@ -83,10 +83,10 @@ const SingleEvent = async ({ params }) => {
 
             {/* Image */}
 
-            <div className="w-3/4 mx-auto lg:w-1/2 lg:float-right lg:ml-8 lg:mt-4">
+            <div className="mx-auto max-w-lg lg:w-1/2 lg:float-right lg:ml-8 lg:mt-4">
               <EventImage imageData={selectedEvent.image} />
               {/* Event address */}
-              <div className="grid grid-cols-2 text-gray-700 text-abhayaLibre justify-center  ">
+              <div className="grid grid-cols-2 text-gray-700 mt-4 text-abhayaLibre justify-center  ">
                 <div>
                   <p>{selectedEvent.date}</p>
                 </div>
@@ -102,10 +102,10 @@ const SingleEvent = async ({ params }) => {
 
             {/* Description */}
             <div className="mb-8 lg:mb-0 mt-8 lg:mt-0 text-justify">
-              <p className="font-text text-gray-700 text-lg md:text-xl line-height">
+              <p className="font-text text-gray-700 text-lg md:text-[1.1rem] line-height">
                 {selectedEvent.description}
               </p>
-              <p className="font-text text-gray-700 text-lg md:text-xl line-height">
+              <p className="font-text text-gray-700 text-lg md:text-[1.1rem] line-height">
                 {selectedEvent.description2}
               </p>
             </div>
