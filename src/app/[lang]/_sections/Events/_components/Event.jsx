@@ -33,7 +33,7 @@ const Event = ({
   const { openModal } = useGlobalContext();
   return (
     <MotionArticle
-      className="flex flex-col max-w-sm min-h-[42rem] xl:my-10 xl:h-[37rem] 2xl:h-[40rem] md:mb-4 bg-white shadow-xl rounded overflow-hidden mx-auto "
+      className="flex flex-col max-w-sm min-h-[42rem] xl:min-h-fit xl:max-h-screen xl:my-10 xl:h-[37rem] 2xl:h-[40rem] md:mb-4 bg-white shadow-xl rounded overflow-hidden mx-auto "
       variants={slideIn}
       initial="initial"
       whileInView="animate"
@@ -65,7 +65,7 @@ const Event = ({
         </div>
       </div>
 
-      <div className="px-6 pt-4 pb-2 flex justify-center lg:text-xl">
+      <div className="px-6 pt-4 pb-2 flex justify-center lg:text-[1rem]">
         <button
           className="bg-tortuga-dark hover:bg-tortuga-light text-white font-kalam py-2 px-4 rounded transition-all duration-200 ease-in-out"
           onClick={() =>

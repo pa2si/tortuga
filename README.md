@@ -1,8 +1,9 @@
-v 0.16.12
+v 0.16.13
 
 What's new:
 
-- Now the last event card is also shown in the middle
+- event cards max and min size
+- some text size formatting
 
 Done:
 

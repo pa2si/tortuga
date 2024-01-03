@@ -34,7 +34,7 @@ const Modal = () => {
             height="300"
             className="rounded-md h-[10rem] md:h-[15rem] shadow-lg mb-10 mt-1"
           />
-          <p className="max-w-xl text-justify font-text md:text-lg lg:text-[1.2rem] lg:leading-[1.8rem] text-neutral-700 mb-4">
+          <p className="max-w-xl text-justify font-text md:text-lg lg:text-[1.1rem] lg:leading-[1.8rem] text-neutral-700 mb-4">
             {selectedEvent.description}
             <br />
             {selectedEvent.description2}
