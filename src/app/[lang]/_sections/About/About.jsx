@@ -37,15 +37,15 @@ const About = ({ fetchedData }) => {
             />
           </div>
           {/* About Description */}
-          <article className="grid grid-cols-1 text-slate-900 mt-8 mb-12 lg:grid-cols-5 lg:items-center lg:mb-8">
-            <div className="col-span-3 px-4 sm:px-8 sm:text-xl lg:text-xl text-justify lg:px-0 lg:text-left order-last lg:order-first ">
+          <article className="grid grid-cols-1 text-slate-900 mt-8 mb-12 xl:grid-cols-5 lg:items-center lg:mb-8">
+            <div className="col-span-3 px-4 sm:px-8 sm:text-xl lg:text-xl text-justify lg:px-0  order-last xl:order-first xl:ml-10 ">
               <p className="text-gray-800 font-text leading-7 sm:leading-8 xl:leading-9 ">
                 {description}
               </p>
               <InView />
             </div>
             {/* Image  */}
-            <div className="col-span-2 flex flex-col justify-center items-center lg:ml-36 order-first lg:order-last">
+            <div className="col-span-2 flex flex-col justify-center items-center xl:ml-16 order-first xl:order-last">
               <Image
                 src={image.filename}
                 alt={image.alt}

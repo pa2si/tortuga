@@ -1,8 +1,9 @@
-v 0.16.10
+v 0.16.11
 
 What's new:
 
-- all Events and back buttons padding adapted
+- description text now in justify block
+- Event cards slider now not in infinite mode
 
 Done:
 

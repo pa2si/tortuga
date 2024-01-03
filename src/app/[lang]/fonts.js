@@ -5,7 +5,7 @@ import { Abhaya_Libre } from 'next/font/google';
 
 export const playpenSans = Playpen_Sans({
   subsets: ['latin'],
-  weight: '400',
+  weight: ['300', '400'],
   variable: '--font-playpenSans',
 });
 

@@ -101,7 +101,7 @@ const SingleEvent = async ({ params }) => {
             </div>
 
             {/* Description */}
-            <div className="mb-8 lg:mb-0 mt-8 lg:mt-0">
+            <div className="mb-8 lg:mb-0 mt-8 lg:mt-0 text-justify">
               <p className="font-text text-gray-700 text-lg md:text-xl line-height">
                 {selectedEvent.description}
               </p>

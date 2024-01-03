@@ -11,7 +11,7 @@ const SlickComp = ({ fetchedData }) => {
   const settings = {
     arrows: true,
     dots: true,
-    infinite: true,
+    infinite: false,
     centerMode: true,
     centerPadding: '0px',
     // speed: 1500,
