@@ -1,9 +1,8 @@
-v 0.16.11
+v 0.16.12
 
 What's new:
 
-- description text now in justify block
-- Event cards slider now not in infinite mode
+- Now the last event card is also shown in the middle
 
 Done:
 

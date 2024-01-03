@@ -1,12 +1,30 @@
 'use client';
 
-import Event from './Event';
+import React, { useState, useEffect } from 'react';
 import Slider from 'react-slick';
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
+import Event from './Event';
 
 const SlickComp = ({ fetchedData }) => {
   const { event_cards } = fetchedData;
+  const [extraSlidesCount, setExtraSlidesCount] = useState(0);
+
+  useEffect(() => {
+    const updateExtraSlides = () => {
+      const width = window.innerWidth;
+      if (width < 640) {
+        setExtraSlidesCount(0); // For mobile, assuming slidesToShow will be 1
+      } else if (width < 960) {
+        setExtraSlidesCount(0); // For tablet, assuming slidesToShow will be 2
+      } else {
+        setExtraSlidesCount(2); // For desktop, assuming slidesToShow will be 3
+      }
+    };
+
+    updateExtraSlides();
+    window.addEventListener('resize', updateExtraSlides);
+
+    return () => window.removeEventListener('resize', updateExtraSlides);
+  }, []);
 
   const settings = {
     arrows: true,
@@ -42,12 +60,20 @@ const SlickComp = ({ fetchedData }) => {
       },
     ],
   };
+  const adjustedEventCards = [
+    ...event_cards,
+    ...Array(extraSlidesCount).fill({}),
+  ];
 
   return (
     <Slider {...settings}>
-      {event_cards.map((event) => {
-        return <Event key={event._uid} {...event} />;
-      })}
+      {adjustedEventCards.map((event, index) =>
+        event._uid ? (
+          <Event key={event._uid} {...event} />
+        ) : (
+          <div key={`empty-${index}`} className="empty-slide" />
+        )
+      )}
     </Slider>
   );
 };
