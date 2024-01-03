@@ -37,10 +37,10 @@ const Program = ({
       >
         {/* Program Description */}
         <div className="font-text flex flex-col p-4 xl:p-4 justify-center order-last xl:order-first">
-          <h3 className="font-bold text-3xl xl:text-4xl mb-8 font-kalam">
+          <h3 className="font-bold text-3xl xl:text-4xl mb-4 font-kalam">
             {title}
           </h3>
-          <div className="text-gray-700 text-[1.4rem] sm:text-[1.5rem] md:text-2xl sm:text-justify">
+          <div className="text-gray-700 text-[1.4rem] sm:text-[1.5rem] md:text-[1.4rem] sm:text-justify">
             <div className="leading-8 sm:leading-10">
               {readMore ? (
                 <>

@@ -1,9 +1,8 @@
-v 0.16.13
+v 0.16.14
 
 What's new:
 
-- event cards max and min size
-- some text size formatting
+- Program font-size adapted
 
 Done:
 
