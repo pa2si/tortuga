@@ -1,44 +1,25 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
 import Slider from 'react-slick';
 import Event from './Event';
 
 const SlickComp = ({ fetchedData }) => {
   const { event_cards } = fetchedData;
-  const [extraSlidesCount, setExtraSlidesCount] = useState(0);
 
-  useEffect(() => {
-    const updateExtraSlides = () => {
-      const width = window.innerWidth;
-      if (width < 640) {
-        setExtraSlidesCount(0); // For mobile, assuming slidesToShow will be 1
-      } else if (width < 960) {
-        setExtraSlidesCount(0); // For tablet, assuming slidesToShow will be 2
-      } else {
-        setExtraSlidesCount(2); // For desktop, assuming slidesToShow will be 3
-      }
-    };
-
-    updateExtraSlides();
-    window.addEventListener('resize', updateExtraSlides);
-
-    return () => window.removeEventListener('resize', updateExtraSlides);
-  }, []);
+  // Filter out past events and sort by date_sort
+  const futureEvents = event_cards
+    .filter((event) => new Date(event.date_sort) >= new Date())
+    .sort((a, b) => new Date(a.date_sort) - new Date(b.date_sort));
 
   const settings = {
     arrows: true,
     dots: true,
-    infinite: false,
-    centerMode: true,
-    centerPadding: '60px',
-    // speed: 1500,
+    infinite: true,
+    centerMode: false,
     slidesToShow: 3,
     slidesToScroll: 1,
-    // fade: true,
     autoplay: false,
-    // autoplaySpeed: 5000,
-    // pauseOnHover: true,
+    // centerPadding: '60px',
 
     responsive: [
       {
@@ -60,21 +41,14 @@ const SlickComp = ({ fetchedData }) => {
       },
     ],
   };
-  const adjustedEventCards = [
-    ...event_cards,
-    ...Array(extraSlidesCount).fill({}),
-  ];
 
   return (
     <Slider {...settings}>
-      {adjustedEventCards.map((event, index) =>
-        event._uid ? (
-          <Event key={event._uid} {...event} />
-        ) : (
-          <div key={`empty-${index}`} className="empty-slide" />
-        )
-      )}
+      {futureEvents.map((event) => (
+        <Event key={event._uid} {...event} />
+      ))}
     </Slider>
   );
 };
+
 export default SlickComp;

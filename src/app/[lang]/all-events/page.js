@@ -29,6 +29,11 @@ const AllEvents = async ({ params: { lang } }) => {
     throw new Error('oops...no Events found!');
   }
 
+  // Sort event cards from furthest away to oldest
+  const sortedEventCards = [...event_cards].sort(
+    (a, b) => new Date(b.date_sort) - new Date(a.date_sort)
+  );
+
   return (
     <section
       className="min-w-screen min-h-screen flex items-center justify-center"
@@ -51,14 +56,14 @@ const AllEvents = async ({ params: { lang } }) => {
         </div>
         {/* events container */}
         <ul className="flex flex-wrap gap-3 justify-center sm:gap-10 ">
-          {event_cards.map((event) => {
+          {sortedEventCards.map((event) => {
             // console.log('lang is', lang);
             const singleEventUrl = `/${lang}/all-events/${event._uid}`;
 
             return (
               <li
                 key={event._uid}
-                className="flex flex-col min-w-[5rem] border-2 border-tortuga-light bg-opacity-80 w-[10rem] md:w-[15rem] group rounded-lg hover:scale-105 transition-all duration-400 ease-in-out"
+                className="flex flex-col sm:min-w-[12rem] border-2 border-tortuga-light bg-opacity-80 w-[10rem] md:w-[15rem] group rounded-lg hover:scale-105 transition-all duration-400 ease-in-out"
               >
                 <Link
                   href={singleEventUrl}

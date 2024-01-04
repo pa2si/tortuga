@@ -33,7 +33,7 @@ const Event = ({
   const { openModal } = useGlobalContext();
   return (
     <MotionArticle
-      className="flex flex-col max-w-sm min-h-[42rem] xl:min-h-fit xl:max-h-[35rem] xl:my-10 xl:h-[37rem] 2xl:h-[40rem] md:mb-4 bg-white shadow-xl rounded overflow-hidden mx-auto "
+      className="flex flex-col max-w-sm min-h-[42rem] md:min-w-[20rem] xl:min-h-fit xl:max-h-[45rem] xl:my-10 xl:h-[37rem] 2xl:h-[40rem] md:mb-4 bg-white shadow-xl rounded overflow-hidden mx-auto "
       variants={slideIn}
       initial="initial"
       whileInView="animate"
@@ -53,8 +53,8 @@ const Event = ({
         {image.copyright}
       </span>
       <div className="flex-grow px-6 py-4" style={{ fontFamily: 'arial' }}>
-        <h3 className="text-[1.7rem] mb-4 font-kalam leading-9">{title}</h3>
-        <div className="leading-7 text-[1.2rem]">
+        <h3 className="text-[1.8rem] mb-4 font-kalam leading-9">{title}</h3>
+        <div className="leading-7 text-[1.4rem] sm:text-[1.2rem]">
           <p className="text-tortuga-dark ">{date}</p>
           <p className="text-gray-700 font-bold">{city}</p>
           <p className="text-gray-700 font-bold">{location}</p>

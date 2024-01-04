@@ -24,7 +24,7 @@ const Events = ({ fetchedData, lang }) => {
       >
         <div className=" pt-8 pb-36 sm:mx-8 max-w-6xl lg:mx-auto lg:pt-12 lg:pb-36 lg:px-16 bg-white bg-opacity-95 rounded-xl slider-events">
           {/* Title */}
-          <div className=" w-full flex flex-col justify-center items-center md:mb-8 xl:mb-0">
+          <div className=" w-full flex flex-col justify-center items-center xl:mb-0">
             <div className="flex flex-col items-center">
               <h2 className="font-title text-black text-center">{title}</h2>
               <div className="relative w-full h-1 mt-7 sm:mt-4 md:mt-1">
@@ -34,12 +34,12 @@ const Events = ({ fetchedData, lang }) => {
           </div>
           <SlickComp fetchedData={fetchedData} />
           <InView />
-          <div className="flex mb-1 font-title text-xl absolute bottom-40 left-1/2 transform -translate-x-1/2 visible md:hidden">
+          <div className="flex font-title text-xl absolute bottom-40 left-1/2 transform -translate-x-1/2 visible md:hidden">
             <MdArrowBackIos />
             <p>{slider_text}</p>
             <MdArrowForwardIos />
           </div>
-          <button className=" flex leading-tight mb-1 text-2xl absolute bottom-10 left-1/2 transform -translate-x-1/2 hover:text-tortuga-light text-tortuga-dark border-2 border-tortuga-dark hover:border-tortuga-light font-kalam pt-1 px-4 sm:px-4 rounded transition-all duration-200 ease-in-out">
+          <button className="flex leading-tight mb-1 text-2xl absolute bottom-10 left-1/2 transform -translate-x-1/2 hover:text-tortuga-light text-tortuga-dark border-2 border-tortuga-dark hover:border-tortuga-light font-kalam pt-1 px-4 sm:px-4 rounded transition-all duration-200 ease-in-out">
             <Link href={allEventsUrl}>{gallery_view_btn}</Link>
           </button>
         </div>

@@ -1,10 +1,9 @@
-v 0.17.5
+v 0.18.0
 
 What's new:
 
-- Event Modal: some formating
-- Event SlickComp: centerpadding now 60px
-- single Event page formatted with date and location on the bottom
+- Event Cards: Infite scroll activated again. no more logic for last slide and no center mode, some formatting
+- some more formating over all
 
 Done:
 
