@@ -1,8 +1,9 @@
-v 0.17.2
+v 0.17.3
 
 What's new:
 
-- all events page: Events now have dates and mobile version now has two rolls
+- single Event page background for image now gray-100
+- no scale anymore on hover of single event image
 
 Done:
 
