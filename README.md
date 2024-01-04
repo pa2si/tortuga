@@ -1,8 +1,8 @@
-v 0.18.1
+v 0.18.2
 
 What's new:
 
-- Event Cards in Event Section: infinite scroll off!
+- Event Cards in Event Section: MotionArticle in Event.jsx is eliminated and instead applied in SlickComp! --> no more buggy repeating motion effect when sliding
 
 Done:
 

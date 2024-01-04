@@ -2,9 +2,24 @@
 
 import Slider from 'react-slick';
 import Event from './Event';
+import { MotionDiv } from '@/utils/MotionDiv';
 
 const SlickComp = ({ fetchedData }) => {
   const { event_cards } = fetchedData;
+
+  const slideIn = {
+    initial: {
+      opacity: 0,
+      x: -200,
+    },
+    animate: () => ({
+      opacity: 1,
+      x: 0,
+      transition: {
+        duration: 1,
+      },
+    }),
+  };
 
   // Filter out past events and sort by date_sort
   const futureEvents = event_cards
@@ -43,11 +58,18 @@ const SlickComp = ({ fetchedData }) => {
   };
 
   return (
-    <Slider {...settings}>
-      {futureEvents.map((event) => (
-        <Event key={event._uid} {...event} />
-      ))}
-    </Slider>
+    <MotionDiv
+      variants={slideIn}
+      initial="initial"
+      whileInView="animate"
+      viewport={{ once: true }}
+    >
+      <Slider {...settings}>
+        {futureEvents.map((event) => (
+          <Event key={event._uid} {...event} />
+        ))}
+      </Slider>
+    </MotionDiv>
   );
 };
 

@@ -16,29 +16,9 @@ const Event = ({
   btn_text,
   fb_logo,
 }) => {
-  const slideIn = {
-    initial: {
-      opacity: 0,
-      x: -200,
-    },
-    animate: () => ({
-      opacity: 1,
-      x: 0,
-      transition: {
-        duration: 1,
-      },
-    }),
-  };
-
   const { openModal } = useGlobalContext();
   return (
-    <MotionArticle
-      className="flex flex-col max-w-sm min-h-[42rem] md:min-w-[20rem] xl:min-h-fit xl:max-h-[45rem] xl:my-10 xl:h-[37rem] 2xl:h-[40rem] md:mb-4 bg-white shadow-xl rounded overflow-hidden mx-auto "
-      variants={slideIn}
-      initial="initial"
-      whileInView="animate"
-      viewport={{ once: true }}
-    >
+    <article className="flex flex-col max-w-sm min-h-[42rem] md:min-w-[20rem] xl:min-h-fit xl:max-h-[45rem] xl:my-10 xl:h-[37rem] 2xl:h-[40rem] md:mb-4 bg-white shadow-xl rounded overflow-hidden mx-auto ">
       <div className="relative w-full h-[18rem] shadow-lg">
         <Image
           src={image.filename}
@@ -85,7 +65,7 @@ const Event = ({
           {btn_text}
         </button>
       </div>
-    </MotionArticle>
+    </article>
   );
 };
 export default Event;
