@@ -1,9 +1,9 @@
-v 0.17.3
+v 0.17.4
 
 What's new:
 
-- single Event page background for image now gray-100
-- no scale anymore on hover of single event image
+- Event Modal: date and direction put into one line
+- Program: implemented a logic that when clicking "show less" we get to the anchor at the start of the program
 
 Done:
 

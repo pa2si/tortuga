@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import InView from './InView';
 import { MotionArticle } from '@/utils/MotionDiv';
+import { useRef } from 'react';
 
 const Program = ({
   title,
@@ -26,9 +27,19 @@ const Program = ({
     }),
   };
 
+  const articleRef = useRef(null);
+
+  const handleToggleReadMore = () => {
+    toggleReadMore(); // This will change the state in the parent component
+    if (readMore && articleRef.current) {
+      articleRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
+
   return (
     <>
       <MotionArticle
+        ref={articleRef}
         className="grid grid-cols-1 bg-white border-2  drop-shadow-2xl rounded-xl  xl:grid-cols-2 program-margin"
         variants={slideIn}
         initial="initial"
@@ -54,7 +65,7 @@ const Program = ({
               <p>
                 <button
                   className="text-tortuga-dark text-[1.7rem] mt-2 font-abhayaLibre hover:text-tortuga-light transition-all duration-200 ease-in-out"
-                  onClick={toggleReadMore}
+                  onClick={handleToggleReadMore}
                 >
                   {readMore ? show_less : read_more}
                 </button>

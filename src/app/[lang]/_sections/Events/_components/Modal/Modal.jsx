@@ -41,13 +41,12 @@ const Modal = () => {
           </p>
 
           <div className="my-4 pt-1 leading-[1.4rem] text-[1.1rem] md:text-[1.2rem] md:leading-[1.5rem] lg:text-[1.3rem] lg:leading-[1.6rem]">
-            <p className="text-gray-700 "> {selectedEvent.date}</p>
             <p className="text-gray-700 "> {selectedEvent.location}</p>
             <p className="text-gray-700 "> {selectedEvent.city}</p>
-            <p className="text-gray-700 ">{selectedEvent.address}</p>
             <p className="text-gray-700 ">
-              Postal Code: {selectedEvent.postal}
+              {selectedEvent.address}, {selectedEvent.postal}
             </p>
+            <p className="text-gray-700 "> {selectedEvent.date}</p>
           </div>
 
           <a
