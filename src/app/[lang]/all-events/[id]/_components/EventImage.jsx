@@ -22,7 +22,7 @@ const EventImage = ({ imageData }) => {
   }
 
   return (
-    <div className="hover:cursor-pointer flex justify-center sm:bg-gray-100  rounded-t-lg sm:border-2 lg:border-0">
+    <div className="hover:cursor-pointer flex justify-center ">
       <Image
         src={imageData.filename}
         alt={imageData.alt || 'Event Image'}
@@ -31,7 +31,7 @@ const EventImage = ({ imageData }) => {
         height="350"
         placeholder="blur"
         blurDataURL={blurDataURL}
-        className="rounded-md shadow-lg  max-h-80 "
+        className="rounded-md shadow-lg max-h-80 hover:scale-105 transition-all duration-300 ease-in-out "
         onClick={handleImageClick}
       />
       <ImageModal />

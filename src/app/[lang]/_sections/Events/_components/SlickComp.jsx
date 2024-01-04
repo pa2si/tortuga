@@ -31,7 +31,7 @@ const SlickComp = ({ fetchedData }) => {
     dots: true,
     infinite: false,
     centerMode: true,
-    centerPadding: '0px',
+    centerPadding: '60px',
     // speed: 1500,
     slidesToShow: 3,
     slidesToScroll: 1,

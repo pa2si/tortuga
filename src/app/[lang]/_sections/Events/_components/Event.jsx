@@ -33,7 +33,7 @@ const Event = ({
   const { openModal } = useGlobalContext();
   return (
     <MotionArticle
-      className="flex flex-col max-w-sm min-h-[42rem] xl:min-h-fit xl:max-h-screen xl:my-10 xl:h-[37rem] 2xl:h-[40rem] md:mb-4 bg-white shadow-xl rounded overflow-hidden mx-auto "
+      className="flex flex-col max-w-sm min-h-[42rem] xl:min-h-fit xl:max-h-[35rem] xl:my-10 xl:h-[37rem] 2xl:h-[40rem] md:mb-4 bg-white shadow-xl rounded overflow-hidden mx-auto "
       variants={slideIn}
       initial="initial"
       whileInView="animate"
@@ -52,16 +52,14 @@ const Event = ({
       <span className="inline-block rounded-full px-1 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
         {image.copyright}
       </span>
-      <div className="flex-grow px-6 py-4">
-        <h3 className="text-4xl xl:text-4xl mb-4 font-kalam">{title}</h3>
-        <div className="text-[1.4rem] md:text-[1.4rem] leading-6 lg:text-[1.2rem]">
-          <p className="text-gray-800 text-2xl mb-2">{date}</p>
-          <p className="text-gray-700 mb-1">{city}</p>
-          <p className="text-gray-700 mb-1">{location}</p>
-          <p className="text-gray-700 mb-1">
-            {address}, {postal}
-          </p>
-          <p className="text-gray-700"></p>
+      <div className="flex-grow px-6 py-4" style={{ fontFamily: 'arial' }}>
+        <h3 className="text-[1.7rem] mb-4 font-kalam leading-9">{title}</h3>
+        <div className="leading-7 text-[1.2rem]">
+          <p className="text-tortuga-dark ">{date}</p>
+          <p className="text-gray-700 font-bold">{city}</p>
+          <p className="text-gray-700 font-bold">{location}</p>
+          <p className="text-gray-700 ">{address}</p>
+          <p className="text-gray-700 ">{postal}</p>
         </div>
       </div>
 

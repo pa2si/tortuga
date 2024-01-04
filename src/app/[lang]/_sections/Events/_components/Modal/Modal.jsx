@@ -34,21 +34,19 @@ const Modal = () => {
             height="300"
             className="rounded-md h-[10rem] md:h-[15rem] shadow-lg mb-10 mt-1"
           />
-          <p className="max-w-xl text-justify font-text md:text-lg lg:text-[1.1rem] lg:leading-[1.8rem] text-neutral-700 mb-4">
+          <p className="max-w-xl text-justify font-text md:text-lg lg:text-[1rem] lg:leading-[1.8rem] text-neutral-700 mb-4">
             {selectedEvent.description}
             <br />
             {selectedEvent.description2}
           </p>
-
           <div className="my-4 pt-1 leading-[1.4rem] text-[1.1rem] md:text-[1.2rem] md:leading-[1.5rem] lg:text-[1.3rem] lg:leading-[1.6rem]">
-            <p className="text-gray-700 "> {selectedEvent.location}</p>
-            <p className="text-gray-700 "> {selectedEvent.city}</p>
-            <p className="text-gray-700 ">
-              {selectedEvent.address}, {selectedEvent.postal}
-            </p>
-            <p className="text-gray-700 "> {selectedEvent.date}</p>
+            <div className=" bg-tortuga-light h-[2px] mb-2 "></div>{' '}
+            <p className="text-tortuga-dark"> {selectedEvent.date}</p>
+            <p className="text-gray-700"> {selectedEvent.location}</p>
+            <p className="text-gray-700"> {selectedEvent.city}</p>
+            <p className="text-gray-700">{selectedEvent.address}</p>
+            <p className="text-gray-700">{selectedEvent.postal}</p>
           </div>
-
           <a
             href={selectedEvent.event_link}
             target="_blank"
@@ -61,7 +59,6 @@ const Modal = () => {
               height={100}
             />
           </a>
-
           <button
             className={`text-red-600 ${styles.close_modal_btn}`}
             onClick={closeModal}

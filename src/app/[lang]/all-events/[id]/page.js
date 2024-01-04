@@ -66,7 +66,7 @@ const SingleEvent = async ({ params }) => {
         backgroundPosition: 'center',
       }}
     >
-      <div className="max-w-6xl mx-4 my-auto p-3 pb-8 md:p-8 lg:mx-8 mt-20 bg-white bg-opacity-95 rounded-xl shadow-lg">
+      <div className="max-w-4xl mx-4 my-auto p-3 pb-8 md:p-8 lg:mx-8 mt-20 bg-white bg-opacity-95 rounded-xl shadow-lg">
         <div className="grid">
           <div className=" w-full">
             {/* Title */}
@@ -85,12 +85,23 @@ const SingleEvent = async ({ params }) => {
 
             <div className="mx-auto sm:w-full lg:px-16">
               <EventImage imageData={selectedEvent.image} />
-              {/* Event address */}
-              <div className="grid grid-cols-2 text-gray-600 mt-3 text-abhayaLibre justify-center italic">
-                <div>
+            </div>
+
+            {/* Description */}
+
+            <div className="mb-8 lg:mb-0 mt-8 text-justify">
+              <p className="font-text text-gray-700 text-[1rem] leading-7 lg:leading-8">
+                {selectedEvent.description}
+              </p>
+              <p className="font-text text-gray-700 text-[1rem] leading-7 lg:leading-8">
+                {selectedEvent.description2}
+              </p>
+              {/* Line above the event address */}
+              <div className="text-gray-600 mt-16 text-abhayaLibre italic">
+                <div className="grid grid-col justify-end text-right">
+                  <div className=" bg-tortuga-light h-[2px] mb-2 "></div>{' '}
+                  {/* Line Element */}
                   <p>{selectedEvent.date}</p>
-                </div>
-                <div className="text-right">
                   <p>{selectedEvent.city}</p>
                   <p>{selectedEvent.location}</p>
                   <p>
@@ -98,16 +109,6 @@ const SingleEvent = async ({ params }) => {
                   </p>
                 </div>
               </div>
-            </div>
-
-            {/* Description */}
-            <div className="mb-8 lg:mb-0 mt-8 lg:mx-16 text-justify">
-              <p className="font-text text-gray-700 text-lg md:text-[1.1rem] line-height">
-                {selectedEvent.description}
-              </p>
-              <p className="font-text text-gray-700 text-lg md:text-[1.1rem] line-height">
-                {selectedEvent.description2}
-              </p>
             </div>
           </div>
 

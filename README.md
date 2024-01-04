@@ -1,9 +1,10 @@
-v 0.17.4
+v 0.17.5
 
 What's new:
 
-- Event Modal: date and direction put into one line
-- Program: implemented a logic that when clicking "show less" we get to the anchor at the start of the program
+- Event Modal: some formating
+- Event SlickComp: centerpadding now 60px
+- single Event page formatted with date and location on the bottom
 
 Done:
 
