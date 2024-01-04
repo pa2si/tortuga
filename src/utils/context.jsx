@@ -15,7 +15,7 @@ export const AppProvider = ({ children }) => {
   const openModal = (event) => {
     setIsModalOpen(true);
     setSelectedEvent(event);
-    console.log('modal has been opened');
+    // console.log('modal has been opened');
   };
 
   // Single Event image Modal

@@ -1,9 +1,9 @@
-v 0.17.0
+v 0.17.1
 
 What's new:
 
-- Single Event is now in lg format not displayed in float
-- About description with a bit more margin
+- placeholder with static base64 image implemented (gray color)
+- static alt text for Program and Event images
 
 Done:
 

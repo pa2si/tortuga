@@ -66,7 +66,7 @@ const Program = ({
         <div className="relative flex justify-center items-center w-full h-[14rem] mx-auto mb-20 sm:h-[18rem] md:h-[22rem] lg:h-[26rem] xl:mb-0 xl:place-self-center  order-first xl:order-last">
           <Image
             src={image.filename}
-            alt={image.alt}
+            alt={image.alt || 'Program Image'}
             priority={true}
             fill
             sizes="(max-width: 768px) 80vw, 33vw"

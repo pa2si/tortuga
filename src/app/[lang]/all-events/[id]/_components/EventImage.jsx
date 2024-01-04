@@ -10,6 +10,9 @@ const EventImage = ({ imageData }) => {
 
   const { openImageModal } = useGlobalContext();
 
+  const blurDataURL =
+    'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAFklEQVR42mN8+vx1PQMRgHFUIX0VAgAKVyAngaWJUwAAAABJRU5ErkJggg==';
+
   const handleImageClick = () => {
     openImageModal(imageData.filename);
   };
@@ -22,10 +25,12 @@ const EventImage = ({ imageData }) => {
     <div className="hover:cursor-pointer flex justify-center sm:bg-gray-200  rounded-t-lg sm:border-2 lg:border-0">
       <Image
         src={imageData.filename}
-        alt={imageData.filename.alt}
+        alt={imageData.alt || 'Event Image'}
         priority={true}
         width="650"
         height="350"
+        placeholder="blur"
+        blurDataURL={blurDataURL}
         className="rounded-md shadow-lg hover:scale-105 max-h-80 "
         onClick={handleImageClick}
       />

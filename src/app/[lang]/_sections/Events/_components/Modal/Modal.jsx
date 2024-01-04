@@ -28,7 +28,7 @@ const Modal = () => {
           </h5>
           <Image
             src={selectedEvent.image.filename}
-            alt={selectedEvent.image.alt}
+            alt={selectedEvent.image.alt || 'Event Image'}
             priority={true}
             width="300"
             height="300"
