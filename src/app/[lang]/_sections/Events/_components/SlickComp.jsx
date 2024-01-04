@@ -14,7 +14,7 @@ const SlickComp = ({ fetchedData }) => {
   const settings = {
     arrows: true,
     dots: true,
-    infinite: true,
+    infinite: false,
     centerMode: false,
     slidesToShow: 3,
     slidesToScroll: 1,

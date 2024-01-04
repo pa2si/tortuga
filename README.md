@@ -1,9 +1,8 @@
-v 0.18.0
+v 0.18.1
 
 What's new:
 
-- Event Cards: Infite scroll activated again. no more logic for last slide and no center mode, some formatting
-- some more formating over all
+- Event Cards in Event Section: infinite scroll off!
 
 Done:
 
