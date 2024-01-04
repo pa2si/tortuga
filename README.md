@@ -1,9 +1,8 @@
-v 0.17.1
+v 0.17.2
 
 What's new:
 
-- placeholder with static base64 image implemented (gray color)
-- static alt text for Program and Event images
+- all events page: Events now have dates and mobile version now has two rolls
 
 Done:
 

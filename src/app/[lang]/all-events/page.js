@@ -39,7 +39,7 @@ const AllEvents = async ({ params: { lang } }) => {
         backgroundSize: 'cover',
       }}
     >
-      <article className=" flex flex-col max-w-6xl max-h-content m-auto mt-20 mb-2 sm:mt-22 mx-4 p-3 pb-8 sm:mx-8 md:p-8 bg-white bg-opacity-95 rounded-xl ">
+      <article className=" flex flex-col max-w-6xl max-h-content m-auto mt-20 mb-2 sm:mt-22 mx-4 pt-3 sm:p-3 pb-8 sm:mx-8 md:p-8 bg-white bg-opacity-95 rounded-xl ">
         {/* title */}
         <div className=" flex flex-col justify-center items-center mb-8">
           <div className="flex flex-col items-center">
@@ -50,7 +50,7 @@ const AllEvents = async ({ params: { lang } }) => {
           </div>
         </div>
         {/* events container */}
-        <ul className="flex flex-wrap gap-5 sm:gap-10 justify-center">
+        <ul className="flex flex-wrap gap-3 justify-center sm:gap-10 ">
           {event_cards.map((event) => {
             // console.log('lang is', lang);
             const singleEventUrl = `/${lang}/all-events/${event._uid}`;
@@ -58,7 +58,7 @@ const AllEvents = async ({ params: { lang } }) => {
             return (
               <li
                 key={event._uid}
-                className="flex flex-col min-w-[13rem] border-2 border-tortuga-light bg-opacity-80 w-[10rem] md:w-[15rem] group rounded-lg hover:scale-105 transition-all duration-400 ease-in-out"
+                className="flex flex-col min-w-[5rem] border-2 border-tortuga-light bg-opacity-80 w-[10rem] md:w-[15rem] group rounded-lg hover:scale-105 transition-all duration-400 ease-in-out"
               >
                 <Link
                   href={singleEventUrl}
@@ -76,10 +76,12 @@ const AllEvents = async ({ params: { lang } }) => {
                     <span className="text-white text-lg">{hover_text}</span>
                   </div>
                 </Link>
-                <div className="px-6 py-4 flex-grow">
-                  <h3 className="text-xl sm:text-2xl mb-2 font-kalam">
+
+                <div className=" py-4 flex-grow mx-2">
+                  <h3 className="text-lg leading-5 sm:leading-7 sm:text-2xl mb-2 font-kalam">
                     {event.title}
                   </h3>
+                  <p className=" mb-2  text-gray-700 ">{event.date}</p>
                 </div>
                 <div className="text-sm px-6 ot-1 sm:pt-4 pb-2 flex justify-center xl:hidden ">
                   <Link
