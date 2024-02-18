@@ -1,8 +1,8 @@
-v 0.18.2
+v 0.18.3
 
 What's new:
 
-- Event Cards in Event Section: MotionArticle in Event.jsx is eliminated and instead applied in SlickComp! --> no more buggy repeating motion effect when sliding
+- skeleton appears when loading image for singe event site
 
 Done:
 
