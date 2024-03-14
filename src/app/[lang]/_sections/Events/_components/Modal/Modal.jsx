@@ -58,6 +58,13 @@ const Modal = () => {
             <p className="text-gray-700"> {selectedEvent.city}</p>
             <p className="text-gray-700">{selectedEvent.address}</p>
             <p className="text-gray-700">{selectedEvent.postal}</p>
+            {selectedEvent.event_language_paragraph &&
+              selectedEvent.event_language && (
+                <p className="text-gray-700 mt-2">
+                  {selectedEvent.event_language_paragraph}:{' '}
+                  {selectedEvent.event_language}
+                </p>
+              )}
           </div>
           <a
             href={selectedEvent.event_link}

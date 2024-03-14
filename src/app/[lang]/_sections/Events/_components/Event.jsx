@@ -1,6 +1,5 @@
 import Image from 'next/image';
 import { useGlobalContext } from '@/utils/context';
-import { MotionArticle } from '@/utils/MotionDiv';
 
 const Event = ({
   title,
@@ -15,6 +14,8 @@ const Event = ({
   event_link,
   btn_text,
   fb_logo,
+  event_language,
+  event_language_paragraph,
 }) => {
   const { openModal } = useGlobalContext();
   return (
@@ -33,13 +34,18 @@ const Event = ({
         {image.copyright}
       </span>
       <div className="flex-grow px-6 py-4" style={{ fontFamily: 'arial' }}>
-        <h3 className="text-[1.8rem] mb-4 font-kalam leading-9">{title}</h3>
+        <h3 className="text-[1.8rem] mb-2 font-kalam leading-9">{title}</h3>
         <div className="leading-7 text-[1.4rem] sm:text-[1.2rem]">
-          <p className="text-tortuga-dark ">{date}</p>
+          <p className="text-tortuga-dark mb-3">{date}</p>
           <p className="text-gray-700 font-bold">{city}</p>
           <p className="text-gray-700 font-bold">{location}</p>
           <p className="text-gray-700 ">{address}</p>
           <p className="text-gray-700 ">{postal}</p>
+          {event_language_paragraph && event_language && (
+            <p className="text-gray-700 mt-2 italic">
+              {event_language_paragraph}: {event_language}
+            </p>
+          )}
         </div>
       </div>
 
@@ -59,6 +65,8 @@ const Event = ({
               event_link,
               title,
               fb_logo,
+              event_language,
+              event_language_paragraph,
             })
           }
         >

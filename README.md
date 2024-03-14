@@ -1,8 +1,8 @@
-v 0.18.3
+v 0.18.4
 
 What's new:
 
-- skeleton appears when loading image for singe event site
+- mb for date at event card and event language paragraph
 
 Done:
 
@@ -21,6 +21,7 @@ Done:
   - Blur and Opacity Effect for Hero when scrolling in Desktop version
 - About Section
 - Event Carousel with modal button for more info
+- skeleton appears when loading image for singe event site
 
   - Motion Effect in View for Events and Programs
   - Icons view button in Events Section
