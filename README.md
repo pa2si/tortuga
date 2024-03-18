@@ -1,8 +1,8 @@
-v 0.18.5
+v 0.18.6
 
 What's new:
 
-- language paragraph only language without category!
+- () around language note in event card etc. some robot settings
 
 Done:
 

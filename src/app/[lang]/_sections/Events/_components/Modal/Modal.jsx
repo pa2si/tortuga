@@ -22,7 +22,7 @@ const Modal = () => {
       onClick={handleOverlayClick}
     >
       {isModalOpen && selectedEvent ? (
-        <div className="relative bg-white max-h-screen-30 lg:max-w-3xl xl:max-w-4xl text-center grid place-items-center p-8 rounded-md overflow-scroll">
+        <div className="relative bg-white max-h-screen-30 lg:max-w-3xl xl:max-w-4xl text-center grid place-items-center pt-8 pb-2 rounded-md overflow-scroll">
           {/* Title */}
           <div className=" w-full flex flex-col justify-center items-center mb-4 ">
             <div className="flex flex-col items-center">
@@ -60,16 +60,9 @@ const Modal = () => {
             <p className="text-gray-700">{selectedEvent.postal}</p>
             {selectedEvent.event_language && (
               <p className="text-gray-700 mt-2">
-                {selectedEvent.event_language}
+                {`(${selectedEvent.event_language})`}
               </p>
             )}
-            {/* {selectedEvent.event_language_paragraph &&
-              selectedEvent.event_language && (
-                <p className="text-gray-700 mt-2">
-                  {selectedEvent.event_language_paragraph}:{' '}
-                  {selectedEvent.event_language}
-                </p>
-              )} */}
           </div>
           <a
             href={selectedEvent.event_link}

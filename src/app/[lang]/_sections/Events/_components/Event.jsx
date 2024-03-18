@@ -41,13 +41,8 @@ const Event = ({
           <p className="text-gray-700 ">{address}</p>
           <p className="text-gray-700 ">{postal}</p>
           {event_language && (
-            <p className="text-gray-700 mt-2 italic">{event_language}</p>
+            <p className="text-gray-700 mt-2 italic">{`(${event_language})`}</p>
           )}
-          {/* {event_language_paragraph && event_language && (
-            <p className="text-gray-700 mt-2 italic">
-              {event_language_paragraph}: {event_language}
-            </p>
-          )} */}
         </div>
       </div>
 

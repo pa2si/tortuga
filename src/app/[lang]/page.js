@@ -24,19 +24,19 @@ export async function generateMetadata({ params: { lang } }) {
       icon: '/favicon.ico',
       apple: storyData.landing_page_meta_data.apple_touch_icon.filename,
     },
-    robots: {
-      index: false,
-      follow: false,
-      nocache: true,
-      googleBot: {
-        index: false,
-        follow: false,
-        noimageindex: true,
-        'max-video-preview': -1,
-        'max-image-preview': 'large',
-        'max-snippet': -1,
-      },
-    },
+    // robots: {
+    //   index: true,
+    //   follow: true,
+    //   nocache: true,
+    //   googleBot: {
+    //     index: true,
+    //     follow: true,
+    //     noimageindex: false,
+    //     'max-video-preview': -1,
+    //     'max-image-preview': 'large',
+    //     'max-snippet': -1,
+    //   },
+    // },
   };
 }
 
