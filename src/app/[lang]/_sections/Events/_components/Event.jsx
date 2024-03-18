@@ -15,7 +15,6 @@ const Event = ({
   btn_text,
   fb_logo,
   event_language,
-  event_language_paragraph,
 }) => {
   const { openModal } = useGlobalContext();
   return (
@@ -41,11 +40,14 @@ const Event = ({
           <p className="text-gray-700 font-bold">{location}</p>
           <p className="text-gray-700 ">{address}</p>
           <p className="text-gray-700 ">{postal}</p>
-          {event_language_paragraph && event_language && (
+          {event_language && (
+            <p className="text-gray-700 mt-2 italic">{event_language}</p>
+          )}
+          {/* {event_language_paragraph && event_language && (
             <p className="text-gray-700 mt-2 italic">
               {event_language_paragraph}: {event_language}
             </p>
-          )}
+          )} */}
         </div>
       </div>
 
@@ -66,7 +68,6 @@ const Event = ({
               title,
               fb_logo,
               event_language,
-              event_language_paragraph,
             })
           }
         >

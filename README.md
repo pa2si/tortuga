@@ -1,8 +1,8 @@
-v 0.18.4
+v 0.18.5
 
 What's new:
 
-- mb for date at event card and event language paragraph
+- language paragraph only language without category!
 
 Done:
 
