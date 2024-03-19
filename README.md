@@ -1,8 +1,8 @@
-v 1.0.7
+v 1.0.8
 
 What's new:
 
-- same settings as Events section
+- className mobile-bg-adjust added to sections to apply for mobile view
 
 Done:
 
