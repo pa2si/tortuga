@@ -5,9 +5,14 @@ import InView from './_components/InView';
 import Link from 'next/link';
 
 const Events = ({ fetchedData, lang }) => {
-  const { title, gallery_view_btn, slider_text, bg } = fetchedData;
+  const { title, gallery_view_btn, slider_text, bg, event_cards } = fetchedData;
+  console.log(event_cards);
 
   const allEventsUrl = `/${lang}/all-events`;
+
+  const futureEvents = event_cards
+    .filter((event) => new Date(event.date_sort) >= new Date())
+    .sort((a, b) => new Date(a.date_sort) - new Date(b.date_sort));
 
   return (
     <section
@@ -34,11 +39,14 @@ const Events = ({ fetchedData, lang }) => {
           </div>
           <SlickComp fetchedData={fetchedData} />
           <InView />
-          <div className="flex font-title text-xl absolute bottom-40 left-1/2 transform -translate-x-1/2 visible md:hidden">
-            <MdArrowBackIos />
-            <p>{slider_text}</p>
-            <MdArrowForwardIos />
-          </div>
+          {/* Conditionally render this div if more than one event card */}
+          {futureEvents && futureEvents.length > 1 && (
+            <div className="flex font-title text-xl absolute bottom-40 left-1/2 transform -translate-x-1/2 visible md:hidden">
+              <MdArrowBackIos />
+              <p>{slider_text}</p>
+              <MdArrowForwardIos />
+            </div>
+          )}
           <button className="flex leading-tight mb-1 text-2xl absolute bottom-10 left-1/2 transform -translate-x-1/2 hover:text-tortuga-light text-tortuga-dark border-2 border-tortuga-dark hover:border-tortuga-light font-kalam pt-1 px-4 sm:px-4 rounded transition-all duration-200 ease-in-out">
             <Link href={allEventsUrl}>{gallery_view_btn}</Link>
           </button>

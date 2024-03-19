@@ -1,8 +1,8 @@
-v 1.0.1
+v 1.0.2
 
 What's new:
 
-- ununsed import deleted
+- slider text for mobile version only displayed when more than one event is planned
 
 Done:
 
