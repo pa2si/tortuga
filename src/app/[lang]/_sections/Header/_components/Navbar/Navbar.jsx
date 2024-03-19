@@ -6,7 +6,6 @@ import styles from './Navbar.module.css';
 import Image from 'next/image';
 import { useState, useRef } from 'react';
 import Link from 'next/link';
-import { usePathname } from 'next/navigation';
 import { motion } from 'framer-motion';
 import { useGlobalContext } from '@/utils/context';
 

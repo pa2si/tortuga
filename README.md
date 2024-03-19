@@ -1,9 +1,8 @@
-v 1.0.0
+v 1.0.1
 
 What's new:
 
-- release version for main branch and real domain
-- added a : at contact me
+- ununsed import deleted
 
 Done:
 
