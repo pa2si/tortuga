@@ -1,8 +1,12 @@
-v 0.18.6
+v 0.18.7
 
 What's new:
 
-- () around language note in event card etc. some robot settings
+- cms branch used to replace its content of main branch. so now main branch is the real main branch.
+- in github the default branch is updated to main branch, and as well in vercel the related branch is the main branch now.
+
+- padding for modal
+- robots file ready for crawling!
 
 Done:
 
