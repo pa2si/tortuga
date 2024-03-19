@@ -9,8 +9,8 @@ const About = ({ fetchedData }) => {
       style={{
         backgroundImage: `url(${bg.filename})`,
         backgroundAttachment: 'fixed',
+        backgroundSize: '140%',
         backgroundPosition: 'center',
-        backgroundSize: 'cover',
       }}
     >
       <div

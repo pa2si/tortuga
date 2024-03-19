@@ -1,8 +1,8 @@
-v 1.0.6
+v 1.0.7
 
 What's new:
 
-- bg-mobile-adjust for about section
+- same settings as Events section
 
 Done:
 
