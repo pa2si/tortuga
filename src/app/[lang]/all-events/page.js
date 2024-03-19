@@ -36,7 +36,7 @@ const AllEvents = async ({ params: { lang } }) => {
 
   return (
     <section
-      className="min-w-screen min-h-screen flex items-center justify-center"
+      className="min-w-screen min-h-svh flex items-center justify-center"
       style={{
         backgroundImage: `linear-gradient(to right, rgba(180, 180, 180, 0.37),  rgba(180, 180, 180, 0.37)), url(${bg.filename})`,
         /*      backgroundAttachment: 'fixed', */

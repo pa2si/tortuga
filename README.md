@@ -1,8 +1,8 @@
-v 1.0.4
+v 1.0.5
 
 What's new:
 
-- console.log removed
+- min-h-svh instead of min-h-screen for all-events sections
 
 Done:
 
