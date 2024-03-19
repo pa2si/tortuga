@@ -12,7 +12,6 @@ const About = ({ fetchedData }) => {
         backgroundPosition: 'center',
         backgroundSize: 'cover',
       }}
-      className="mobile-bg-adjust"
     >
       <div
         className="flex justify-center relative max-h-svh bg-gray-300 mx-4 bg-opacity-0  text-slate-50 overflow-auto sm:bg-opacity-40 xl:mx-0 rounded-lg"
