@@ -242,9 +242,9 @@ body {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 639px) {
   .mobile-bg-adjust {
-    background-size: auto 100% !important; /* Adjust to suit your needs */
-    background-position: top center !important; /* Adjust to focus on a particular area */
+    background-size: 100% !important; /* Adjust to suit your needs */
+    background-position: center !important; /* Adjust to focus on a particular area */
   }
 }
