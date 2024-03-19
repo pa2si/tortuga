@@ -244,7 +244,8 @@ body {
 
 @media (max-width: 639px) {
   .mobile-bg-adjust {
-    background-size: 400% !important; /* Adjust to suit your needs */
-    background-position: bottom !important; /* Adjust to focus on a particular area */
+    background-size: 400% !important;
+    background-position: bottom !important;
+    background-attachment: 'fixed' !important;
   }
 }
