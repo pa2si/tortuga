@@ -13,7 +13,6 @@ const Programs = ({ fetchedData }) => {
         backgroundPosition: 'center',
         backgroundSize: 'cover',
       }}
-      className="mobile-bg-adjust"
     >
       <div
         className="relative max-h-fit mx-4 text-black overflow-auto bg-opacity-0 bg-slate-300 sm:mx-0 sm:bg-opacity-10 lg:mx-8 xl:mx-0 rounded-lg "

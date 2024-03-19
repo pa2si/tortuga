@@ -21,7 +21,6 @@ const Events = ({ fetchedData, lang }) => {
         backgroundPosition: 'center',
         backgroundAttachment: 'fixed',
       }}
-      className="mobile-bg-adjust"
     >
       <div
         className="relative mx-4 max-h-svh overflow-auto bg-gray-100 bg-opacity-0 sm:mx-0 sm:bg-opacity-5 lg:mx-8 xl:mx-0 rounded-lg"
