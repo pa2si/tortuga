@@ -1,8 +1,8 @@
-v 1.0.5
+v 1.0.6
 
 What's new:
 
-- min-h-svh instead of min-h-screen for all-events sections
+- bg-mobile-adjust for about section
 
 Done:
 
