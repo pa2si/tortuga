@@ -1,8 +1,8 @@
-v 1.0.2
+v 1.0.3
 
 What's new:
 
-- slider text for mobile version only displayed when more than one event is planned
+- max-h-max für sections erstetzt mit max-h-svh
 
 Done:
 
