@@ -1,8 +1,8 @@
-v 1.0.3
+v 1.0.4
 
 What's new:
 
-- max-h-max für sections erstetzt mit max-h-svh
+- console.log removed
 
 Done:
 

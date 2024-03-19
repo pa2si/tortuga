@@ -6,7 +6,6 @@ import Link from 'next/link';
 
 const Events = ({ fetchedData, lang }) => {
   const { title, gallery_view_btn, slider_text, bg, event_cards } = fetchedData;
-  console.log(event_cards);
 
   const allEventsUrl = `/${lang}/all-events`;
 
