@@ -1,12 +1,9 @@
-v 0.18.7
+v 1.0.0
 
 What's new:
 
-- cms branch used to replace its content of main branch. so now main branch is the real main branch.
-- in github the default branch is updated to main branch, and as well in vercel the related branch is the main branch now.
-
-- padding for modal
-- robots file ready for crawling!
+- release version for main branch and real domain
+- added a : at contact me
 
 Done:
 
