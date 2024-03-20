@@ -24,6 +24,7 @@ const Contacts = ({
         backgroundPosition: 'center',
         backgroundSize: 'cover',
       }}
+      className="mobile-bg-adjust"
     >
       <div
         className="relative max-h-svh mx-4 bg-opacity-0 sm:mx-0 lg:mx-8 xl:mx-0 text-slate-50 overflow-auto bg-gray-500 sm:bg-opacity-30  "
