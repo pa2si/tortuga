@@ -15,6 +15,7 @@ const Event = ({
   btn_text,
   fb_logo,
   event_language,
+  time,
 }) => {
   const { openModal } = useGlobalContext();
   return (
