@@ -1,8 +1,8 @@
-v 1.0.8
+v 1.0.9
 
 What's new:
 
-- className mobile-bg-adjust added to sections to apply for mobile view
+- adjustFontFallback: false added to playpen sans to avoid error message! i deleted also node-modules folder and package.lock.json and ran npm install again.
 
 Done:
 

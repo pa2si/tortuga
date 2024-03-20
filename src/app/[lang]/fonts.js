@@ -7,6 +7,8 @@ export const playpenSans = Playpen_Sans({
   subsets: ['latin'],
   weight: ['300', '400'],
   variable: '--font-playpenSans',
+  display: 'swap',
+  adjustFontFallback: false,
 });
 
 export const indieFlower = Indie_Flower({
